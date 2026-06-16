@@ -800,3 +800,109 @@ input, select, textarea { font: inherit; }
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Logo Container */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+/* Logo Image */
+.logo__image {
+  display: block;
+  height: 70px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.logo:hover .logo__image {
+  transform: scale(1.03);
+}
+
+/* Large Desktop */
+@media (min-width: 1400px) {
+  .logo__image {
+    height: 80px;
+  }
+}
+
+/* Desktop */
+@media (max-width: 1200px) {
+  .logo__image {
+    height: 65px;
+  }
+}
+
+/* Tablet Landscape */
+@media (max-width: 992px) {
+  .logo__image {
+    height: 58px;
+  }
+}
+
+/* Tablet Portrait */
+@media (max-width: 768px) {
+  .logo__image {
+    height: 52px;
+  }
+}
+
+/* Large Mobile */
+@media (max-width: 576px) {
+  .logo__image {
+    height: 46px;
+  }
+}
+
+/* Standard Mobile */
+@media (max-width: 480px) {
+  .logo__image {
+    height: 42px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 375px) {
+  .logo__image {
+    height: 38px;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 320px) {
+  .logo__image {
+    height: 34px;
+  }
+}
+
+.logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo__image {
+  height: clamp(34px, 5vw, 72px);
+  width: auto;
+  transition: opacity .35s ease;
+}
+
+.logo__image--dark {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+}
+
+.site-header.is-solid .logo__image--light {
+  opacity: 0;
+}
+
+.site-header.is-solid .logo__image--dark {
+  opacity: 1;
+}

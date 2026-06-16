@@ -151,11 +151,25 @@
     wireHeader();
   }
 
-  function logoHtml() {
-    return '<a class="logo" href="' + ROUTES.home + '" aria-label="Prestige Tractors Ballarat — home">' +
-      '<span class="logo__bars"><span></span><span></span><span></span></span>' +
-      '<span class="logo__name"><b>Prestige</b><small>Ballarat</small></span></a>';
-  }
+function logoHtml() {
+  return `
+    <a class="logo" href="${ROUTES.home}" aria-label="Prestige Tractors Ballarat — home">
+
+      <img
+        src="assets/prestige-white-no-bg.png"
+        alt="Prestige Tractors Ballarat"
+        class="logo__image logo__image--light"
+      >
+
+      <img
+        src="assets/prestige-no-bg.png"
+        alt="Prestige Tractors Ballarat"
+        class="logo__image logo__image--dark"
+      >
+
+    </a>
+  `;
+}
   function themeToggleHtml() {
     return '<button class="theme-toggle" type="button" id="js-theme" aria-label="Toggle colour theme">' +
       icon("moon", "icon-moon") + icon("sun", "icon-sun") + "</button>";
