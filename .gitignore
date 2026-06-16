@@ -1,0 +1,11 @@
+# OS / editor
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+# Logs
+*.log
+
+# Archived previous (React) tech stack — kept for reference only
+# _reference/react-app/   (uncomment to exclude from version control)

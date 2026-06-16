@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0a0b" />
+  <script>(function(){try{var s=localStorage.getItem("pt-theme");document.documentElement.dataset.theme=(s==="light"||s==="dark")?s:(window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");}catch(e){document.documentElement.dataset.theme="dark";}})();</script>
+  <title>Finance | Prestige Tractors Ballarat</title>
+  <meta name="description" content="Competitive finance for new and used machinery — chattel mortgage, equipment loans, lease and seasonal repayment structures for farming, contracting and business." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400..900;1,400..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body data-page="finance">
+  <header id="site-header"></header>
+  <main>
+    <header class="page-header" data-theme="dark">
+      <img class="page-header__bg" src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&w=2000&q=72" alt="" />
+      <div class="container"><div class="page-header__inner">
+        <nav class="breadcrumb"><a href="index.html">Home</a><i data-icon="chevron-right"></i><span class="current">Finance</span></nav>
+        <span class="eyebrow">Finance</span>
+        <h1>Finance to suit your season</h1>
+        <p class="page-header__desc">We can arrange finance for both new and used machinery with competitive interest rates — structured around your cash flow and seasonal income.</p>
+      </div></div>
+    </header>
+
+    <section class="section section--canvas">
+      <div class="container">
+        <div class="section-head"><div class="section-head__main reveal"><span class="eyebrow">Finance options</span><h2>Flexible ways to fund your machinery</h2><p>From chattel mortgages to seasonal repayment structures, we'll match you to the right solution.</p></div></div>
+        <div class="cards-grid cols-4" id="fin-options"></div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="split">
+          <div class="reveal"><span class="eyebrow">Who we help</span><h2 style="font-size:clamp(1.875rem,4vw,2.5rem);margin-top:1rem">Machinery &amp; finance for every operation</h2><p class="lead" style="margin-top:1.25rem">We provide machinery for a broad range of sectors and structure finance to match how each one earns.</p></div>
+          <div class="reveal" data-delay="1"><div class="cards-grid" style="margin-top:0" id="fin-sectors"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--canvas">
+      <div class="container">
+        <div class="section-head"><div class="section-head__main reveal"><span class="eyebrow">How it works</span><h2>Finance in four simple steps</h2></div></div>
+        <div class="steps" id="fin-steps"></div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="enquiry">
+      <div class="container">
+        <div class="split" style="align-items:flex-start">
+          <div class="reveal">
+            <span class="eyebrow">Finance enquiry</span>
+            <h2 style="font-size:clamp(1.875rem,4vw,2.5rem);margin-top:1rem">Get a finance quote</h2>
+            <p class="lead" style="margin-top:1.25rem">Tell us about the machine and your operation. We'll come back with competitive options — no obligation.</p>
+            <h3 style="font-size:1.25rem;margin-top:2rem;margin-bottom:1rem">Common questions</h3>
+            <div class="accordion" id="fin-faq"></div>
+          </div>
+          <div class="reveal" data-delay="1">
+            <form class="surface form" data-success-title="Finance enquiry received" data-success="We'll be in touch to discuss competitive rates and structure finance to suit your cash flow. For a fast chat, call (03) 5339 2056." novalidate>
+              <div class="form-grid">
+                <div class="field"><label for="f-name">Full name<span class="req">*</span></label><input class="input" id="f-name" required></div>
+                <div class="field"><label for="f-business">Business name</label><input class="input" id="f-business"></div>
+                <div class="field"><label for="f-email">Email<span class="req">*</span></label><input class="input" id="f-email" type="email" required></div>
+                <div class="field"><label for="f-phone">Phone<span class="req">*</span></label><input class="input" id="f-phone" type="tel" required></div>
+                <div class="field"><label for="f-cond">Machinery condition</label><select class="select" id="f-cond"><option value="" disabled selected>Select condition</option><option>New machinery</option><option>Used machinery</option><option>Not sure yet</option></select></div>
+                <div class="field"><label for="f-sector">Sector</label><select class="select" id="f-sector"><option value="" disabled selected>Select sector</option><option>Farming</option><option>Horticulture</option><option>Contracting</option><option>Viticulture</option><option>Government</option><option>Lifestyle / hobby farm</option><option>Other</option></select></div>
+                <div class="field"><label for="f-amount">Estimated amount (AUD)</label><input class="input" id="f-amount" inputmode="numeric" placeholder="e.g. 45,000"></div>
+                <div class="field"><label for="f-equip">Equipment of interest</label><input class="input" id="f-equip" placeholder="e.g. Bobcat CT4055"></div>
+                <div class="field field--full"><label for="f-notes">Anything else?</label><textarea class="textarea" id="f-notes" placeholder="Tell us about your operation and timing…"></textarea></div>
+              </div>
+              <button class="btn btn--primary btn--full" type="submit">Submit Finance Enquiry <i data-icon="arrow-right" class="arrow"></i></button>
+              <p class="form__note">Indicative only and subject to lender approval. Demo form — connect to your finance broker workflow to go live.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script>
+    window.PTpage = function () {
+      var U = window.PTUI, PT = window.PT, d = document;
+      var options = [
+        ["file", "Chattel Mortgage", "Own the machine from day one with potential GST and depreciation benefits — a popular choice for businesses."],
+        ["banknote", "Equipment Loan", "Straightforward finance for new or used machinery with competitive fixed rates and flexible terms."],
+        ["handshake", "Finance Lease", "Use the equipment with structured payments and end-of-term options to suit your cash flow."],
+        ["gauge", "Seasonal Structures", "Repayments aligned to your income cycle — ideal for farming and seasonal operations."]
+      ];
+      d.getElementById("fin-options").innerHTML = options.map(function (o) {
+        return '<div class="feature-card surface reveal"><span class="icon-chip">' + U.icon(o[0]) + "</span><h3>" + o[1] + "</h3><p>" + o[2] + "</p></div>";
+      }).join("");
+      d.getElementById("fin-sectors").innerHTML = PT.site.sectors.map(function (s) {
+        return '<div class="surface" style="display:flex;align-items:center;gap:.75rem;padding:1rem;border-radius:var(--radius-md)">' + U.icon("circle-check") + '<span style="font-weight:500;color:var(--fg)">' + s + "</span></div>";
+      }).join("");
+      var steps = [
+        ["01", "Tell us your needs", "Share the equipment, amount and your operation via our quick enquiry."],
+        ["02", "We structure options", "We work with lenders to find competitive rates and terms that fit."],
+        ["03", "Approval", "Provide a few details and we guide the application through to approval."],
+        ["04", "Get to work", "Drive away in your new machine with finance sorted and payments that suit."]
+      ];
+      d.getElementById("fin-steps").innerHTML = steps.map(function (s) { return '<div class="step reveal"><span class="n">' + s[0] + "</span><h3>" + s[1] + "</h3><p>" + s[2] + "</p></div>"; }).join("");
+      var faqs = [
+        ["Can you finance both new and used machinery?", "Yes. We can arrange finance for both new and used machinery at competitive interest rates, tailored to your situation."],
+        ["Which sectors do you finance?", "We provide and finance machinery for government, farming, horticulture, contracting, viticulture and lifestyle properties."],
+        ["How are repayments structured?", "Repayments can be structured around your cash flow — including seasonal options that align with farming income cycles."],
+        ["Is finance approval guaranteed?", "Finance is subject to lender approval and your circumstances. We'll help present your application in the best light."]
+      ];
+      d.getElementById("fin-faq").innerHTML = faqs.map(function (f) {
+        return '<div class="accordion__item"><button class="accordion__q" type="button"><b>' + f[0] + '</b><span class="plus">' + U.icon("plus") + '</span></button><div class="accordion__a"><p>' + f[1] + "</p></div></div>";
+      }).join("");
+    };
+  </script>
+</body>
+</html>

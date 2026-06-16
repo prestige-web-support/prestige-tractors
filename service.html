@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0a0b" />
+  <script>(function(){try{var s=localStorage.getItem("pt-theme");document.documentElement.dataset.theme=(s==="light"||s==="dark")?s:(window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");}catch(e){document.documentElement.dataset.theme="dark";}})();</script>
+  <title>Service Centre | Prestige Tractors Ballarat</title>
+  <meta name="description" content="Book factory-trained servicing, repairs and genuine parts at Prestige Tractors Ballarat. Scheduled maintenance, diagnostics and field support." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400..900;1,400..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body data-page="service">
+  <header id="site-header"></header>
+  <main>
+    <header class="page-header" data-theme="dark">
+      <img class="page-header__bg" src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=2000&q=72" alt="" />
+      <div class="container"><div class="page-header__inner">
+        <nav class="breadcrumb"><a href="index.html">Home</a><i data-icon="chevron-right"></i><span class="current">Service Centre</span></nav>
+        <span class="eyebrow">Service Centre</span>
+        <h1>Keep your equipment working hard</h1>
+        <p class="page-header__desc">Excellent product knowledge, workmanship and support is the backbone of Prestige Tractors. Book factory-trained servicing, repairs and genuine parts.</p>
+        <div class="page-header__actions"><a class="btn btn--primary" href="#book"><i data-icon="calendar"></i> Book a Service</a><a class="btn btn--glass" href="tel:+61353392056"><i data-icon="phone"></i> (03) 5339 2056</a></div>
+      </div></div>
+    </header>
+
+    <section class="section section--canvas">
+      <div class="container">
+        <div class="section-head is-center"><div class="section-head__main reveal">
+          <span class="eyebrow">Why our workshop</span><h2>Servicing you can rely on</h2>
+          <p>From scheduled maintenance to major repairs, our workshop keeps your machinery performing at its peak.</p>
+        </div></div>
+        <div class="cards-grid cols-3" id="svc-benefits"></div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-head"><div class="section-head__main reveal"><span class="eyebrow">How it works</span><h2>A simple path to peak performance</h2></div></div>
+        <div class="steps" id="svc-steps"></div>
+      </div>
+    </section>
+
+    <section class="section section--canvas" id="book">
+      <div class="container">
+        <div class="split" style="grid-template-columns:1fr">
+          <div class="reveal">
+            <span class="eyebrow">Book a service</span>
+            <h2 style="font-size:clamp(1.875rem,4vw,2.5rem);margin-top:1rem">Request your booking</h2>
+            <p class="lead" style="margin-top:1.25rem">Tell us about your machine and what needs attention. Our workshop team will confirm a time that works for you.</p>
+            <div class="media-frame ratio-1610 scrim" style="margin-top:2rem"><img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=900&q=72" alt="Technician servicing a machine" loading="lazy"></div>
+            <div class="feature-list" style="grid-template-columns:1fr 1fr">
+              <div class="surface" style="padding:1.25rem;border-radius:var(--radius-lg)"><span style="color:var(--brand-400)"><i data-icon="clock"></i></span><p style="margin-top:.75rem;font-weight:600;color:var(--fg)">Workshop hours</p><p class="subtle" style="font-size:.875rem">Mon – Fri: 8:00 AM – 5:00 PM</p><p class="subtle" style="font-size:.875rem">Sat – Sun: Closed</p></div>
+              <div class="surface" style="padding:1.25rem;border-radius:var(--radius-lg)"><span style="color:var(--brand-400)"><i data-icon="phone"></i></span><p style="margin-top:.75rem;font-weight:600;color:var(--fg)">Prefer to call?</p><a href="tel:+61353392056" style="font-size:.875rem;color:var(--brand-400)">(03) 5339 2056</a><a href="mailto:sales@goadgroup.com.au" class="subtle" style="display:block;font-size:.875rem">sales@goadgroup.com.au</a></div>
+            </div>
+          </div>
+          <div class="reveal" data-delay="1">
+            <form class="surface form" data-success-title="Service request received" data-success="Our workshop team will confirm your booking and preferred time by phone or email. Need it sooner? Call (03) 5339 2056." novalidate>
+              <div class="form-grid">
+                <div class="field"><label for="s-name">Full name<span class="req">*</span></label><input class="input" id="s-name" required></div>
+                <div class="field"><label for="s-phone">Phone<span class="req">*</span></label><input class="input" id="s-phone" type="tel" required></div>
+                <div class="field"><label for="s-email">Email<span class="req">*</span></label><input class="input" id="s-email" type="email" required></div>
+                <div class="field"><label for="s-date">Preferred date</label><input class="input" id="s-date" type="date"></div>
+                <div class="field"><label for="s-type">Service type<span class="req">*</span></label><select class="select" id="s-type" required><option value="" disabled selected>Select service type</option><option>Scheduled service</option><option>Repair / diagnostics</option><option>Pre-season check</option><option>Warranty work</option><option>Field / mobile service</option><option>Fleet maintenance</option></select></div>
+                <div class="field"><label for="s-machine">Machine make / model</label><input class="input" id="s-machine" placeholder="e.g. McCormick X7"></div>
+                <div class="field field--full"><label for="s-notes">What needs attention?</label><textarea class="textarea" id="s-notes" placeholder="Describe the work, symptoms or service due…"></textarea></div>
+              </div>
+              <button class="btn btn--primary btn--full" type="submit"><i data-icon="calendar"></i> Request Booking</button>
+              <p class="form__note">Demo form — connect to your booking system or email service to go live.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="cards-grid">
+          <div class="cta-banner surface"><div><h3 style="font-size:1.25rem">Need genuine parts?</h3><p>Our parts department supports every brand we stock.</p></div><a class="btn btn--secondary" href="parts.html">Spare Parts <i data-icon="arrow-right" class="arrow"></i></a></div>
+          <div class="cta-banner surface"><div><h3 style="font-size:1.25rem">Trucks &amp; fleet?</h3><p>Prestige Fleet Maintenance covers heavy &amp; commercial vehicles.</p></div><a class="btn btn--secondary" href="fleet-maintenance.html">Fleet Maintenance <i data-icon="arrow-right" class="arrow"></i></a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script>
+    window.PTpage = function () {
+      var U = window.PTUI, d = document;
+      var benefits = [
+        ["wrench", "Factory-trained technicians", "Brand-certified knowledge across every machine we sell and beyond."],
+        ["settings", "Genuine spare parts", "Fitted with genuine components for reliability and warranty cover."],
+        ["truck", "Field & mobile service", "On-farm support to minimise downtime during critical windows."],
+        ["gauge", "Diagnostics & repairs", "Modern diagnostics to pinpoint issues fast and fix them right."],
+        ["calendar", "Scheduled maintenance", "Planned servicing programmes that head off costly breakdowns."],
+        ["headset", "Local support team", "Real people who know your machine and pick up the phone."]
+      ];
+      d.getElementById("svc-benefits").innerHTML = benefits.map(function (b) {
+        return '<div class="feature-card surface reveal"><span class="icon-chip">' + U.icon(b[0]) + "</span><h3>" + b[1] + "</h3><p>" + b[2] + "</p></div>";
+      }).join("");
+      var steps = [
+        ["01", "Book it in", "Request a booking online or call the workshop. Tell us the machine and the job."],
+        ["02", "Assess & quote", "We diagnose, confirm the work required and provide a clear quote."],
+        ["03", "Service & repair", "Factory-trained techs carry out the work with genuine parts."],
+        ["04", "Back to work", "We test, hand back and keep records for your next scheduled service."]
+      ];
+      d.getElementById("svc-steps").innerHTML = steps.map(function (s) {
+        return '<div class="step reveal"><span class="n">' + s[0] + "</span><h3>" + s[1] + "</h3><p>" + s[2] + "</p></div>";
+      }).join("");
+    };
+  </script>
+</body>
+</html>

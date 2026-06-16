@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0a0b" />
+  <script>(function(){try{var s=localStorage.getItem("pt-theme");document.documentElement.dataset.theme=(s==="light"||s==="dark")?s:(window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");}catch(e){document.documentElement.dataset.theme="dark";}})();</script>
+  <title>Latest News & Specials | Prestige Tractors Ballarat</title>
+  <meta name="description" content="Limited-time deals, seasonal advice and the latest from the Prestige Tractors Ballarat showroom and workshop." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400..900;1,400..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body data-page="news">
+  <header id="site-header"></header>
+  <main>
+    <header class="page-header" data-theme="dark">
+      <img class="page-header__bg" src="https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=2000&q=72" alt="" />
+      <div class="container"><div class="page-header__inner">
+        <nav class="breadcrumb"><a href="index.html">Home</a><i data-icon="chevron-right"></i><span class="current">News & Specials</span></nav>
+        <span class="eyebrow">Latest News &amp; Specials</span>
+        <h1>What's new at Prestige</h1>
+        <p class="page-header__desc">Limited-time deals, seasonal advice and the latest from our showroom and workshop floor.</p>
+      </div></div>
+    </header>
+
+    <section class="section section--canvas">
+      <div class="container"><div id="news-feature"></div></div>
+    </section>
+
+    <section class="section section--alt" style="padding-top:0">
+      <div class="container">
+        <div class="chips" id="news-filter" style="margin-bottom:2.5rem;padding-top:0"></div>
+        <div class="grid-cards cols-3" id="news-grid"></div>
+        <p id="news-empty" class="subtle hidden">No items right now — check back soon.</p>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script>
+    window.PTpage = function () {
+      var U = window.PTUI, PT = window.PT, d = document;
+      var feature = PT.articles[0], rest = PT.articles.slice(1);
+      d.getElementById("news-feature").innerHTML =
+        '<article class="reveal" data-theme="dark" style="position:relative;display:grid;overflow:hidden;border-radius:var(--radius-2xl);border:1px solid var(--ink-700);grid-template-columns:1fr">' +
+          '<div class="media-frame scrim" style="min-height:18rem;border:0;border-radius:0"><img src="' + PT.img(feature.photoId, 1100) + '" alt="' + feature.title + '"></div>' +
+          '<div style="padding:2rem"><div class="meta" style="display:flex;align-items:center;gap:.75rem">' + U.badge(feature.type, "brand") + '<time class="subtle" style="font-size:.875rem">' + feature.date + "</time></div>" +
+          '<h2 style="font-size:clamp(1.5rem,3vw,2.25rem);margin-top:1rem">' + feature.title + '</h2><p class="lead" style="color:#d2d2da;margin-top:1rem">' + feature.excerpt + "</p>" +
+          (feature.cta ? '<a class="btn btn--primary" style="margin-top:1.75rem" href="' + feature.cta.href + '">' + feature.cta.label + " " + U.icon("arrow-right", "arrow") + "</a>" : "") + "</div></article>";
+      var fb = d.querySelector("#news-feature article");
+      if (window.matchMedia("(min-width:1024px)").matches) fb.style.gridTemplateColumns = "1fr 1fr";
+
+      var types = ["All", "Special", "News", "Event"];
+      var active = "All";
+      function renderFilter() {
+        d.getElementById("news-filter").innerHTML = types.map(function (t) { return '<button class="chip ' + (active === t ? "is-active" : "") + '" data-type="' + t + '">' + t + "</button>"; }).join("");
+        d.querySelectorAll("#news-filter .chip").forEach(function (c) { c.addEventListener("click", function () { active = c.dataset.type; renderFilter(); renderGrid(); }); });
+      }
+      function renderGrid() {
+        var list = active === "All" ? rest : rest.filter(function (a) { return a.type === active; });
+        var grid = d.getElementById("news-grid"), empty = d.getElementById("news-empty");
+        if (list.length) { empty.classList.add("hidden"); grid.classList.remove("hidden"); grid.innerHTML = list.map(U.articleCard).join(""); window.PTinjectIcons(grid); grid.querySelectorAll(".reveal").forEach(function (e) { e.classList.add("is-visible"); }); }
+        else { grid.classList.add("hidden"); empty.classList.remove("hidden"); }
+      }
+      renderFilter(); renderGrid();
+    };
+  </script>
+</body>
+</html>
