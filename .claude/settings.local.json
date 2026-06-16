@@ -4,7 +4,9 @@
       "Bash(pkill -f \"http.server\")",
       "Bash(grep -v '^_reference$')",
       "Bash(curl -sL --max-time 30 \"https://prestigetractors.com.au/shop\" -o /tmp/shop.html)",
-      "Read(//tmp/**)"
+      "Read(//tmp/**)",
+      "Bash(perl -0pi -e 's/<html lang=\"en-AU\">/<html lang=\"en-AU\" data-theme=\"light\">/' *.html)",
+      "Bash(perl -ni -e 'print unless /var s=localStorage\\\\.getItem\\\\\\(\"pt-theme\"\\\\\\)/' *.html)"
     ]
   }
 }

@@ -1,6 +1,6 @@
 /* ==========================================================================
    PRESTIGE TRACTORS — shared site behaviour (vanilla JS, no frameworks)
-   Renders header/footer, runs theme toggle, nav, drawer, mega menu, reveal
+   Renders header/footer, runs nav, drawer, mega menu, reveal
    animations and form handling. Exposes PTUI render helpers for page scripts.
    In WordPress: renderHeader/renderFooter → header.php/footer.php; the
    behaviour below becomes an enqueued script.
@@ -136,7 +136,6 @@
         '<nav class="nav__menu" aria-label="Primary">' + navItems + "</nav>" +
         '<div class="nav__right">' +
           '<a class="nav__phone" href="' + s.phoneHref + '">' + icon("phone") + s.phone + "</a>" +
-          themeToggleHtml() +
           '<a class="btn btn--primary btn--sm" href="' + ROUTES.service + '#book" style="display:none">' + icon("calendar") + "Book Service</a>" +
           '<button class="nav__burger" type="button" aria-label="Open menu" id="js-burger">' + icon("menu") + "</button>" +
         "</div>" +
@@ -170,11 +169,6 @@ function logoHtml() {
     </a>
   `;
 }
-  function themeToggleHtml() {
-    return '<button class="theme-toggle" type="button" id="js-theme" aria-label="Toggle colour theme">' +
-      icon("moon", "icon-moon") + icon("sun", "icon-sun") + "</button>";
-  }
-
   /* ------------------------------ DRAWER --------------------------------- */
   function renderDrawer() {
     if (d.getElementById("site-drawer")) return;
@@ -197,7 +191,6 @@ function logoHtml() {
         '<div class="drawer__head">' + logoHtml() + '<button class="drawer__close" id="js-drawer-close" aria-label="Close menu">' + icon("x") + "</button></div>" +
         '<div class="drawer__body"><nav aria-label="Mobile">' + groupsHtml + simple + "</nav></div>" +
         '<div class="drawer__foot">' +
-          '<button class="theme-toggle--full" id="js-theme-full" type="button" aria-label="Toggle colour theme"><span class="tt-row" style="display:flex;align-items:center;gap:.75rem">' + icon("moon", "icon-moon") + icon("sun", "icon-sun") + '<span class="tt-label-dark">Dark mode</span><span class="tt-label-light">Light mode</span></span><span class="switch"></span></button>' +
           '<a class="btn btn--primary btn--full" href="' + ROUTES.service + '#book">' + icon("calendar") + "Book a Service</a>" +
           '<a class="drawer__phone" href="' + s.phoneHref + '">' + icon("phone") + s.phone + "</a>" +
         "</div>" +
@@ -216,7 +209,6 @@ function logoHtml() {
     backdrop.addEventListener("click", close);
     d.getElementById("js-drawer-close").addEventListener("click", close);
     drawer.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", close); });
-    d.getElementById("js-theme-full").addEventListener("click", toggleTheme);
   }
 
   /* ------------------------------ FOOTER --------------------------------- */
@@ -257,16 +249,6 @@ function logoHtml() {
       "</div>";
   }
 
-  /* ------------------------------- THEME --------------------------------- */
-  function applyTheme(t, animate) {
-    var root = d.documentElement;
-    if (animate) { root.classList.add("theme-transition"); w.setTimeout(function () { root.classList.remove("theme-transition"); }, 320); }
-    root.dataset.theme = t;
-    try { localStorage.setItem("pt-theme", t); } catch (e) {}
-  }
-  function toggleTheme() { applyTheme(d.documentElement.dataset.theme === "light" ? "dark" : "light", true); }
-  w.PTtoggleTheme = toggleTheme;
-
   /* ------------------------- HEADER INTERACTIONS ------------------------- */
   function wireHeader() {
     var header = d.getElementById("site-header");
@@ -280,7 +262,6 @@ function logoHtml() {
     update();
     w.addEventListener("scroll", update, { passive: true });
 
-    d.getElementById("js-theme").addEventListener("click", toggleTheme);
     d.getElementById("js-burger").addEventListener("click", function () { if (w.PTopenDrawer) w.PTopenDrawer(); });
 
     // Mega menu hover (desktop)
