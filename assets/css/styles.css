@@ -899,11 +899,24 @@ input, select, textarea { font: inherit; }
   opacity: 0;
 }
 
-.site-header.is-solid .logo__image--light {
+/* Logo colour follows the header's actual background darkness
+   (data-theme="dark" = still over the hero image), not .is-solid — the
+   header is always solid now, so .is-solid no longer implies a light
+   background. Using it here left the dark-on-dark logo invisible while
+   the header was still over the hero. */
+.site-header[data-theme="dark"] .logo__image--light {
+  opacity: 1;
+}
+
+.site-header[data-theme="dark"] .logo__image--dark {
   opacity: 0;
 }
 
-.site-header.is-solid .logo__image--dark {
+.site-header:not([data-theme="dark"]) .logo__image--light {
+  opacity: 0;
+}
+
+.site-header:not([data-theme="dark"]) .logo__image--dark {
   opacity: 1;
 }
 

@@ -75,11 +75,16 @@
   }
 
   /* ------------------------- header: subtle slide-down -------------------- */
+  /* Position only — no opacity fade. Fading the header's own opacity from 0
+     made it look transparent over the hero for the first ~1s of every page
+     load (the header's solid background was correct the whole time; the
+     GSAP tween was fading the whole element, background included, on top
+     of it). The header should read as solid from the very first frame. */
   function animateHeader() {
     var header = d.getElementById("site-header");
     if (!header || reduceMotion) return;
-    gsap.set(header, { y: -32, opacity: 0 });
-    gsap.to(header, { y: 0, opacity: 1, duration: 0.9, ease: "power2.out", delay: 0.1 });
+    gsap.set(header, { y: -32 });
+    gsap.to(header, { y: 0, duration: 0.7, ease: "power2.out", delay: 0.1 });
   }
 
   /* ------------------- hero / page-header: page-load entrance ------------- */
