@@ -360,7 +360,7 @@ function logoHtml() {
     // page-specific rendering first, so dynamic content gets wired below
     if (w.PTpage) w.PTpage();
     injectIcons();
-    initReveal();
+    if (w.PTanimate) w.PTanimate(); else initReveal();
     initForms();
     initAccordion();
     var y = d.getElementById("js-year"); if (y) y.textContent = "2026";
