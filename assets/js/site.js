@@ -253,10 +253,9 @@ function logoHtml() {
   function wireHeader() {
     var header = d.getElementById("site-header");
     var isHome = d.body.dataset.page === "home";
+    header.classList.add("is-solid"); // always solid — never transparent, even at first paint over the hero
     function update() {
-      var scrolled = w.scrollY > 24;
-      var overHero = isHome && !scrolled;
-      header.classList.toggle("is-solid", !overHero);
+      var overHero = isHome && w.scrollY <= 24;
       if (overHero) header.setAttribute("data-theme", "dark"); else header.removeAttribute("data-theme");
     }
     update();
