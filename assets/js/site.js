@@ -155,7 +155,7 @@ function logoHtml() {
     <a class="logo" href="${ROUTES.home}" aria-label="Prestige Tractors Ballarat — home">
 
       <img
-        src="assets/prestige-white-no-bg.png"
+        src="assets/prestige-no-bg.png"
         alt="Prestige Tractors Ballarat"
         class="logo__image logo__image--light"
       >
