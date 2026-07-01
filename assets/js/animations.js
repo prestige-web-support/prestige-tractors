@@ -215,18 +215,41 @@
   function initHoverFX() {
     if (!fineHover || reduceMotion) return;
 
-    function magnetic(el, strength) {
-      var xTo = gsap.quickTo(el, "x", { duration: 0.5, ease: "power3" });
-      var yTo = gsap.quickTo(el, "y", { duration: 0.5, ease: "power3" });
-      el.addEventListener("mousemove", function (e) {
-        var r = el.getBoundingClientRect();
-        xTo((e.clientX - r.left - r.width / 2) * strength);
-        yTo((e.clientY - r.top - r.height / 2) * strength);
-      });
-      el.addEventListener("mouseleave", function () { xTo(0); yTo(0); });
+    // Delegated magnetic pull for buttons/nav links — robust to dynamic
+    // content (catalogue.js re-renders .product-card, and with it every
+    // "Request Quote" button, on each filter change; the checkout overlay's
+    // own submit button lives in static markup but this keeps one code path
+    // for all of it rather than binding some buttons directly and others not).
+    var magSelector = ".btn, .nav__link";
+    var magCtrls = new WeakMap();
+    function getMagCtrls(el) {
+      var c = magCtrls.get(el);
+      if (!c) {
+        el.classList.add("gsap-hover");
+        c = {
+          x: gsap.quickTo(el, "x", { duration: 0.5, ease: "power3" }),
+          y: gsap.quickTo(el, "y", { duration: 0.5, ease: "power3" })
+        };
+        magCtrls.set(el, c);
+      }
+      return c;
     }
-    d.querySelectorAll(".btn").forEach(function (el) { el.classList.add("gsap-hover"); magnetic(el, 0.3); });
-    d.querySelectorAll(".nav__link").forEach(function (el) { magnetic(el, 0.22); });
+    d.addEventListener("mousemove", function (e) {
+      var el = e.target.closest(magSelector);
+      if (!el) return;
+      var r = el.getBoundingClientRect();
+      var strength = el.classList.contains("nav__link") ? 0.22 : 0.3;
+      var c = getMagCtrls(el);
+      c.x((e.clientX - r.left - r.width / 2) * strength);
+      c.y((e.clientY - r.top - r.height / 2) * strength);
+    });
+    d.addEventListener("mouseout", function (e) {
+      var el = e.target.closest(magSelector);
+      if (!el || (e.relatedTarget && el.contains(e.relatedTarget))) return;
+      var c = magCtrls.get(el);
+      if (!c) return;
+      c.x(0); c.y(0);
+    });
 
     // Delegated tilt for cards — robust to catalogue.js re-rendering
     // .product-card on every filter change (direct per-element listeners

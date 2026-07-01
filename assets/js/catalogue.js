@@ -107,12 +107,33 @@ window.PTpage = function () {
     if (list.length) {
       wrap.classList.remove("hidden"); empty.classList.add("hidden");
       wrap.innerHTML = list.map(U.productCard).join("");
+      addQuoteButtons(wrap, list);
       window.PTinjectIcons(wrap);
       requestAnimationFrame(function () { wrap.querySelectorAll(".reveal").forEach(function (e) { e.classList.add("is-visible"); }); });
     } else {
       wrap.classList.add("hidden"); empty.classList.remove("hidden");
     }
     return list.length;
+  }
+
+  // "Request Quote" opens the checkout overlay (assets/js/checkout.js)
+  // pre-filled with this exact card's product. Added here rather than in
+  // U.productCard (site.js) since that template is shared by pages that
+  // don't have the checkout overlay in their DOM.
+  function addQuoteButtons(wrap, list) {
+    wrap.querySelectorAll(".product-card").forEach(function (card, i) {
+      var p = list[i];
+      var body = card.querySelector(".product-card__body");
+      if (!p || !body) return;
+      var btn = d.createElement("button");
+      btn.type = "button";
+      btn.className = "btn btn--secondary btn--sm btn--full product-card__quote";
+      btn.innerHTML = icon("send") + " Request Quote";
+      btn.addEventListener("click", function () {
+        if (window.PTopenCheckout) window.PTopenCheckout(p);
+      });
+      body.appendChild(btn);
+    });
   }
   function updateMeta() {
     var n = getFiltered().length, ac = activeCount();

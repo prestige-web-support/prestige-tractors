@@ -84,6 +84,143 @@
         </div>
       </div>
     </div>
+
+    <!-- ============================================================
+         REQUEST A QUOTE — "checkout" style order-inquiry overlay
+         Single reusable instance; assets/js/checkout.js populates it
+         per-product when a card's "Request Quote" button is clicked
+         (see assets/js/catalogue.js) and swaps it into view. No
+         payment is processed — this maps straight onto a Contact
+         Form 7 form; each field is commented with the shortcode it
+         becomes so it's a drop-in swap once CF7 is wired up.
+         ============================================================ -->
+    <div class="overlay-shell" id="checkout-shell" aria-hidden="true">
+      <div class="backdrop" id="checkout-backdrop"></div>
+      <div class="checkout-panel" id="checkout-panel">
+        <div class="checkout-card" id="checkout-card" role="dialog" aria-modal="true" aria-labelledby="checkout-title">
+          <button class="drawer__close checkout-card__close" id="checkout-close" aria-label="Close quote request"><i data-icon="x"></i></button>
+
+          <div class="checkout-card__inner">
+            <!-- ---------- Equipment summary ("cart") sidebar ---------- -->
+            <aside class="checkout-summary">
+              <span class="eyebrow">Selected Equipment</span>
+              <div class="checkout-summary__product">
+                <img id="quote-img" src="" alt="" />
+                <div>
+                  <span class="checkout-summary__brand" id="quote-brand"></span>
+                  <h3 id="quote-name"></h3>
+                </div>
+              </div>
+              <p class="checkout-summary__tagline" id="quote-tagline"></p>
+
+              <dl class="checkout-summary__meta">
+                <div><dt>Condition</dt><dd id="quote-condition">—</dd></div>
+                <div id="quote-hp-row"><dt>Horsepower</dt><dd id="quote-hp">—</dd></div>
+                <div><dt>Est. Price</dt><dd id="quote-price">—</dd></div>
+              </dl>
+
+              <div class="hairline"></div>
+
+              <ul class="checkout-summary__assurances">
+                <li><i data-icon="shield"></i> Genuine parts &amp; warranty</li>
+                <li><i data-icon="wrench"></i> Factory-trained servicing</li>
+                <li><i data-icon="banknote"></i> Finance &amp; trade-in options</li>
+              </ul>
+            </aside>
+
+            <!-- ---------- Order inquiry form ---------- -->
+            <div class="checkout-form-wrap" id="checkout-form-wrap">
+              <span class="eyebrow">Request a Quote</span>
+              <h2 id="checkout-title">Complete your enquiry</h2>
+              <p class="checkout-form-wrap__intro">No payment is taken online. Submit your details and our Ballarat team will follow up directly to confirm pricing, finance and delivery.</p>
+
+              <form id="checkout-form" class="checkout-form">
+                <div class="form-grid">
+
+                  <!-- CF7: [text* equipment-model readonly] -->
+                  <div class="field field--locked field--full">
+                    <label for="q-model">Equipment</label>
+                    <input class="input" type="text" name="equipment-model" id="q-model" readonly />
+                    <span class="field__hint"><i data-icon="check"></i> Auto-filled from your selection</span>
+                  </div>
+                  <!-- CF7: [hidden equipment-slug] -->
+                  <input type="hidden" name="equipment-slug" id="q-slug" />
+
+                  <!-- CF7: [text* your-name] -->
+                  <div class="field field--floating">
+                    <input class="input" type="text" name="your-name" id="q-name" placeholder=" " autocomplete="name" required />
+                    <label for="q-name">Full name<span class="req">*</span></label>
+                  </div>
+
+                  <!-- CF7: [text your-company] -->
+                  <div class="field field--floating">
+                    <input class="input" type="text" name="your-company" id="q-company" placeholder=" " autocomplete="organization" />
+                    <label for="q-company">Company / farm name</label>
+                  </div>
+
+                  <!-- CF7: [tel* your-phone] -->
+                  <div class="field field--floating">
+                    <input class="input" type="tel" name="your-phone" id="q-phone" placeholder=" " autocomplete="tel" required />
+                    <label for="q-phone">Contact number<span class="req">*</span></label>
+                  </div>
+
+                  <!-- CF7: [email* your-email] -->
+                  <div class="field field--floating">
+                    <input class="input" type="email" name="your-email" id="q-email" placeholder=" " autocomplete="email" required />
+                    <label for="q-email">Email address<span class="req">*</span></label>
+                  </div>
+
+                  <!-- CF7: [text* delivery-address] -->
+                  <div class="field field--floating field--full">
+                    <input class="input" type="text" name="delivery-address" id="q-address" placeholder=" " autocomplete="address-level2" required />
+                    <label for="q-address">Delivery address / region<span class="req">*</span></label>
+                  </div>
+
+                  <!-- CF7: [select delivery-timeline "Immediate" "Within 1 month" "Next season" "Flexible / just researching"] -->
+                  <div class="field field--full">
+                    <label for="q-timeline">Required delivery timeline</label>
+                    <select class="select" name="delivery-timeline" id="q-timeline">
+                      <option value="">Select a timeframe (optional)</option>
+                      <option>Immediate</option>
+                      <option>Within 1 month</option>
+                      <option>Next season</option>
+                      <option>Flexible / just researching</option>
+                    </select>
+                  </div>
+
+                  <!-- CF7: [radio payment-intent default:1 "Cash purchase" "Financing required" "Requesting trade-in"] -->
+                  <div class="field field--full">
+                    <span class="field__legend">Payment method intent<span class="req">*</span></span>
+                    <div class="radio-pill-group" role="radiogroup" aria-label="Payment method intent">
+                      <label class="radio-pill"><input type="radio" name="payment-intent" value="Cash purchase" required /><span><i data-icon="banknote"></i> Cash purchase</span></label>
+                      <label class="radio-pill"><input type="radio" name="payment-intent" value="Financing required" /><span><i data-icon="file"></i> Financing required</span></label>
+                      <label class="radio-pill"><input type="radio" name="payment-intent" value="Requesting trade-in" /><span><i data-icon="handshake"></i> Requesting trade-in</span></label>
+                    </div>
+                  </div>
+
+                  <!-- CF7: [textarea your-message] -->
+                  <div class="field field--floating field--full">
+                    <textarea class="textarea" name="your-message" id="q-message" placeholder=" "></textarea>
+                    <label for="q-message">Additional notes (optional)</label>
+                  </div>
+                </div>
+
+                <!-- CF7: [submit "Submit Order Inquiry"] -->
+                <button type="submit" class="btn btn--primary btn--lg btn--full checkout-submit">Submit Order Inquiry <i data-icon="arrow-right" class="arrow"></i></button>
+                <p class="form__note">By submitting, you agree to be contacted by Prestige Tractors about this enquiry. No payment is processed online.</p>
+              </form>
+
+              <div class="form-success checkout-form-success" id="checkout-success" hidden>
+                <span class="fs-icon"><i data-icon="circle-check"></i></span>
+                <h3>Enquiry received</h3>
+                <p>Thanks — our team will follow up shortly to confirm pricing, finance and delivery for the <strong id="quote-success-name"></strong>.</p>
+                <button type="button" class="btn btn--secondary" id="checkout-success-close">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
   <footer id="site-footer"></footer>
 
@@ -95,5 +232,6 @@
   <script src="assets/js/site.js"></script>
   <script src="assets/js/animations.js"></script>
   <script src="assets/js/catalogue.js"></script>
+  <script src="assets/js/checkout.js"></script>
 </body>
 </html>

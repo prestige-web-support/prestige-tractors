@@ -642,7 +642,7 @@ input, select, textarea { font: inherit; }
 .form-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
 @media (min-width: 640px) { .form-grid { grid-template-columns: 1fr 1fr; } .field--full { grid-column: 1 / -1; } }
 .field label { display: block; margin-bottom: .5rem; font-size: .875rem; font-weight: 500; color: var(--ink-100); }
-.field label .req { color: var(--brand-400); margin-left: .15rem; }
+.field label .req, .field__legend .req { color: var(--brand-400); margin-left: .15rem; }
 .input, .select, .textarea {
   width: 100%; border-radius: var(--radius-md); border: 1px solid var(--ink-600);
   background: color-mix(in srgb, var(--ink-850) 80%, transparent); color: var(--fg);
@@ -906,3 +906,95 @@ input, select, textarea { font: inherit; }
 .site-header.is-solid .logo__image--dark {
   opacity: 1;
 }
+
+/* ========================= 15. CHECKOUT / ORDER FORM ===================== */
+/* Reuses .overlay-shell / .backdrop (section 5) — same pattern as the nav
+   drawer and equipment.html's own mobile filter sheet. Only the panel/card
+   and its contents are new. Populated per-product by assets/js/checkout.js;
+   entrance/exit is GSAP-driven there, so nothing here transitions
+   opacity/transform on .checkout-card — that would fight the tween, same
+   issue documented for .reveal/.gsap-managed in section 7. */
+.checkout-panel { position: absolute; inset: 0; z-index: 2; display: flex; align-items: center; justify-content: center; padding: 1.25rem; pointer-events: none; }
+.checkout-panel.is-open { pointer-events: auto; }
+.checkout-card { position: relative; width: 100%; max-width: 68rem; max-height: min(92vh, 920px); display: flex; flex-direction: column; overflow: hidden; border-radius: var(--radius-2xl); border: 1px solid var(--ink-700); background: var(--ink-900); box-shadow: var(--shadow-lift); opacity: 0; }
+.checkout-card__close { position: absolute; top: 1.1rem; right: 1.1rem; z-index: 3; background: color-mix(in srgb, var(--ink-900) 65%, transparent); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+.checkout-card__inner { display: grid; grid-template-columns: 1fr; flex: 1; min-height: 0; overflow-y: auto; }
+@media (min-width: 900px) { .checkout-card__inner { grid-template-columns: 21rem 1fr; overflow: hidden; } }
+
+/* Summary ("cart") sidebar */
+.checkout-summary { padding: 2.25rem 1.75rem 1.75rem; background: linear-gradient(180deg, var(--ink-950), var(--ink-900)); border-bottom: 1px solid var(--ink-700); }
+@media (min-width: 900px) { .checkout-summary { border-bottom: 0; border-right: 1px solid var(--ink-700); overflow-y: auto; } }
+.checkout-summary__product { display: flex; align-items: center; gap: 1rem; margin-top: 1.25rem; }
+.checkout-summary__product img { width: 5rem; height: 5rem; flex-shrink: 0; object-fit: cover; border-radius: var(--radius-lg); border: 1px solid var(--ink-700); }
+.checkout-summary__brand { display: block; font-size: .75rem; font-weight: 600; text-transform: uppercase; letter-spacing: .14em; color: var(--brand-ink); }
+.checkout-summary__product h3 { margin-top: .25rem; font-size: 1.125rem; }
+.checkout-summary__tagline { margin-top: 1rem; font-size: .875rem; line-height: 1.6; color: var(--ink-300); }
+.checkout-summary__meta { margin-top: 1.5rem; display: flex; flex-direction: column; gap: .6rem; }
+.checkout-summary__meta div { display: flex; align-items: center; justify-content: space-between; font-size: .875rem; }
+.checkout-summary__meta div[hidden] { display: none; }
+.checkout-summary__meta dt { color: var(--ink-400); }
+.checkout-summary__meta dd { font-weight: 600; color: var(--fg); }
+.checkout-summary .hairline { margin-block: 1.5rem; }
+.checkout-summary__assurances { display: flex; flex-direction: column; gap: .75rem; }
+.checkout-summary__assurances li { display: flex; align-items: center; gap: .65rem; font-size: .8125rem; color: var(--ink-200); }
+.checkout-summary__assurances svg { width: 1rem; height: 1rem; color: var(--brand-400); flex-shrink: 0; }
+
+/* Form column */
+.checkout-form-wrap { position: relative; padding: 2.25rem 1.75rem 2.5rem; overflow-y: auto; }
+.checkout-form-wrap h2 { margin-top: .5rem; font-size: clamp(1.375rem, 3vw, 1.75rem); }
+.checkout-form-wrap__intro { margin-top: .75rem; font-size: .9375rem; line-height: 1.6; color: var(--ink-300); max-width: 34rem; }
+.checkout-form { margin-top: 1.75rem; }
+.checkout-submit { margin-top: 2rem; }
+.checkout-form-success { margin-top: 1.75rem; }
+.checkout-form-success #checkout-success-close { margin-top: 1.5rem; }
+
+/* Locked (auto-filled) equipment field */
+.field--locked .input[readonly] { background: color-mix(in srgb, var(--brand-500) 7%, var(--ink-850)); border-color: rgba(224,25,43,.35); color: var(--fg); font-weight: 600; cursor: default; }
+[data-theme="light"] .field--locked .input[readonly] { background: color-mix(in srgb, var(--brand-500) 6%, var(--ink-800)); }
+.field__hint { display: inline-flex; align-items: center; gap: .35rem; margin-top: .5rem; font-size: .75rem; color: var(--brand-ink); }
+.field__hint svg { width: .8rem; height: .8rem; }
+.field__legend { display: block; margin-bottom: .6rem; font-size: .875rem; font-weight: 500; color: var(--ink-100); }
+
+/* Floating labels (text/email/tel/textarea inputs only — native <select>
+   doesn't support :placeholder-shown, so selects keep a plain static
+   label, matching the rest of the site's simpler forms). */
+.field--floating { position: relative; }
+.field--floating .input,
+.field--floating .textarea { padding-top: 1.4rem; padding-bottom: .5rem; }
+.field--floating .textarea { padding-top: 1.6rem; min-height: 7rem; }
+.field--floating label {
+  position: absolute; left: 1rem; top: 1.05rem; margin: 0;
+  font-size: .95rem; font-weight: 400; color: var(--ink-400);
+  pointer-events: none; transform-origin: left top;
+  transition: top .22s var(--ease), font-size .22s var(--ease), color .22s var(--ease);
+}
+.field--floating .input:focus ~ label,
+.field--floating .input:not(:placeholder-shown) ~ label,
+.field--floating .textarea:focus ~ label,
+.field--floating .textarea:not(:placeholder-shown) ~ label {
+  top: .5rem; font-size: .7rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--brand-ink);
+}
+.field--floating .input:focus,
+.field--floating .textarea:focus { border-color: var(--brand-500); box-shadow: 0 0 0 4px rgba(224,25,43,.12); }
+
+/* Payment-intent radio pills — native inputs stay in the DOM (visually
+   hidden, not display:none) so keyboard/screen-reader behaviour is
+   unaffected; only the sibling <span> is restyled. */
+.radio-pill-group { display: flex; flex-wrap: wrap; gap: .6rem; }
+.radio-pill { position: relative; }
+.radio-pill input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.radio-pill span {
+  display: inline-flex; align-items: center; gap: .5rem;
+  padding: .65rem 1.1rem; border-radius: 999px; border: 1px solid var(--ink-600);
+  font-size: .875rem; font-weight: 600; color: var(--ink-200);
+  transition: all .25s var(--ease); cursor: pointer;
+}
+.radio-pill span svg { width: .9rem; height: .9rem; }
+.radio-pill:hover span { border-color: var(--ink-400); }
+.radio-pill input:checked + span { border-color: var(--brand-500); background: var(--brand-500); color: #fff; }
+.radio-pill input:focus-visible + span { outline: 2px solid var(--brand-400); outline-offset: 2px; }
+
+/* "Request Quote" trigger appended to product cards on equipment.html
+   (assets/js/catalogue.js) — .product-card__foot already ends the card
+   body, so this just needs top spacing. */
+.product-card__quote { margin-top: 1rem; }
