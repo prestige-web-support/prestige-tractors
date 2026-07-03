@@ -31,12 +31,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.prestigetractors.com.au/fleet-maintenance.html</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://www.prestigetractors.com.au/about.html</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
@@ -115,7 +109,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.prestigetractors.com.au/category.html?cat=oils-lubricants</loc>
+    <loc>https://www.prestigetractors.com.au/category.html?cat=woods-equipment</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -176,18 +170,6 @@
   </url>
   <url>
     <loc>https://www.prestigetractors.com.au/equipment.html?brand=muratori</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.prestigetractors.com.au/equipment.html?brand=woods</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.prestigetractors.com.au/equipment.html?brand=valvoline</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -793,42 +775,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.prestigetractors.com.au/product.html?slug=woods-batwing-cutter</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.prestigetractors.com.au/product.html?slug=woods-rotary-cutter</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.prestigetractors.com.au/product.html?slug=woods-finish-mower</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.prestigetractors.com.au/product.html?slug=woods-box-scraper</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.prestigetractors.com.au/product.html?slug=woods-landscape-rake</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.prestigetractors.com.au/product.html?slug=woods-rear-blade</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.prestigetractors.com.au/product.html?slug=rapidspray-spray-tanks</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -986,60 +932,6 @@
   </url>
   <url>
     <loc>https://www.prestigetractors.com.au/product.html?slug=bobcat-uw56-toolcat</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.prestigetractors.com.au/product.html?slug=valvoline-premium-blue-diesel</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.prestigetractors.com.au/product.html?slug=valvoline-all-fleet-diesel</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.prestigetractors.com.au/product.html?slug=valvoline-unitractor-fluid</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.prestigetractors.com.au/product.html?slug=valvoline-farmplus-uto</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.prestigetractors.com.au/product.html?slug=valvoline-hydraulic-oil</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.prestigetractors.com.au/product.html?slug=valvoline-diesel-oil-20l</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.prestigetractors.com.au/product.html?slug=valvoline-bulk-drums</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.prestigetractors.com.au/product.html?slug=valvoline-injector-cleaner</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.prestigetractors.com.au/product.html?slug=valvoline-engine-flush</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>

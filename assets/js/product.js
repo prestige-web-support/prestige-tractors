@@ -21,17 +21,34 @@ window.PTpage = function () {
   var breadcrumb = '<nav class="breadcrumb"><a href="index.html">Home</a>' + icon("chevron-right") + '<a href="equipment.html">Equipment</a>' + icon("chevron-right") +
     (cat ? '<a href="' + R.category(cat.slug) + '">' + cat.name + "</a>" + icon("chevron-right") : "") + '<span class="current">' + p.name + "</span></nav>";
 
+  // Gallery: 3–5 photos, hero first (client: "a couple of photos, then the specs")
+  var imgs = (p.gallery && p.gallery.length ? p.gallery : [p.photoId]).slice(0, 5);
+  var mainImg = '<img id="gal-main" src="' + PT.img(imgs[0], 1100) + '" alt="' + p.name + '">';
+  var thumbs = imgs.length > 1
+    ? '<div class="gallery-thumbs">' + imgs.map(function (src, i) {
+        return '<button class="gallery-thumb' + (i === 0 ? " is-active" : "") + '" type="button" data-src="' + PT.img(src, 1100) + '"><img src="' + PT.img(src, 400) + '" alt="' + p.name + " photo " + (i + 1) + '" loading="lazy"></button>';
+      }).join("") + "</div>"
+    : "";
+  var mob = PT.site.mobileHref || PT.site.phoneHref;
+
   var hero =
     '<div class="container" style="padding-block:2.5rem">' + breadcrumb +
       '<div class="detail" style="margin-top:2rem">' +
-        '<div class="detail__media reveal"><div class="media-frame ratio-43" data-theme="dark"><img src="' + PT.img(p.photoId, 1100) + '" alt="' + p.name + '"><span class="detail__tags">' + tags + '</span></div><div class="stat-cards">' + statCards + "</div></div>" +
+        '<div class="detail__media reveal"><div class="media-frame ratio-43" data-theme="dark">' + mainImg + '<span class="detail__tags">' + tags + "</span></div>" + thumbs + '<div class="stat-cards">' + statCards + "</div></div>" +
         '<div class="reveal" data-delay="1">' +
           '<div style="display:flex;align-items:center;gap:.75rem"><a class="detail__brand" href="' + R.brand(p.brand) + '">' + (brand ? brand.name : p.brand) + '</a><span class="subtle">·</span><span class="subtle" style="text-transform:capitalize">' + p.condition + " " + (cat ? cat.name.toLowerCase() : "") + "</span></div>" +
           "<h1>" + p.name + "</h1>" +
           '<p class="detail__summary">' + p.summary + "</p>" +
           '<div class="detail__price">' + price + "</div>" +
           '<ul class="detail__highlights">' + highlights + "</ul>" +
-          '<div class="detail__cta"><a class="btn btn--primary btn--lg" href="contact.html?enquiry=' + encodeURIComponent(p.name) + '">Enquire about this model ' + icon("arrow-right", "arrow") + '</a><a class="btn btn--secondary btn--lg" href="finance.html">' + icon("banknote") + " Finance options</a></div>" +
+          '<div class="detail__cta">' +
+            '<a class="btn btn--primary btn--lg" href="' + mob + '">' + icon("phone") + " Call Danny Now</a>" +
+            '<a class="btn btn--secondary btn--lg" href="contact.html?enquiry=' + encodeURIComponent("Book a call about " + p.name) + '">' + icon("calendar") + " Book a Call</a>" +
+          "</div>" +
+          '<div class="detail__cta detail__cta--secondary">' +
+            '<a class="btn btn--secondary btn--lg" href="contact.html?enquiry=' + encodeURIComponent("Buy / deposit: " + p.name) + '">' + icon("banknote") + " Buy Now / Pay Deposit</a>" +
+            '<a class="btn btn--secondary btn--lg" href="finance.html">Finance options</a>' +
+          "</div>" +
           (p.brochure ? '<a class="detail__brochure" href="' + PT.asset(p.brochure) + '" target="_blank" rel="noopener">' + icon("file") + " Download specifications (PDF)" + icon("arrow-up-right") + "</a>" : "") +
           '<div class="assurances">' + assurances + "</div>" +
         "</div>" +
@@ -57,4 +74,14 @@ window.PTpage = function () {
   d.getElementById("product-main").innerHTML = hero + overview + relatedHtml;
   var ov = d.querySelector(".detail-overview");
   if (ov && window.matchMedia("(min-width:1024px)").matches) { ov.style.gridTemplateColumns = "1.2fr 1fr"; }
+
+  // Gallery thumbnails swap the main image
+  d.querySelectorAll(".gallery-thumb").forEach(function (t) {
+    t.addEventListener("click", function () {
+      var main = d.getElementById("gal-main");
+      if (main) main.src = t.getAttribute("data-src");
+      d.querySelectorAll(".gallery-thumb").forEach(function (x) { x.classList.remove("is-active"); });
+      t.classList.add("is-active");
+    });
+  });
 };

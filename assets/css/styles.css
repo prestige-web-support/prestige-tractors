@@ -1020,3 +1020,96 @@ input, select, textarea { font: inherit; }
    (assets/js/catalogue.js) — .product-card__foot already ends the card
    body, so this just needs top spacing. */
 .product-card__quote { margin-top: 1rem; }
+/* ==========================================================================
+   PHASE — client "silent salesman" light re-skin + new sections
+   Light page-headers/bands, top utility bar, Danny section, brand logos,
+   galleries, collage/gallery categories, Valvoline banner, finance ABN.
+   ========================================================================== */
+
+/* Light page headers (client: strictly no black backgrounds with white text) */
+.page-header { min-height: auto; background: var(--ink-900); border-bottom: 1px solid var(--ink-700); }
+.page-header.is-tall { min-height: auto; }
+.page-header__bg, .page-header::before, .page-header::after { display: none !important; }
+.page-header h1 { color: var(--fg); }
+.page-header__desc { color: var(--ink-300); }
+@media (min-width: 640px) { .page-header .container { padding-top: 9rem; } }
+
+/* Light feature band (photo sits right, dark text on light left) */
+.band { background: var(--ink-900); }
+.band::before { background: linear-gradient(90deg, var(--ink-900), color-mix(in srgb, var(--ink-900) 82%, transparent) 55%, transparent); }
+.band h2 { color: var(--fg); }
+
+/* Give the hero a touch more top room now the header carries a top bar */
+.hero .container { padding-top: 8.5rem; }
+
+/* Top utility bar: email + landline + Danny direct (compact, single row) */
+.topbar { background: var(--ink-900); border-bottom: 1px solid var(--ink-700); font-size: .8125rem; }
+.topbar__row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 2.4rem; }
+.topbar__phones { display: flex; align-items: center; gap: 1.25rem; }
+.topbar__item { display: inline-flex; align-items: center; gap: .4rem; color: var(--ink-200); font-weight: 500; white-space: nowrap; }
+.topbar__item svg { width: .95rem; height: .95rem; color: var(--brand-400); }
+.topbar__item:hover { color: var(--fg); }
+.topbar__item--accent { color: var(--fg); font-weight: 700; }
+.topbar__note { color: var(--ink-400); font-weight: 400; margin-left: .35rem; }
+@media (max-width: 700px) {
+  .topbar__row { justify-content: center; gap: 1rem; }
+  .topbar > .container > .topbar__row > .topbar__item:first-child { display: none; } /* hide email text on small screens */
+  .topbar__phones > .topbar__item:first-child { display: none; }                     /* keep just Danny's number */
+  .topbar__note { display: none; }
+}
+
+/* Locally-owned badge */
+.owned-banner { display: flex; justify-content: center; padding-block: 2.25rem 0; }
+.owned-banner__badge { max-width: 54rem; margin-inline: auto; text-align: center; display: inline-flex; align-items: center; gap: .75rem; padding: 1rem 1.75rem; border-radius: 999px; background: color-mix(in srgb, var(--brand-500) 7%, var(--ink-900)); border: 1px solid color-mix(in srgb, var(--brand-500) 28%, transparent); font-family: var(--font-display); font-size: clamp(1rem, 2.6vw, 1.35rem); color: var(--fg); line-height: 1.3; }
+.owned-banner__badge strong { color: var(--brand-500); }
+.owned-banner__badge svg { width: 1.4rem; height: 1.4rem; color: var(--brand-500); flex-shrink: 0; }
+
+/* Clean white brand-logos section (Mahindra font style = Archivo baseline) */
+.brand-logos { background: #fff; }
+.brand-logos__grid { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--ink-700); border: 1px solid var(--ink-700); border-radius: var(--radius-xl); overflow: hidden; }
+@media (min-width: 768px) { .brand-logos__grid { grid-template-columns: repeat(4, 1fr); } }
+.brand-logos__item { display: flex; align-items: center; justify-content: center; min-height: 7rem; background: #fff; color: #14141a; font-family: var(--font-display); font-weight: 800; text-transform: uppercase; letter-spacing: .03em; font-size: 1.5rem; transition: background .2s, color .2s; }
+.brand-logos__item:hover { background: #faf7f2; color: var(--brand-500); }
+
+/* The Tractor Guy (Danny) */
+.tractor-guy__photo .media-frame { border-radius: var(--radius-2xl); overflow: hidden; }
+.tractor-guy__photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+
+/* Testimonials — italicised farmer quotes */
+.testimonial blockquote { font-style: italic; }
+
+/* Product gallery thumbnails */
+.gallery-thumbs { display: grid; grid-template-columns: repeat(5, 1fr); gap: .5rem; margin-top: .75rem; }
+.gallery-thumb { border: 2px solid transparent; border-radius: var(--radius-md); overflow: hidden; aspect-ratio: 4/3; padding: 0; background: var(--ink-800); cursor: pointer; }
+.gallery-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.gallery-thumb.is-active { border-color: var(--brand-500); }
+.gallery-thumb:hover { border-color: var(--brand-300); }
+
+/* Secondary CTA row on product pages */
+.detail__cta--secondary { margin-top: .75rem; }
+
+/* Category highlight tagline */
+.cat-highlight { display: inline-flex; align-items: center; gap: .5rem; margin-top: 1rem; font-family: var(--font-display); font-size: 1.05rem; color: var(--brand-500); font-weight: 700; }
+.cat-highlight svg { width: 1.15rem; height: 1.15rem; flex-shrink: 0; }
+
+/* Collage / gallery category layouts (Enorossi hay, Woods equipment) */
+.collage { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+@media (min-width: 700px) { .collage { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1000px) { .collage { grid-template-columns: repeat(4, 1fr); } }
+.collage__item { position: relative; margin: 0; border-radius: var(--radius-lg); overflow: hidden; background: var(--ink-850); border: 1px solid var(--ink-700); aspect-ratio: 4/3; }
+.collage__item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s var(--ease); }
+.collage__item--link:hover img { transform: scale(1.05); }
+.collage__cap { position: absolute; left: 0; right: 0; bottom: 0; padding: .85rem 1rem; font-family: var(--font-display); font-weight: 700; color: #fff; background: linear-gradient(0deg, rgba(0,0,0,.82), transparent); font-size: .95rem; }
+
+/* Valvoline stockist banner */
+.valvoline-banner { position: relative; overflow: hidden; isolation: isolate; }
+.valvoline-banner__bg { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; opacity: .16; }
+.valvoline-banner__inner { display: grid; gap: 2rem; align-items: center; }
+@media (min-width: 900px) { .valvoline-banner__inner { grid-template-columns: 1.1fr 1fr; } }
+.valvoline-banner__imgs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.valvoline-banner__imgs img { width: 100%; aspect-ratio: 1; object-fit: contain; background: #fff; border-radius: var(--radius-lg); padding: .75rem; }
+
+/* Finance: with/without ABN note */
+.finance-abn { display: flex; gap: .9rem; align-items: flex-start; padding: 1.25rem 1.5rem; border-radius: var(--radius-lg); margin-bottom: 2rem; }
+.finance-abn svg { width: 1.4rem; height: 1.4rem; color: var(--success); flex-shrink: 0; margin-top: .1rem; }
+.finance-abn strong { color: var(--fg); }

@@ -46,6 +46,9 @@
   "tagline": "Victoria's Trusted Agricultural Equipment Partner",
   "phone": "(03) 5339 2056",
   "phoneHref": "tel:+61353392056",
+  "mobile": "(03) 5339 2056",
+  "mobileHref": "tel:+61353392056",
+  "mobileLabel": "Danny — 7 days",
   "email": "danny@prestigetractors.com.au",
   "emailHref": "mailto:danny@prestigetractors.com.au",
   "addressLine": "206 Burnbank Street, Wendouree, Victoria 3355",
@@ -229,32 +232,6 @@
     },
     "description": "Italian specialists in rotary tillers, power harrows, stone buriers and seedbed-preparation equipment — precision cultivation for horticulture and broadacre.",
     "featured": false
-  },
-  {
-    "slug": "woods",
-    "name": "Woods",
-    "origin": "USA",
-    "category": "Implements & Attachments",
-    "wm": {
-      "w": 800,
-      "up": true,
-      "it": false
-    },
-    "description": "American-built cutting and land-management equipment — rotary cutters, batwing mowers, finish mowers, box scrapers and landscape tools trusted for durability.",
-    "featured": false
-  },
-  {
-    "slug": "valvoline",
-    "name": "Valvoline",
-    "origin": "USA",
-    "category": "Oils & Lubricants",
-    "wm": {
-      "w": 800,
-      "up": true,
-      "it": true
-    },
-    "description": "Premium engine oils, tractor transmission/hydraulic fluids, lubricants and additives — protecting your machinery with genuine Valvoline quality, available in-store.",
-    "featured": false
   }
 ];
 
@@ -271,7 +248,8 @@
       "mahindra",
       "landini"
     ],
-    "description": "From 25hp sub-compacts to 300hp broadacre workhorses. Compact and utility Bobcat tractors, value-driven Mahindra models, and Italian-built McCormick and Landini power — all backed by local parts and servicing."
+    "highlight": "Italian-built McCormick & Landini, 60–310 hp — plus American Bobcat & value-driven Mahindra",
+    "description": "From 25hp sub-compacts to 310hp broadacre workhorses. Italian-built McCormick and Landini power, American Bobcat compact and utility tractors, and value-driven Mahindra — all backed by local parts and servicing."
   },
   {
     "slug": "hay-equipment",
@@ -282,7 +260,9 @@
     "brands": [
       "enorossi"
     ],
-    "description": "Make better hay with Enorossi's world-leading forage range — disc and sickle mowers, rotary rakes, tedders, round and square balers and bale wrappers engineered for clean, efficient harvest."
+    "layout": "collage",
+    "highlight": "Italian built — the Ferrari of the hay & forage world",
+    "description": "Make better hay with Enorossi's world-leading Italian forage range — disc and sickle mowers, rotary rakes, tedders, round and square balers and bale wrappers. Browse the range below and enquire about the machine you need."
   },
   {
     "slug": "sprayers",
@@ -293,6 +273,7 @@
     "brands": [
       "rapidspray"
     ],
+    "highlight": "Australian made — spraying, water cartage & fire units",
     "description": "Australian-made RapidSpray tanks, pumps, field sprayers, water cartage and fire-fighting units for spot spraying, boom application, water transport and property protection."
   },
   {
@@ -303,10 +284,10 @@
     "photoId": "1486262715619-67b85e0b08d3",
     "brands": [
       "dakenag",
-      "muratori",
-      "woods"
+      "muratori"
     ],
-    "description": "Match your tractor to the task with DakenAg, Woods and Muratori implements — slashers, post-hole diggers, rippers, blades, rotary hoes, bale handling, spreaders and loader attachments."
+    "highlight": "Australian & Italian-built implements for every job",
+    "description": "Match your tractor to the task with DakenAg and Muratori implements — slashers, post-hole diggers, rippers, blades, rotary hoes, bale handling, spreaders and loader attachments."
   },
   {
     "slug": "mulchers",
@@ -317,6 +298,7 @@
     "brands": [
       "orsi"
     ],
+    "highlight": "Italian built — flail & forestry mulching",
     "description": "Orsi flail mowers and mulchers for verge, orchard, vineyard and forestry work — from inter-row and side-reach mulchers to heavy-duty forestry machines that clear scrub and saplings."
   },
   {
@@ -328,18 +310,20 @@
     "brands": [
       "grasshopper"
     ],
+    "highlight": "American-built Grasshopper zero-turn mowers",
     "description": "Keep acreage and commercial grounds immaculate with Grasshopper zero-turn mowers — gas, diesel and stand-on models built for professional cut quality and all-day comfort."
   },
   {
     "slug": "utility-vehicles",
-    "name": "Utility Vehicles",
+    "name": "Utility Vehicles & Toolcats",
     "icon": "truck",
     "blurb": "Side-by-sides & Toolcat carriers",
     "photoId": "assets/images/Bobcat Utility Vehicles/Bobcat UV34 XL.jpg",
     "brands": [
       "bobcat"
     ],
-    "description": "Move people, tools and loads across the property with Bobcat utility vehicles and the versatile UW56 Toolcat — rugged, capable and ready for farm, estate and worksite duties."
+    "highlight": "Premium American-built Bobcat quality",
+    "description": "Move people, tools and loads across the property with Bobcat utility vehicles and the versatile UW56 Toolcat — a tractor-cross-UTV hybrid with a front loader. Rugged, capable and premium American build."
   },
   {
     "slug": "turf-care",
@@ -350,18 +334,30 @@
     "brands": [
       "bobcat"
     ],
+    "highlight": "Premium American-built Bobcat turf equipment",
     "description": "Professional Bobcat turf renovation equipment — core aerators, dethatchers, overseeders and sod cutters for parks, sports fields, estates and turf contractors."
   },
   {
-    "slug": "oils-lubricants",
-    "name": "Oils & Lubricants",
-    "icon": "droplet",
-    "blurb": "Engine, hydraulic & tractor oils",
-    "photoId": "assets/images/Vavoline Oils/diesel-engine-oil-range.webp",
-    "brands": [
-      "valvoline"
+    "slug": "woods-equipment",
+    "name": "Woods Equipment",
+    "icon": "package",
+    "blurb": "USA-built slashers & cutting gear",
+    "photoId": "assets/images/Woods Equipment/1.png",
+    "brands": [],
+    "layout": "gallery",
+    "highlight": "USA built — premium American cutting equipment",
+    "gallery": [
+      "assets/images/Woods Equipment/1.png",
+      "assets/images/Woods Equipment/2.png",
+      "assets/images/Woods Equipment/3.png",
+      "assets/images/Woods Equipment/4.png",
+      "assets/images/Woods Equipment/5.png",
+      "assets/images/Woods Equipment/6.png",
+      "assets/images/Woods Equipment/7.png",
+      "assets/images/Woods Equipment/8.png",
+      "assets/images/Woods Equipment/Slasher-diagram-2.jpg"
     ],
-    "description": "Genuine Valvoline oils and lubricants for your machinery — diesel engine oils, universal tractor transmission/hydraulic fluids, hydraulic oils, additives and bulk drums, available in-store."
+    "description": "American-built Woods cutting and land-management equipment — rotary cutters, finishing mowers and land-clearing gear, engineered so there's no windrow mess. Superior US build. See the range below and email us about the machine you're after."
   }
 ];
 
@@ -540,6 +536,12 @@
     "hp": 60,
     "featured": false,
     "photoId": "assets/images/McCormick Tractors/1st - McCormick S-MAX 60/1.jpg",
+    "gallery": [
+      "assets/images/McCormick Tractors/1st - McCormick S-MAX 60/1.jpg",
+      "assets/images/McCormick Tractors/1st - McCormick S-MAX 60/2.jpg",
+      "assets/images/McCormick Tractors/1st - McCormick S-MAX 60/3.jpg",
+      "assets/images/McCormick Tractors/1st - McCormick S-MAX 60/4.jpg"
+    ],
     "brochure": "assets/images/McCormick Tractors/1st - McCormick S-MAX 60/Tractor_Specifications.pdf",
     "tagline": "Compact utility power with genuine capability.",
     "summary": "The McCormick S-MAX 60 is a nimble utility tractor built for mixed farms, livestock and property work — comfortable, easy to operate and Italian-engineered.",
@@ -594,6 +596,12 @@
     "hp": 75,
     "featured": false,
     "photoId": "assets/images/McCormick Tractors/2nd - McCormick S-MAX 75/1.jpg",
+    "gallery": [
+      "assets/images/McCormick Tractors/2nd - McCormick S-MAX 75/1.jpg",
+      "assets/images/McCormick Tractors/2nd - McCormick S-MAX 75/2.jpg",
+      "assets/images/McCormick Tractors/2nd - McCormick S-MAX 75/3.jpg",
+      "assets/images/McCormick Tractors/2nd - McCormick S-MAX 75/4.jpg"
+    ],
     "tagline": "Versatile mid-utility for the working farm.",
     "summary": "The McCormick S-MAX 75 steps up horsepower and hydraulic capacity for busy mixed-farming operations, while staying compact and simple to run.",
     "description": "With more grunt for loader and implement work, the S-MAX 75 is a versatile all-rounder for farms that need to do a bit of everything. A comfortable cab, strong hydraulics and proven McCormick driveline make it a dependable daily workhorse.",
@@ -647,6 +655,13 @@
     "hp": 85,
     "featured": false,
     "photoId": "assets/images/McCormick Tractors/3rd - McCormick B-MAX 85/1.jpg",
+    "gallery": [
+      "assets/images/McCormick Tractors/3rd - McCormick B-MAX 85/1.jpg",
+      "assets/images/McCormick Tractors/3rd - McCormick B-MAX 85/2.jpg",
+      "assets/images/McCormick Tractors/3rd - McCormick B-MAX 85/3.jpg",
+      "assets/images/McCormick Tractors/3rd - McCormick B-MAX 85/4.jpg",
+      "assets/images/McCormick Tractors/3rd - McCormick B-MAX 85/5.jpg"
+    ],
     "brochure": "assets/images/McCormick Tractors/3rd - McCormick B-MAX 85/Tractor_Specifications.pdf",
     "tagline": "Specialist compact for orchards & vineyards.",
     "summary": "The McCormick B-MAX 85 is a narrow, agile specialist tractor built for orchard, vineyard and horticultural rows where width and turning circle matter.",
@@ -701,6 +716,12 @@
     "hp": 90,
     "featured": false,
     "photoId": "assets/images/McCormick Tractors/4th - McCormick S-MAX 90R/1.jpg",
+    "gallery": [
+      "assets/images/McCormick Tractors/4th - McCormick S-MAX 90R/1.jpg",
+      "assets/images/McCormick Tractors/4th - McCormick S-MAX 90R/2.jpg",
+      "assets/images/McCormick Tractors/4th - McCormick S-MAX 90R/3.jpg",
+      "assets/images/McCormick Tractors/4th - McCormick S-MAX 90R/4.jpg"
+    ],
     "brochure": "assets/images/McCormick Tractors/4th - McCormick S-MAX 90R/Tractor_Specifications.pdf",
     "tagline": "90hp all-rounder, open-station value.",
     "summary": "The McCormick S-MAX 90R pairs 90hp-class performance with a robust ROPS open-station configuration for operators who want capability without a cab.",
@@ -755,6 +776,12 @@
     "hp": 90,
     "featured": false,
     "photoId": "assets/images/McCormick Tractors/5th - McCormick S-MAX 90C/1.jpg",
+    "gallery": [
+      "assets/images/McCormick Tractors/5th - McCormick S-MAX 90C/1.jpg",
+      "assets/images/McCormick Tractors/5th - McCormick S-MAX 90C/2.jpg",
+      "assets/images/McCormick Tractors/5th - McCormick S-MAX 90C/3.jpg",
+      "assets/images/McCormick Tractors/5th - McCormick S-MAX 90C/4.jpg"
+    ],
     "brochure": "assets/images/McCormick Tractors/5th - McCormick S-MAX 90C/Tractor_Specifications.pdf",
     "tagline": "90hp with all-day cab comfort.",
     "summary": "The McCormick S-MAX 90C brings 90hp-class performance together with a quiet, climate-comfortable cab for longer days in the seat.",
@@ -809,6 +836,13 @@
     "hp": 110,
     "featured": false,
     "photoId": "assets/images/McCormick Tractors/6th - McCormick B-MAX 110/1.jpg",
+    "gallery": [
+      "assets/images/McCormick Tractors/6th - McCormick B-MAX 110/1.jpg",
+      "assets/images/McCormick Tractors/6th - McCormick B-MAX 110/2.jpg",
+      "assets/images/McCormick Tractors/6th - McCormick B-MAX 110/3.jpg",
+      "assets/images/McCormick Tractors/6th - McCormick B-MAX 110/4.jpg",
+      "assets/images/McCormick Tractors/6th - McCormick B-MAX 110/5.jpg"
+    ],
     "brochure": "assets/images/McCormick Tractors/6th - McCormick B-MAX 110/Tractor_Specifications.pdf",
     "tagline": "Specialist power for demanding rows.",
     "summary": "The McCormick B-MAX 110 delivers specialist tractor agility with the extra horsepower needed for heavier orchard, vineyard and horticultural work.",
@@ -863,6 +897,13 @@
     "hp": 110,
     "featured": false,
     "photoId": "assets/images/McCormick Tractors/7th - McCormick F.110/1.jpg",
+    "gallery": [
+      "assets/images/McCormick Tractors/7th - McCormick F.110/1.jpg",
+      "assets/images/McCormick Tractors/7th - McCormick F.110/2.jpg",
+      "assets/images/McCormick Tractors/7th - McCormick F.110/3.jpg",
+      "assets/images/McCormick Tractors/7th - McCormick F.110/4.jpg",
+      "assets/images/McCormick Tractors/7th - McCormick F.110/5.jpg"
+    ],
     "brochure": "assets/images/McCormick Tractors/7th - McCormick F.110/Tractor_Specifications.pdf",
     "tagline": "Purpose-built fruit & vineyard specialist.",
     "summary": "The McCormick F.110 is a dedicated fruit and vineyard tractor — narrow, low and agile, with the power and hydraulics for intensive specialty-crop work.",
@@ -917,6 +958,13 @@
     "hp": 120,
     "featured": false,
     "photoId": "assets/images/McCormick Tractors/8th - McCormick X4.120TM/1.jpg",
+    "gallery": [
+      "assets/images/McCormick Tractors/8th - McCormick X4.120TM/1.jpg",
+      "assets/images/McCormick Tractors/8th - McCormick X4.120TM/2.jpg",
+      "assets/images/McCormick Tractors/8th - McCormick X4.120TM/3.jpg",
+      "assets/images/McCormick Tractors/8th - McCormick X4.120TM/4.jpg",
+      "assets/images/McCormick Tractors/8th - McCormick X4.120TM/5.jpg"
+    ],
     "brochure": "assets/images/McCormick Tractors/8th - McCormick X4.120TM/Tractor_Specifications.pdf",
     "tagline": "Compact-class power with premium comfort.",
     "summary": "The McCormick X4.120TM delivers up to 120hp-class performance in a compact, versatile chassis with a refined operator environment.",
@@ -971,6 +1019,13 @@
     "hp": null,
     "featured": false,
     "photoId": "assets/images/McCormick Tractors/9th - McCormick D-MAX 125/1.jpg",
+    "gallery": [
+      "assets/images/McCormick Tractors/9th - McCormick D-MAX 125/1.jpg",
+      "assets/images/McCormick Tractors/9th - McCormick D-MAX 125/2.jpg",
+      "assets/images/McCormick Tractors/9th - McCormick D-MAX 125/3.jpg",
+      "assets/images/McCormick Tractors/9th - McCormick D-MAX 125/4.jpg",
+      "assets/images/McCormick Tractors/9th - McCormick D-MAX 125/6.jpg"
+    ],
     "brochure": "assets/images/McCormick Tractors/9th - McCormick D-MAX 125/Tractor_Specifications.pdf",
     "tagline": "Versatile utility, Italian-engineered.",
     "summary": "The McCormick D-MAX 125 is a versatile utility tractor suited to a wide range of everyday farm and property tasks.",
@@ -1025,6 +1080,13 @@
     "hp": null,
     "featured": false,
     "photoId": "assets/images/McCormick Tractors/10th - McCormick G-MAX 135/1.jpg",
+    "gallery": [
+      "assets/images/McCormick Tractors/10th - McCormick G-MAX 135/1.jpg",
+      "assets/images/McCormick Tractors/10th - McCormick G-MAX 135/2.jpg",
+      "assets/images/McCormick Tractors/10th - McCormick G-MAX 135/3.jpg",
+      "assets/images/McCormick Tractors/10th - McCormick G-MAX 135/4.jpg",
+      "assets/images/McCormick Tractors/10th - McCormick G-MAX 135/5.jpg"
+    ],
     "brochure": "assets/images/McCormick Tractors/10th - McCormick G-MAX 135/Tractor_Specifications.pdf",
     "tagline": "Broadacre-ready mid-to-high horsepower.",
     "summary": "The McCormick G-MAX 135 brings higher-horsepower performance and cab comfort to broadacre and mixed farming operations.",
@@ -1079,6 +1141,13 @@
     "hp": null,
     "featured": false,
     "photoId": "assets/images/McCormick Tractors/11th - McCormick X6.415/1.jpg",
+    "gallery": [
+      "assets/images/McCormick Tractors/11th - McCormick X6.415/1.jpg",
+      "assets/images/McCormick Tractors/11th - McCormick X6.415/2.jpg",
+      "assets/images/McCormick Tractors/11th - McCormick X6.415/3.jpg",
+      "assets/images/McCormick Tractors/11th - McCormick X6.415/4.jpg",
+      "assets/images/McCormick Tractors/11th - McCormick X6.415/5.jpg"
+    ],
     "brochure": "assets/images/McCormick Tractors/11th - McCormick X6.415/Tractor_Specifications.pdf",
     "tagline": "Efficient four-cylinder power, premium feel.",
     "summary": "The McCormick X6.415 delivers efficient four-cylinder horsepower with premium transmission and cab options for productive mixed-farming work.",
@@ -1133,6 +1202,13 @@
     "hp": null,
     "featured": false,
     "photoId": "assets/images/McCormick Tractors/12th - McCormick G-MAX 165/1.jpg",
+    "gallery": [
+      "assets/images/McCormick Tractors/12th - McCormick G-MAX 165/1.jpg",
+      "assets/images/McCormick Tractors/12th - McCormick G-MAX 165/2.jpg",
+      "assets/images/McCormick Tractors/12th - McCormick G-MAX 165/3.png",
+      "assets/images/McCormick Tractors/12th - McCormick G-MAX 165/4.jpg",
+      "assets/images/McCormick Tractors/12th - McCormick G-MAX 165/5.jpg"
+    ],
     "brochure": "assets/images/McCormick Tractors/12th - McCormick G-MAX 165/Tractor_Specifications.pdf",
     "tagline": "High-horsepower muscle for heavy work.",
     "summary": "The McCormick G-MAX 165 is a high-horsepower workhorse for heavy tillage, transport and broadacre operations that demand serious pulling power.",
@@ -1187,6 +1263,13 @@
     "hp": null,
     "featured": false,
     "photoId": "assets/images/McCormick Tractors/13th - McCormick X7.616/1.jpg",
+    "gallery": [
+      "assets/images/McCormick Tractors/13th - McCormick X7.616/1.jpg",
+      "assets/images/McCormick Tractors/13th - McCormick X7.616/2.jpg",
+      "assets/images/McCormick Tractors/13th - McCormick X7.616/3.jpg",
+      "assets/images/McCormick Tractors/13th - McCormick X7.616/4.jpg",
+      "assets/images/McCormick Tractors/13th - McCormick X7.616/5.jpg"
+    ],
     "brochure": "assets/images/McCormick Tractors/13th - McCormick X7.616/Tractor_Specifications.pdf",
     "tagline": "Premium six-cylinder performance.",
     "summary": "The McCormick X7.616 brings refined six-cylinder power, advanced transmission technology and premium cab comfort to serious farming operations.",
@@ -1241,6 +1324,13 @@
     "hp": null,
     "featured": false,
     "photoId": "assets/images/McCormick Tractors/14th - McCormick X7.660/1.jpg",
+    "gallery": [
+      "assets/images/McCormick Tractors/14th - McCormick X7.660/1.jpg",
+      "assets/images/McCormick Tractors/14th - McCormick X7.660/2.jpg",
+      "assets/images/McCormick Tractors/14th - McCormick X7.660/3.jpg",
+      "assets/images/McCormick Tractors/14th - McCormick X7.660/4.jpg",
+      "assets/images/McCormick Tractors/14th - McCormick X7.660/5.jpg"
+    ],
     "brochure": "assets/images/McCormick Tractors/14th - McCormick X7.660/Tractor_Specifications.pdf",
     "tagline": "Flagship six-cylinder power & refinement.",
     "summary": "The McCormick X7.660 sits near the top of the X7 range, delivering high six-cylinder horsepower with premium comfort and technology for the most demanding operations.",
@@ -1295,6 +1385,13 @@
     "hp": null,
     "featured": false,
     "photoId": "assets/images/McCormick Tractors/15th - McCormick X7.623/1.png",
+    "gallery": [
+      "assets/images/McCormick Tractors/15th - McCormick X7.623/1.png",
+      "assets/images/McCormick Tractors/15th - McCormick X7.623/2.png",
+      "assets/images/McCormick Tractors/15th - McCormick X7.623/3.png",
+      "assets/images/McCormick Tractors/15th - McCormick X7.623/4.jpg",
+      "assets/images/McCormick Tractors/15th - McCormick X7.623/5.png"
+    ],
     "brochure": "assets/images/McCormick Tractors/15th - McCormick X7.623/Tractor_Specifications.pdf",
     "tagline": "VT-Drive continuously variable performance.",
     "summary": "The McCormick X7.623 pairs premium six-cylinder power with continuously variable transmission technology for smooth, efficient, all-day productivity.",
@@ -1349,6 +1446,13 @@
     "hp": null,
     "featured": true,
     "photoId": "assets/images/McCormick Tractors/16th - McCormick X8.680/1.jpg",
+    "gallery": [
+      "assets/images/McCormick Tractors/16th - McCormick X8.680/1.jpg",
+      "assets/images/McCormick Tractors/16th - McCormick X8.680/2.jpg",
+      "assets/images/McCormick Tractors/16th - McCormick X8.680/3.jpg",
+      "assets/images/McCormick Tractors/16th - McCormick X8.680/4.jpg",
+      "assets/images/McCormick Tractors/16th - McCormick X8.680/5.jpg"
+    ],
     "brochure": "assets/images/McCormick Tractors/16th - McCormick X8.680/Tractor_Specifications.pdf",
     "tagline": "The flagship — maximum power & technology.",
     "summary": "The McCormick X8.680 is the flagship of the range, delivering top-tier horsepower, premium technology and exceptional comfort for the largest broadacre operations.",
@@ -1402,6 +1506,13 @@
     "category": "tractors",
     "hp": 25,
     "photoId": "assets/images/Bobcat Tractors/CT1025/1.jpg",
+    "gallery": [
+      "assets/images/Bobcat Tractors/CT1025/1.jpg",
+      "assets/images/Bobcat Tractors/CT1025/2.jpg",
+      "assets/images/Bobcat Tractors/CT1025/3.jpg",
+      "assets/images/Bobcat Tractors/CT1025/4.jpg",
+      "assets/images/Bobcat Tractors/CT1025/5.jpg"
+    ],
     "brochure": "assets/images/Bobcat Tractors/CT1025/Tractor_Specifications.pdf",
     "tagline": "Sub-compact power for smaller properties.",
     "summary": "The Bobcat CT1025 is a sub-compact tractor that packs genuine capability into an easy-to-operate, easy-to-store package for smaller acreage.",
@@ -1456,6 +1567,13 @@
     "category": "tractors",
     "hp": 40,
     "photoId": "assets/images/Bobcat Tractors/CT2040/1.jpg",
+    "gallery": [
+      "assets/images/Bobcat Tractors/CT2040/1.jpg",
+      "assets/images/Bobcat Tractors/CT2040/2.jpg",
+      "assets/images/Bobcat Tractors/CT2040/3.jpg",
+      "assets/images/Bobcat Tractors/CT2040/4.jpg",
+      "assets/images/Bobcat Tractors/CT2040/5.jpg"
+    ],
     "brochure": "assets/images/Bobcat Tractors/CT2040/Tractor_Specifications.pdf",
     "tagline": "Compact capability for properties & farms.",
     "summary": "The Bobcat CT2040 compact tractor delivers dependable power for loader work, mowing and implements on properties and small farms.",
@@ -1510,6 +1628,13 @@
     "category": "tractors",
     "hp": 45,
     "photoId": "assets/images/Bobcat Tractors/CT2045/1.jpg",
+    "gallery": [
+      "assets/images/Bobcat Tractors/CT2045/1.jpg",
+      "assets/images/Bobcat Tractors/CT2045/2.jpg",
+      "assets/images/Bobcat Tractors/CT2045/3.jpg",
+      "assets/images/Bobcat Tractors/CT2045/4.jpg",
+      "assets/images/Bobcat Tractors/CT2045/5.jpg"
+    ],
     "brochure": "assets/images/Bobcat Tractors/CT2045/Tractor_Specifications.pdf",
     "tagline": "Mid-compact power with strong hydraulics.",
     "summary": "The Bobcat CT2045 brings extra horsepower and hydraulic capacity for owners tackling heavier loader and implement work.",
@@ -1564,6 +1689,13 @@
     "category": "tractors",
     "hp": 55,
     "photoId": "assets/images/Bobcat Tractors/CT2055/1.jpg",
+    "gallery": [
+      "assets/images/Bobcat Tractors/CT2055/1.jpg",
+      "assets/images/Bobcat Tractors/CT2055/2.jpg",
+      "assets/images/Bobcat Tractors/CT2055/3.jpg",
+      "assets/images/Bobcat Tractors/CT2055/4.jpg",
+      "assets/images/Bobcat Tractors/CT2055/5.jpg"
+    ],
     "brochure": "assets/images/Bobcat Tractors/CT2055/Tractor_Specifications.pdf",
     "tagline": "Top-of-range compact muscle.",
     "summary": "The Bobcat CT2055 tops the compact CT range with 55hp-class power for the heaviest loader, mowing and implement tasks.",
@@ -1618,6 +1750,11 @@
     "category": "tractors",
     "hp": 70,
     "photoId": "assets/images/Bobcat Tractors/UT6070/1.jpg",
+    "gallery": [
+      "assets/images/Bobcat Tractors/UT6070/1.jpg",
+      "assets/images/Bobcat Tractors/UT6070/2.jpg",
+      "assets/images/Bobcat Tractors/UT6070/3.jpg"
+    ],
     "brochure": "assets/images/Bobcat Tractors/UT6070/Tractor_Specifications.pdf",
     "tagline": "Utility-class power for serious work.",
     "summary": "The Bobcat UT6070 utility tractor delivers 70hp-class performance for farms and contractors needing genuine daily capability.",
@@ -1672,6 +1809,11 @@
     "category": "tractors",
     "hp": 80,
     "photoId": "assets/images/Bobcat Tractors/UT6080/1.jpg",
+    "gallery": [
+      "assets/images/Bobcat Tractors/UT6080/1.jpg",
+      "assets/images/Bobcat Tractors/UT6080/2.jpg",
+      "assets/images/Bobcat Tractors/UT6080/3.jpg"
+    ],
     "brochure": "assets/images/Bobcat Tractors/UT6080/Tractor_Specifications.pdf",
     "tagline": "Higher-horsepower utility workhorse.",
     "summary": "The Bobcat UT6080 brings 80hp-class utility performance for demanding farm and contracting operations.",
@@ -1726,6 +1868,13 @@
     "category": "tractors",
     "hp": 70,
     "photoId": "assets/images/Bobcat Tractors/UT6570/1.jpg",
+    "gallery": [
+      "assets/images/Bobcat Tractors/UT6570/1.jpg",
+      "assets/images/Bobcat Tractors/UT6570/2.jpg",
+      "assets/images/Bobcat Tractors/UT6570/3.jpg",
+      "assets/images/Bobcat Tractors/UT6570/4.jpg",
+      "assets/images/Bobcat Tractors/UT6570/5.jpg"
+    ],
     "brochure": "assets/images/Bobcat Tractors/UT6570/Tractor_Specifications.pdf",
     "tagline": "Premium utility with enhanced comfort.",
     "summary": "The Bobcat UT6570 pairs 70hp-class utility power with an enhanced operator environment for longer, more productive days.",
@@ -1780,6 +1929,13 @@
     "category": "tractors",
     "hp": 80,
     "photoId": "assets/images/Bobcat Tractors/UT6580/1.jpg",
+    "gallery": [
+      "assets/images/Bobcat Tractors/UT6580/1.jpg",
+      "assets/images/Bobcat Tractors/UT6580/2.jpg",
+      "assets/images/Bobcat Tractors/UT6580/3.jpg",
+      "assets/images/Bobcat Tractors/UT6580/4.jpg",
+      "assets/images/Bobcat Tractors/UT6580/5.jpg"
+    ],
     "brochure": "assets/images/Bobcat Tractors/UT6580/Tractor_Specifications.pdf",
     "tagline": "Flagship utility power & comfort.",
     "summary": "The Bobcat UT6580 tops the utility range with 80hp-class performance and premium comfort for the most demanding operations.",
@@ -1834,6 +1990,11 @@
     "category": "tractors",
     "hp": 24,
     "photoId": "assets/images/Mahindra Tractors/1st - OJA 1123 HST/1123-active.jpg",
+    "gallery": [
+      "assets/images/Mahindra Tractors/1st - OJA 1123 HST/1123-active.jpg",
+      "assets/images/Mahindra Tractors/1st - OJA 1123 HST/Mahindra-OJA-1123.jpg",
+      "assets/images/Mahindra Tractors/1st - OJA 1123 HST/Screenshot 2026-07-02 141656.png"
+    ],
     "tagline": "Next-gen sub-compact, packed with technology.",
     "summary": "The Mahindra OJA 1123 HST is a modern sub-compact tractor combining lightweight agility with smart features and easy hydrostatic operation.",
     "description": "Part of Mahindra's advanced OJA range, the 1123 HST delivers surprising capability in a compact, tech-forward package. Ideal for lifestyle blocks, it makes mowing, loader work and light tasks effortless with hydrostatic drive and modern ergonomics.",
@@ -1887,6 +2048,11 @@
     "category": "tractors",
     "hp": 26,
     "photoId": "assets/images/Mahindra Tractors/2nd - OJA 1126 HST/1126-active.jpg",
+    "gallery": [
+      "assets/images/Mahindra Tractors/2nd - OJA 1126 HST/1126-active.jpg",
+      "assets/images/Mahindra Tractors/2nd - OJA 1126 HST/Mahindra-OJA-1126.jpg",
+      "assets/images/Mahindra Tractors/2nd - OJA 1126 HST/Screenshot 2026-07-02 142035.png"
+    ],
     "tagline": "Compact capability with smart technology.",
     "summary": "The Mahindra OJA 1126 HST offers a step up in capability within the modern OJA sub-compact family, with hydrostatic ease and smart features.",
     "description": "The OJA 1126 HST brings a little more power to Mahindra's advanced sub-compact range. With hydrostatic drive, four-wheel drive and modern ergonomics, it's an easy, capable choice for property owners and hobby farmers.",
@@ -1940,6 +2106,11 @@
     "category": "tractors",
     "hp": 26,
     "photoId": "assets/images/Mahindra Tractors/3rd - OJA 2126 HST/2126-active.jpg",
+    "gallery": [
+      "assets/images/Mahindra Tractors/3rd - OJA 2126 HST/2126-active.jpg",
+      "assets/images/Mahindra Tractors/3rd - OJA 2126 HST/Mahindra-OJA-2126.jpg",
+      "assets/images/Mahindra Tractors/3rd - OJA 2126 HST/Screenshot 2026-07-02 144724.png"
+    ],
     "tagline": "Compact-class OJA with added versatility.",
     "summary": "The Mahindra OJA 2126 HST moves into the compact class of the OJA range, offering more versatility for property and small-farm work.",
     "description": "The OJA 2126 HST steps up to the compact class, blending modern technology with genuine working capability. Hydrostatic drive, four-wheel drive and strong hydraulics make it a versatile all-rounder for acreage owners.",
@@ -1993,6 +2164,12 @@
     "category": "tractors",
     "hp": 24,
     "photoId": "assets/images/Mahindra Tractors/4th - Jivo/JIVO.jpg",
+    "gallery": [
+      "assets/images/Mahindra Tractors/4th - Jivo/JIVO.jpg",
+      "assets/images/Mahindra Tractors/4th - Jivo/JIVO-790x580-with-Sprayer-1.jpg",
+      "assets/images/Mahindra Tractors/4th - Jivo/Jivo-1.jpg",
+      "assets/images/Mahindra Tractors/4th - Jivo/Jivo-2.jpg"
+    ],
     "tagline": "Lightweight 4WD for orchards & small farms.",
     "summary": "The Mahindra Jivo is a compact, lightweight four-wheel-drive tractor purpose-built for orchards, vineyards and small-farm work.",
     "description": "The nimble Jivo is designed for tight, specialty applications. Its narrow build, low weight and four-wheel drive make it ideal for orchard spraying, mowing and light haulage where a bigger tractor simply won't fit.",
@@ -2046,6 +2223,12 @@
     "category": "tractors",
     "hp": 28,
     "photoId": "assets/images/Mahindra Tractors/5th - Max28/1.jpg",
+    "gallery": [
+      "assets/images/Mahindra Tractors/5th - Max28/1.jpg",
+      "assets/images/Mahindra Tractors/5th - Max28/2.jpg",
+      "assets/images/Mahindra Tractors/5th - Max28/3.jpg",
+      "assets/images/Mahindra Tractors/5th - Max28/4.jpg"
+    ],
     "tagline": "Compact all-rounder for everyday work.",
     "summary": "The Mahindra Max 28 is a versatile compact tractor built for mowing, loader work and general property maintenance.",
     "description": "The Max 28 packs dependable four-wheel-drive capability into a compact, easy-to-run package. With loader-ready hydraulics and simple operation, it's a practical choice for acreage owners and hobby farmers.",
@@ -2099,6 +2282,12 @@
     "category": "tractors",
     "hp": 41,
     "photoId": "assets/images/Mahindra Tractors/6th - 4025/1.jpg",
+    "gallery": [
+      "assets/images/Mahindra Tractors/6th - 4025/1.jpg",
+      "assets/images/Mahindra Tractors/6th - 4025/2.jpg",
+      "assets/images/Mahindra Tractors/6th - 4025/3.jpg",
+      "assets/images/Mahindra Tractors/6th - 4025/4.jpg"
+    ],
     "tagline": "Rugged, no-nonsense utility value.",
     "summary": "The Mahindra 4025 is a rugged, straightforward utility tractor delivering exceptional value and Mahindra's renowned reliability.",
     "description": "Built simple and built tough, the 4025 is a dependable utility tractor for farms that value reliability and low running costs. Its robust driveline and easy serviceability make it a proven daily workhorse.",
@@ -2152,6 +2341,12 @@
     "category": "tractors",
     "hp": 50,
     "photoId": "assets/images/Mahindra Tractors/7th - 3650/1.jpg",
+    "gallery": [
+      "assets/images/Mahindra Tractors/7th - 3650/1.jpg",
+      "assets/images/Mahindra Tractors/7th - 3650/2.png",
+      "assets/images/Mahindra Tractors/7th - 3650/3.jpg",
+      "assets/images/Mahindra Tractors/7th - 3650/4.jpg"
+    ],
     "tagline": "Dependable mid-utility workhorse.",
     "summary": "The Mahindra 3650 is a capable mid-utility tractor built for mixed farming, livestock and everyday property work.",
     "description": "The 3650 delivers reliable 50hp-class performance with the rugged simplicity Mahindra is famous for. Strong hydraulics and an easy-to-operate driveline make it a versatile, cost-effective all-rounder.",
@@ -2205,6 +2400,13 @@
     "category": "tractors",
     "hp": 60,
     "photoId": "assets/images/Mahindra Tractors/8th - 6060/1.png",
+    "gallery": [
+      "assets/images/Mahindra Tractors/8th - 6060/1.png",
+      "assets/images/Mahindra Tractors/8th - 6060/2.jpg",
+      "assets/images/Mahindra Tractors/8th - 6060/3.png",
+      "assets/images/Mahindra Tractors/8th - 6060/4.jpg",
+      "assets/images/Mahindra Tractors/8th - 6060/5.jpg"
+    ],
     "tagline": "60hp value with genuine capability.",
     "summary": "The Mahindra 6060 delivers 60hp-class performance and strong hydraulics at outstanding value for working farms.",
     "description": "The 6060 is a robust utility tractor that punches above its price. With 60hp-class power, capable hydraulics and Mahindra's proven reliability, it's ready for loader work, tillage and daily farm duties.",
@@ -2258,6 +2460,11 @@
     "category": "tractors",
     "hp": 75,
     "photoId": "assets/images/Mahindra Tractors/9th - 6075/1.jpg",
+    "gallery": [
+      "assets/images/Mahindra Tractors/9th - 6075/1.jpg",
+      "assets/images/Mahindra Tractors/9th - 6075/2.jpg",
+      "assets/images/Mahindra Tractors/9th - 6075/Mahindra-6075-Tractor-hero.png"
+    ],
     "tagline": "75hp utility power, built tough.",
     "summary": "The Mahindra 6075 brings 75hp-class capability to farms needing more power for loader and implement work.",
     "description": "The 6075 steps up horsepower and hydraulic capacity while retaining Mahindra's rugged simplicity and value. A dependable choice for mixed farming, livestock and contracting.",
@@ -2311,6 +2518,10 @@
     "category": "tractors",
     "hp": 80,
     "photoId": "assets/images/Mahindra Tractors/10th - 6080/6080_780_0342.jpg",
+    "gallery": [
+      "assets/images/Mahindra Tractors/10th - 6080/6080_780_0342.jpg",
+      "assets/images/Mahindra Tractors/10th - 6080/6080_780_0388.jpg"
+    ],
     "tagline": "80hp workhorse for demanding farms.",
     "summary": "The Mahindra 6080 delivers 80hp-class utility performance with the strength and value Mahindra is known for.",
     "description": "The 6080 is a serious utility tractor built for demanding daily work. Strong power, robust hydraulics and proven reliability make it an excellent-value choice for farms that need capability without the premium price tag.",
@@ -2364,6 +2575,12 @@
     "category": "tractors",
     "hp": null,
     "photoId": "assets/images/Mahindra Tractors/11th - 7590/Mahindra-Tractor129.jpg",
+    "gallery": [
+      "assets/images/Mahindra Tractors/11th - 7590/Mahindra-Tractor129.jpg",
+      "assets/images/Mahindra Tractors/11th - 7590/7580.png",
+      "assets/images/Mahindra Tractors/11th - 7590/Mahindra-Tractor131.jpg",
+      "assets/images/Mahindra Tractors/11th - 7590/Mahindra-Tractor1601.jpg"
+    ],
     "tagline": "High-horsepower value flagship.",
     "summary": "The Mahindra 7590 sits at the top of the utility range, delivering high-horsepower capability and cab comfort at outstanding value.",
     "description": "The 7590 brings serious horsepower and hydraulic capacity to large properties and contracting operations. With a comfortable cab and Mahindra's proven durability, it's a high-value option for demanding, high-hour work.",
@@ -2417,6 +2634,12 @@
     "category": "tractors",
     "hp": 90,
     "photoId": "assets/images/Landini Tractors/Landini REX 90/Landini_REX_90_ROPS_Gallery_Image1.jpg",
+    "gallery": [
+      "assets/images/Landini Tractors/Landini REX 90/Landini_REX_90_ROPS_Gallery_Image1.jpg",
+      "assets/images/Landini Tractors/Landini REX 90/Landini_REX_90_ROPS_Gallery_Image2.jpg",
+      "assets/images/Landini Tractors/Landini REX 90/Landini_REX_90_ROPS_Gallery_Image6.jpg",
+      "assets/images/Landini Tractors/Landini REX 90/Landini_REX_90_ROPS_Gallery_Image8.jpg"
+    ],
     "tagline": "Specialist agility for orchards & vineyards.",
     "summary": "The Landini REX 90 is a versatile specialist tractor built for orchards, vineyards and horticulture, combining a compact profile with genuine capability.",
     "description": "Italian-built for specialty crops, the REX 90 threads through the tightest rows while delivering the power and hydraulics needed for spraying, mowing and cultivation. Available in ROPS configuration for low-clearance work.",
@@ -2470,6 +2693,9 @@
     "category": "tractors",
     "hp": 110,
     "photoId": "assets/images/Landini Tractors/Landini REX 110/Landini_REX_110_CAB_Gallery_Image1.jpg",
+    "gallery": [
+      "assets/images/Landini Tractors/Landini REX 110/Landini_REX_110_CAB_Gallery_Image1.jpg"
+    ],
     "tagline": "Premium specialist power with cab comfort.",
     "summary": "The Landini REX 110 pairs 110hp-class specialist capability with a comfortable enclosed cab for demanding orchard and vineyard work.",
     "description": "The cab-equipped REX 110 brings premium comfort to specialty-crop farming. Its narrow build and tight turning circle keep it productive in confined rows, while strong hydraulics and horsepower handle heavier tasks with ease.",
@@ -2523,6 +2749,12 @@
     "category": "tractors",
     "hp": 80,
     "photoId": "assets/images/Landini Tractors/Landini REX 3-080 LP/Landini_REX_3-080_CAB_LP_Gallery_Image4 (1).jpg",
+    "gallery": [
+      "assets/images/Landini Tractors/Landini REX 3-080 LP/Landini_REX_3-080_CAB_LP_Gallery_Image4 (1).jpg",
+      "assets/images/Landini Tractors/Landini REX 3-080 LP/Landini_REX_3-080_CAB_LP_Gallery_Image5.jpg",
+      "assets/images/Landini Tractors/Landini REX 3-080 LP/Landini_REX_3-080_CAB_LP_Gallery_Image6.jpg",
+      "assets/images/Landini Tractors/Landini REX 3-080 LP/Landini_REX_3-080_CAB_LP_Gallery_Image7.jpg"
+    ],
     "tagline": "Ultra-low profile for the tightest work.",
     "summary": "The Landini REX 3-080 LP is an ultra-low-profile specialist tractor designed for low-clearance orchard, vineyard and tunnel applications.",
     "description": "The Low Profile REX 3-080 sits especially low to work beneath canopies and in tunnels where height is critical. Compact and agile, it delivers dependable specialist performance without compromising on capability.",
@@ -2576,6 +2808,12 @@
     "category": "tractors",
     "hp": 120,
     "photoId": "assets/images/Landini Tractors/Landini REX 4-120GT/Landini_REX_4-120GT_CAB_Gallery_Image1.jpg",
+    "gallery": [
+      "assets/images/Landini Tractors/Landini REX 4-120GT/Landini_REX_4-120GT_CAB_Gallery_Image1.jpg",
+      "assets/images/Landini Tractors/Landini REX 4-120GT/Landini_REX_4-120GT_CAB_Gallery_Image3.jpg",
+      "assets/images/Landini Tractors/Landini REX 4-120GT/Landini_REX_4-120GT_CAB_Gallery_Image8.jpg",
+      "assets/images/Landini Tractors/Landini REX 4-120GT/Landini_REX_4-120GT_CAB_Gallery_Image9.jpg"
+    ],
     "tagline": "Green Tech specialist muscle.",
     "summary": "The Landini REX 4-120GT delivers 120hp-class specialist power with the technology and comfort for intensive orchard and vineyard operations.",
     "description": "The GT (Green Tech) version of the REX 4 range brings extra horsepower and refinement to specialty farming. Strong hydraulics, a comfortable cab and a compact profile make it a productive choice for demanding row-crop work.",
@@ -2629,6 +2867,13 @@
     "category": "tractors",
     "hp": 120,
     "photoId": "assets/images/Landini Tractors/Landini REX 4-120S/Landini_REX_4-120S_CAB_Gallery_Image2.jpg",
+    "gallery": [
+      "assets/images/Landini Tractors/Landini REX 4-120S/Landini_REX_4-120S_CAB_Gallery_Image2.jpg",
+      "assets/images/Landini Tractors/Landini REX 4-120S/Landini_REX_4-120S_CAB_Gallery_Image4.jpg",
+      "assets/images/Landini Tractors/Landini REX 4-120S/Landini_REX_4-120S_CAB_Gallery_Image5.jpg",
+      "assets/images/Landini Tractors/Landini REX 4-120S/Landini_REX_4-120S_CAB_Gallery_Image6.jpg",
+      "assets/images/Landini Tractors/Landini REX 4-120S/Landini_REX_4-120S_CAB_Gallery_Image7.jpg"
+    ],
     "tagline": "Refined 120hp specialist all-rounder.",
     "summary": "The Landini REX 4-120S combines 120hp-class specialist capability with refined comfort for productive orchard, vineyard and mixed work.",
     "description": "The REX 4-120S is a versatile specialist tractor that balances power, comfort and manoeuvrability. Its strong hydraulics and comfortable cab make long days in confined rows efficient and comfortable.",
@@ -2682,6 +2927,13 @@
     "category": "tractors",
     "hp": 85,
     "photoId": "assets/images/Landini Tractors/Landini SUPER 85/Landini_SUPER_85_ROPS.jpg",
+    "gallery": [
+      "assets/images/Landini Tractors/Landini SUPER 85/Landini_SUPER_85_ROPS.jpg",
+      "assets/images/Landini Tractors/Landini SUPER 85/Landini_SUPER_100_CAB_Gallery_Image3.jpg",
+      "assets/images/Landini Tractors/Landini SUPER 85/Landini_SUPER_85_ROPS 1.jpg",
+      "assets/images/Landini Tractors/Landini SUPER 85/Landini_SUPER_85_ROPS 4.jpg",
+      "assets/images/Landini Tractors/Landini SUPER 85/Landini_SUPER_85_ROPS 5.jpg"
+    ],
     "tagline": "Rugged utility for mixed farms.",
     "summary": "The Landini SUPER 85 is a robust utility tractor built for mixed farming, livestock and everyday property work.",
     "description": "The SUPER series delivers dependable, straightforward capability. The SUPER 85 pairs 85hp-class power with strong hydraulics and an easy-to-operate driveline, available in ROPS form for practical, value-focused work.",
@@ -2735,6 +2987,9 @@
     "category": "tractors",
     "hp": 90,
     "photoId": "assets/images/Landini Tractors/Landini SUPER 90 HC/Landini_SUPER_90_ROPS_HC_Gallery_Image1.jpg",
+    "gallery": [
+      "assets/images/Landini Tractors/Landini SUPER 90 HC/Landini_SUPER_90_ROPS_HC_Gallery_Image1.jpg"
+    ],
     "tagline": "High-clearance utility for specialty crops.",
     "summary": "The Landini SUPER 90 HC is a high-clearance utility tractor built to work above row crops and specialty plantings.",
     "description": "The High Clearance SUPER 90 lifts the operator and driveline above tall crops, making it ideal for vegetable, tobacco and specialty row-crop work. Rugged and capable, it delivers 90hp-class performance where standard tractors can't reach.",
@@ -2788,6 +3043,12 @@
     "category": "tractors",
     "hp": 100,
     "photoId": "assets/images/Landini Tractors/Landini SUPER 100/Landini_SUPER_100_CAB_Gallery_Image1.jpg",
+    "gallery": [
+      "assets/images/Landini Tractors/Landini SUPER 100/Landini_SUPER_100_CAB_Gallery_Image1.jpg",
+      "assets/images/Landini Tractors/Landini SUPER 100/Landini_SUPER_100_CAB_Gallery_Image3.jpg",
+      "assets/images/Landini Tractors/Landini SUPER 100/Landini_SUPER_100_CAB_Gallery_Image4.jpg",
+      "assets/images/Landini Tractors/Landini SUPER 100/Landini_SUPER_100_CAB_Gallery_Image5.jpg"
+    ],
     "tagline": "100hp utility with cab comfort.",
     "summary": "The Landini SUPER 100 delivers 100hp-class utility performance with an enclosed cab for comfortable, all-day productivity.",
     "description": "The cab-equipped SUPER 100 brings comfort and capability to working farms. Strong hydraulics, a robust driveline and a quiet cab make it a dependable all-rounder for mixed farming and contracting.",
@@ -2841,6 +3102,13 @@
     "category": "tractors",
     "hp": 110,
     "photoId": "assets/images/Landini Tractors/Landini SUPER 110 HC/Landini_SUPER_110_CAB_HC_Gallery_Image1.jpg",
+    "gallery": [
+      "assets/images/Landini Tractors/Landini SUPER 110 HC/Landini_SUPER_110_CAB_HC_Gallery_Image1.jpg",
+      "assets/images/Landini Tractors/Landini SUPER 110 HC/Landini_SUPER_110_CAB_HC_Gallery_Image2.jpg",
+      "assets/images/Landini Tractors/Landini SUPER 110 HC/Landini_SUPER_110_CAB_HC_Gallery_Image4.jpg",
+      "assets/images/Landini Tractors/Landini SUPER 110 HC/Landini_SUPER_110_CAB_HC_Gallery_Image7.jpg",
+      "assets/images/Landini Tractors/Landini SUPER 110 HC/Landini_SUPER_110_CAB_HC_Gallery_Image9.jpg"
+    ],
     "tagline": "High-clearance power with premium comfort.",
     "summary": "The Landini SUPER 110 HC combines 110hp-class high-clearance capability with an enclosed cab for demanding specialty row-crop operations.",
     "description": "The flagship of the SUPER HC range, the 110 HC lifts serious horsepower above tall crops while keeping the operator in comfort. Ideal for intensive vegetable and specialty row-crop work that demands both reach and power.",
@@ -5521,300 +5789,6 @@
     "featured": false
   },
   {
-    "slug": "woods-batwing-cutter",
-    "name": "Woods Batwing Rotary Cutter",
-    "brand": "woods",
-    "category": "attachments",
-    "photoId": "assets/images/Woods Equipment/1.png",
-    "tagline": "Wide-area cutting productivity.",
-    "summary": "Woods batwing rotary cutters deliver wide-area mowing productivity for large acreage and contract work.",
-    "description": "American-built by Woods, the batwing rotary cutter folds out to a wide cutting width for high-productivity mowing of pasture, stubble and light brush — then folds up for easy transport.",
-    "highlights": [
-      "Wide folding cutting width",
-      "High-productivity mowing",
-      "Handles pasture & light brush",
-      "Rugged Woods build"
-    ],
-    "specs": [
-      [
-        "Type",
-        "Batwing rotary cutter"
-      ],
-      [
-        "Mounting",
-        "3-point linkage / tractor mount"
-      ],
-      [
-        "Build",
-        "Heavy-duty steel"
-      ],
-      [
-        "Compatibility",
-        "Matched to your tractor"
-      ],
-      [
-        "Origin",
-        "USA"
-      ]
-    ],
-    "features": [
-      "Flex-wing contour following",
-      "Heavy-duty gearboxes",
-      "Replaceable blades",
-      "Transport-friendly fold"
-    ],
-    "hp": null,
-    "priceFrom": null,
-    "condition": "new",
-    "availability": "enquire",
-    "featured": false
-  },
-  {
-    "slug": "woods-rotary-cutter",
-    "name": "Woods Rotary Cutter",
-    "brand": "woods",
-    "category": "attachments",
-    "photoId": "assets/images/Woods Equipment/2.png",
-    "tagline": "Dependable single-deck slashing.",
-    "summary": "Woods single-deck rotary cutters are dependable slashers for pasture topping and property maintenance.",
-    "description": "A trusted name in cutting equipment, Woods rotary cutters deliver reliable pasture-topping and vegetation control with heavy-duty decks and driveline built to last.",
-    "highlights": [
-      "Reliable single-deck cutter",
-      "Pasture & property maintenance",
-      "Heavy-duty driveline",
-      "Multiple widths"
-    ],
-    "specs": [
-      [
-        "Type",
-        "Rotary cutter / slasher"
-      ],
-      [
-        "Mounting",
-        "3-point linkage / tractor mount"
-      ],
-      [
-        "Build",
-        "Heavy-duty steel"
-      ],
-      [
-        "Compatibility",
-        "Matched to your tractor"
-      ],
-      [
-        "Origin",
-        "USA"
-      ]
-    ],
-    "features": [
-      "Reinforced deck",
-      "Slip-clutch / shear protection",
-      "Adjustable cutting height",
-      "Replaceable blades"
-    ],
-    "hp": null,
-    "priceFrom": null,
-    "condition": "new",
-    "availability": "enquire",
-    "featured": false
-  },
-  {
-    "slug": "woods-finish-mower",
-    "name": "Woods Finish Mower",
-    "brand": "woods",
-    "category": "attachments",
-    "photoId": "assets/images/Woods Equipment/3.png",
-    "tagline": "Professional manicured finish.",
-    "summary": "Woods finish mowers produce a clean, manicured cut for lawns, parks and estate grounds.",
-    "description": "For a professional finish, Woods finishing mowers mount to your tractor's PTO to deliver an even, manicured cut across lawns, parks and acreage grounds.",
-    "highlights": [
-      "Clean, manicured finish",
-      "Lawns, parks & estates",
-      "Multiple deck widths",
-      "Rear-roller finish"
-    ],
-    "specs": [
-      [
-        "Type",
-        "Finishing mower"
-      ],
-      [
-        "Mounting",
-        "3-point linkage / tractor mount"
-      ],
-      [
-        "Build",
-        "Heavy-duty steel"
-      ],
-      [
-        "Compatibility",
-        "Matched to your tractor"
-      ],
-      [
-        "Origin",
-        "USA"
-      ]
-    ],
-    "features": [
-      "Multi-blade deck",
-      "Adjustable cutting height",
-      "Rear roller",
-      "Side discharge"
-    ],
-    "hp": null,
-    "priceFrom": null,
-    "condition": "new",
-    "availability": "enquire",
-    "featured": false
-  },
-  {
-    "slug": "woods-box-scraper",
-    "name": "Woods Box Scraper",
-    "brand": "woods",
-    "category": "attachments",
-    "photoId": "assets/images/Woods Equipment/4.png",
-    "tagline": "Grade, level and site-prep.",
-    "summary": "Woods box scrapers cut, carry and level material for grading, driveways and site preparation.",
-    "description": "The Woods box scraper is a versatile grading tool — scarifier tynes loosen the ground while the box cuts, carries and spreads material to a smooth, level finish.",
-    "highlights": [
-      "Cut, carry & level",
-      "Scarifier tynes",
-      "Driveway & site prep",
-      "Heavy-duty build"
-    ],
-    "specs": [
-      [
-        "Type",
-        "Box scraper"
-      ],
-      [
-        "Mounting",
-        "3-point linkage / tractor mount"
-      ],
-      [
-        "Build",
-        "Heavy-duty steel"
-      ],
-      [
-        "Compatibility",
-        "Matched to your tractor"
-      ],
-      [
-        "Origin",
-        "USA"
-      ]
-    ],
-    "features": [
-      "Front & rear cutting edges",
-      "Adjustable rippers",
-      "Reinforced frame",
-      "Three-point linkage mount"
-    ],
-    "hp": null,
-    "priceFrom": null,
-    "condition": "new",
-    "availability": "enquire",
-    "featured": false
-  },
-  {
-    "slug": "woods-landscape-rake",
-    "name": "Woods Landscape Rake",
-    "brand": "woods",
-    "category": "attachments",
-    "photoId": "assets/images/Woods Equipment/5.png",
-    "tagline": "Prepare and finish the seedbed.",
-    "summary": "Woods landscape rakes level, de-rock and finish soil for landscaping and seedbed preparation.",
-    "description": "Ideal for landscaping and turf prep, the Woods landscape rake grades and levels soil while raking out rocks and debris for a clean, planting-ready finish.",
-    "highlights": [
-      "Level & finish soil",
-      "Rakes out rocks & debris",
-      "Landscaping & turf prep",
-      "Angle-adjustable"
-    ],
-    "specs": [
-      [
-        "Type",
-        "Landscape rake"
-      ],
-      [
-        "Mounting",
-        "3-point linkage / tractor mount"
-      ],
-      [
-        "Build",
-        "Heavy-duty steel"
-      ],
-      [
-        "Compatibility",
-        "Matched to your tractor"
-      ],
-      [
-        "Origin",
-        "USA"
-      ]
-    ],
-    "features": [
-      "Durable rake tines",
-      "Adjustable angle",
-      "Gauge wheel options",
-      "Three-point linkage mount"
-    ],
-    "hp": null,
-    "priceFrom": null,
-    "condition": "new",
-    "availability": "enquire",
-    "featured": false
-  },
-  {
-    "slug": "woods-rear-blade",
-    "name": "Woods Rear Blade",
-    "brand": "woods",
-    "category": "attachments",
-    "photoId": "assets/images/Woods Equipment/6.png",
-    "tagline": "Grade tracks and move material.",
-    "summary": "Woods rear blades grade, level and move material for track maintenance and property upkeep.",
-    "description": "A property essential, the Woods rear blade grades driveways and tracks, moves soil and gravel, and shapes ground with adjustable angle, tilt and offset.",
-    "highlights": [
-      "Grade & level tracks",
-      "Move soil & gravel",
-      "Adjustable angle & tilt",
-      "Heavy-duty build"
-    ],
-    "specs": [
-      [
-        "Type",
-        "Rear grader blade"
-      ],
-      [
-        "Mounting",
-        "3-point linkage / tractor mount"
-      ],
-      [
-        "Build",
-        "Heavy-duty steel"
-      ],
-      [
-        "Compatibility",
-        "Matched to your tractor"
-      ],
-      [
-        "Origin",
-        "USA"
-      ]
-    ],
-    "features": [
-      "Reversible cutting edge",
-      "Multi-position angle",
-      "Offset capability",
-      "Three-point linkage mount"
-    ],
-    "hp": null,
-    "priceFrom": null,
-    "condition": "new",
-    "availability": "enquire",
-    "featured": false
-  },
-  {
     "slug": "rapidspray-spray-tanks",
     "name": "RapidSpray Spray Tanks",
     "brand": "rapidspray",
@@ -7140,447 +7114,6 @@
     "condition": "new",
     "availability": "enquire",
     "featured": false
-  },
-  {
-    "slug": "valvoline-premium-blue-diesel",
-    "name": "Valvoline Premium Blue Diesel Engine Oil",
-    "brand": "valvoline",
-    "category": "oils-lubricants",
-    "availability": "in-stock",
-    "photoId": "assets/images/Vavoline Oils/diesel-engine-oil-range.webp",
-    "tagline": "Premium protection for diesel engines.",
-    "summary": "Valvoline Premium Blue diesel engine oil delivers advanced protection and performance for modern agricultural diesel engines.",
-    "description": "Engineered for hard-working diesel engines, Valvoline Premium Blue provides outstanding wear protection, deposit control and performance across demanding agricultural duty cycles — helping your machinery run reliably and last longer.",
-    "highlights": [
-      "Advanced wear protection",
-      "Deposit & soot control",
-      "For modern diesel engines",
-      "Available in 20L & 205L"
-    ],
-    "specs": [
-      [
-        "Type",
-        "Diesel engine oil"
-      ],
-      [
-        "Brand",
-        "Valvoline"
-      ],
-      [
-        "Packaging",
-        "20L / 205L drum options"
-      ],
-      [
-        "Application",
-        "Tractors & machinery"
-      ],
-      [
-        "Origin",
-        "Valvoline"
-      ]
-    ],
-    "features": [
-      "High-performance diesel formulation",
-      "Extended drain capability",
-      "Protects under heavy load",
-      "Genuine Valvoline quality"
-    ],
-    "hp": null,
-    "priceFrom": null,
-    "condition": "new",
-    "featured": false
-  },
-  {
-    "slug": "valvoline-all-fleet-diesel",
-    "name": "Valvoline All Fleet Diesel Engine Oil",
-    "brand": "valvoline",
-    "category": "oils-lubricants",
-    "availability": "in-stock",
-    "photoId": "assets/images/Vavoline Oils/All Fleet.webp",
-    "tagline": "One oil for the mixed fleet.",
-    "summary": "Valvoline All Fleet is a versatile diesel engine oil suited to mixed fleets of tractors, trucks and machinery.",
-    "description": "Simplify oil stocking across a mixed fleet with Valvoline All Fleet — a robust diesel engine oil that protects a wide range of tractors, trucks and equipment, reducing complexity while delivering dependable protection.",
-    "highlights": [
-      "Versatile fleet coverage",
-      "Protects mixed equipment",
-      "Reliable wear protection",
-      "Available in 20L & 205L"
-    ],
-    "specs": [
-      [
-        "Type",
-        "Fleet diesel engine oil"
-      ],
-      [
-        "Brand",
-        "Valvoline"
-      ],
-      [
-        "Packaging",
-        "20L / 205L drum options"
-      ],
-      [
-        "Application",
-        "Tractors & machinery"
-      ],
-      [
-        "Origin",
-        "Valvoline"
-      ]
-    ],
-    "features": [
-      "Broad application suitability",
-      "Strong soot handling",
-      "Reduces oil stocking complexity",
-      "Genuine Valvoline quality"
-    ],
-    "hp": null,
-    "priceFrom": null,
-    "condition": "new",
-    "featured": false
-  },
-  {
-    "slug": "valvoline-unitractor-fluid",
-    "name": "Valvoline Universal Tractor Transmission/Hydraulic Fluid",
-    "brand": "valvoline",
-    "category": "oils-lubricants",
-    "availability": "in-stock",
-    "photoId": "assets/images/Vavoline Oils/Universal Tractor transmission-hydraulic fluid.webp",
-    "tagline": "One fluid for transmission & hydraulics.",
-    "summary": "Valvoline Universal Tractor Transmission/Hydraulic (UTTO) fluid protects transmissions, hydraulics and wet brakes in one.",
-    "description": "A true multi-purpose fluid, Valvoline UTTO serves tractor transmissions, hydraulic systems, final drives and wet brakes — delivering smooth operation, wear protection and anti-chatter performance in a single product.",
-    "highlights": [
-      "Multi-purpose UTTO fluid",
-      "Transmission, hydraulic & wet brake",
-      "Anti-chatter performance",
-      "Available in 20L & 205L"
-    ],
-    "specs": [
-      [
-        "Type",
-        "UTTO fluid"
-      ],
-      [
-        "Brand",
-        "Valvoline"
-      ],
-      [
-        "Packaging",
-        "20L / 205L drum options"
-      ],
-      [
-        "Application",
-        "Tractors & machinery"
-      ],
-      [
-        "Origin",
-        "Valvoline"
-      ]
-    ],
-    "features": [
-      "Meets wide OEM requirements",
-      "Smooth wet-brake operation",
-      "Protects gears & pumps",
-      "Genuine Valvoline quality"
-    ],
-    "hp": null,
-    "priceFrom": null,
-    "condition": "new",
-    "featured": false
-  },
-  {
-    "slug": "valvoline-farmplus-uto",
-    "name": "Valvoline Farm Plus Universal Tractor Oil",
-    "brand": "valvoline",
-    "category": "oils-lubricants",
-    "availability": "in-stock",
-    "photoId": "assets/images/Vavoline Oils/Farmplus-universal-tractor-oil.webp",
-    "tagline": "Value multi-purpose tractor oil.",
-    "summary": "Valvoline Farm Plus is a value-focused universal tractor oil for transmissions, hydraulics and wet brakes.",
-    "description": "Valvoline Farm Plus universal tractor oil offers dependable multi-purpose protection for older and mixed tractor fleets — a cost-effective UTTO solution for transmissions, hydraulics and wet-brake systems.",
-    "highlights": [
-      "Value multi-purpose oil",
-      "Transmission & hydraulic use",
-      "Wet-brake compatible",
-      "Available in 20L & 205L"
-    ],
-    "specs": [
-      [
-        "Type",
-        "Universal tractor oil"
-      ],
-      [
-        "Brand",
-        "Valvoline"
-      ],
-      [
-        "Packaging",
-        "20L / 205L drum options"
-      ],
-      [
-        "Application",
-        "Tractors & machinery"
-      ],
-      [
-        "Origin",
-        "Valvoline"
-      ]
-    ],
-    "features": [
-      "Cost-effective UTTO",
-      "Broad tractor suitability",
-      "Reliable wear protection",
-      "Genuine Valvoline quality"
-    ],
-    "hp": null,
-    "priceFrom": null,
-    "condition": "new",
-    "featured": false
-  },
-  {
-    "slug": "valvoline-hydraulic-oil",
-    "name": "Valvoline Hydraulic Oils",
-    "brand": "valvoline",
-    "category": "oils-lubricants",
-    "availability": "in-stock",
-    "photoId": "assets/images/Vavoline Oils/Hydraulic Oils 20ltrs.webp",
-    "tagline": "Reliable hydraulic system protection.",
-    "summary": "Valvoline hydraulic oils protect pumps, valves and cylinders for smooth, reliable hydraulic performance.",
-    "description": "Keep hydraulic systems running smoothly with Valvoline hydraulic oils — engineered for excellent wear protection, oxidation stability and consistent performance across the operating temperature range.",
-    "highlights": [
-      "Protects pumps & valves",
-      "Excellent wear protection",
-      "Oxidation stability",
-      "Available in 20L & 205L"
-    ],
-    "specs": [
-      [
-        "Type",
-        "Hydraulic oil"
-      ],
-      [
-        "Brand",
-        "Valvoline"
-      ],
-      [
-        "Packaging",
-        "20L / 205L drum options"
-      ],
-      [
-        "Application",
-        "Tractors & machinery"
-      ],
-      [
-        "Origin",
-        "Valvoline"
-      ]
-    ],
-    "features": [
-      "Anti-wear additive package",
-      "Stable across temperatures",
-      "Long service life",
-      "Genuine Valvoline quality"
-    ],
-    "hp": null,
-    "priceFrom": null,
-    "condition": "new",
-    "featured": false
-  },
-  {
-    "slug": "valvoline-diesel-oil-20l",
-    "name": "Valvoline Diesel Engine Oils (20L)",
-    "brand": "valvoline",
-    "category": "oils-lubricants",
-    "availability": "in-stock",
-    "photoId": "assets/images/Vavoline Oils/Diesel Oils 20ltr.webp",
-    "tagline": "Convenient 20L diesel oil packs.",
-    "summary": "Valvoline diesel engine oils in convenient 20L packs for easy on-farm servicing.",
-    "description": "Keep your servicing simple with Valvoline diesel engine oil in handy 20L packs — dependable protection for agricultural diesel engines, ready on the shelf for scheduled oil changes.",
-    "highlights": [
-      "Convenient 20L packs",
-      "Dependable diesel protection",
-      "Ideal for on-farm servicing",
-      "Genuine Valvoline quality"
-    ],
-    "specs": [
-      [
-        "Type",
-        "Diesel engine oil"
-      ],
-      [
-        "Brand",
-        "Valvoline"
-      ],
-      [
-        "Packaging",
-        "20L / 205L drum options"
-      ],
-      [
-        "Application",
-        "Tractors & machinery"
-      ],
-      [
-        "Origin",
-        "Valvoline"
-      ]
-    ],
-    "features": [
-      "Easy-handling 20L size",
-      "Strong wear protection",
-      "Soot & deposit control",
-      "Ready for scheduled changes"
-    ],
-    "hp": null,
-    "priceFrom": null,
-    "condition": "new",
-    "featured": false
-  },
-  {
-    "slug": "valvoline-bulk-drums",
-    "name": "Valvoline Bulk Oil Drums (205L)",
-    "brand": "valvoline",
-    "category": "oils-lubricants",
-    "availability": "in-stock",
-    "photoId": "assets/images/Vavoline Oils/205Ltr Drums.webp",
-    "tagline": "Bulk 205L drums for busy operations.",
-    "summary": "Valvoline 205L bulk drums keep oil costs down for busy farms and workshops with high usage.",
-    "description": "For high-usage operations, Valvoline 205L bulk drums reduce cost per litre and keep essential oils on hand — available across engine, transmission and hydraulic product lines.",
-    "highlights": [
-      "Bulk 205L drums",
-      "Lower cost per litre",
-      "For high-usage operations",
-      "Range of oil types"
-    ],
-    "specs": [
-      [
-        "Type",
-        "Bulk oil drum"
-      ],
-      [
-        "Brand",
-        "Valvoline"
-      ],
-      [
-        "Packaging",
-        "20L / 205L drum options"
-      ],
-      [
-        "Application",
-        "Tractors & machinery"
-      ],
-      [
-        "Origin",
-        "Valvoline"
-      ]
-    ],
-    "features": [
-      "Economical bulk supply",
-      "Engine, UTTO & hydraulic options",
-      "Drum-pump compatible",
-      "Genuine Valvoline quality"
-    ],
-    "hp": null,
-    "priceFrom": null,
-    "condition": "new",
-    "featured": false
-  },
-  {
-    "slug": "valvoline-injector-cleaner",
-    "name": "Valvoline Diesel Injector Cleaner",
-    "brand": "valvoline",
-    "category": "oils-lubricants",
-    "availability": "in-stock",
-    "photoId": "assets/images/Vavoline Oils/Diesel Injector Cleaner.webp",
-    "tagline": "Restore diesel performance & economy.",
-    "summary": "Valvoline Diesel Injector Cleaner cleans injectors to restore power, economy and smooth running.",
-    "description": "Over time, deposits rob diesel engines of performance. Valvoline Diesel Injector Cleaner removes injector and fuel-system deposits to restore power, improve fuel economy and keep engines running smoothly.",
-    "highlights": [
-      "Cleans diesel injectors",
-      "Restores power & economy",
-      "Smoother running",
-      "Easy fuel-tank dosing"
-    ],
-    "specs": [
-      [
-        "Type",
-        "Fuel additive"
-      ],
-      [
-        "Brand",
-        "Valvoline"
-      ],
-      [
-        "Packaging",
-        "20L / 205L drum options"
-      ],
-      [
-        "Application",
-        "Tractors & machinery"
-      ],
-      [
-        "Origin",
-        "Valvoline"
-      ]
-    ],
-    "features": [
-      "Removes fuel-system deposits",
-      "Improves combustion",
-      "Protects fuel system",
-      "Genuine Valvoline quality"
-    ],
-    "hp": null,
-    "priceFrom": null,
-    "condition": "new",
-    "featured": false
-  },
-  {
-    "slug": "valvoline-engine-flush",
-    "name": "Valvoline Engine Flush",
-    "brand": "valvoline",
-    "category": "oils-lubricants",
-    "availability": "in-stock",
-    "photoId": "assets/images/Vavoline Oils/Engine Flush.webp",
-    "tagline": "Clean internals before every oil change.",
-    "summary": "Valvoline Engine Flush removes sludge and deposits before an oil change for a cleaner, better-protected engine.",
-    "description": "Add Valvoline Engine Flush before draining old oil to dissolve sludge and deposits from internal engine surfaces — so fresh oil goes into a cleaner engine and delivers its full protective benefit.",
-    "highlights": [
-      "Removes internal sludge",
-      "Use before oil changes",
-      "Cleaner engine internals",
-      "Maximises fresh-oil benefit"
-    ],
-    "specs": [
-      [
-        "Type",
-        "Engine flush additive"
-      ],
-      [
-        "Brand",
-        "Valvoline"
-      ],
-      [
-        "Packaging",
-        "20L / 205L drum options"
-      ],
-      [
-        "Application",
-        "Tractors & machinery"
-      ],
-      [
-        "Origin",
-        "Valvoline"
-      ]
-    ],
-    "features": [
-      "Dissolves deposits & sludge",
-      "Simple pre-drain dosing",
-      "Improves oil circulation",
-      "Genuine Valvoline quality"
-    ],
-    "hp": null,
-    "priceFrom": null,
-    "condition": "new",
-    "featured": false
   }
 ];
 
@@ -7669,10 +7202,10 @@
 
   var team = [
   {
-    "name": "Fleet Maintenance",
-    "role": "Truck & Heavy-Vehicle Servicing",
-    "initials": "FM",
-    "bio": "Prestige Fleet Maintenance covers truck & heavy-vehicle servicing, light & commercial vehicle servicing, breakdown support, roadworthy certificates (RWC) and classic-car servicing across Ballarat."
+    "name": "Danny",
+    "role": "The Tractor Guy — Owner",
+    "initials": "D",
+    "bio": "A local Ballarat tractor bloke who's been on the land himself. Danny personally knows every machine on the lot and will talk you through the right one for your place — 7 days a week."
   },
   {
     "name": "Sales Team",

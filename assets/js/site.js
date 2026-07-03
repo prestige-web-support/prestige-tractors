@@ -78,7 +78,7 @@
   var ROUTES = {
     home: "index.html", equipment: "equipment.html", service: "service.html", parts: "parts.html",
     finance: "finance.html", about: "about.html", contact: "contact.html", news: "news.html",
-    fleet: "fleet-maintenance.html", disclaimer: "disclaimer.html", privacy: "privacy.html",
+    disclaimer: "disclaimer.html", privacy: "privacy.html",
     category: function (s) { return "category.html?cat=" + s; },
     product: function (s) { return "product.html?slug=" + s; },
     brand: function (s) { return "equipment.html?brand=" + s; }
@@ -86,6 +86,7 @@
   w.PTROUTES = ROUTES;
 
   var topNav = [
+    { label: "Home", href: ROUTES.home },
     { label: "Equipment", href: ROUTES.equipment, menu: "equipment" },
     { label: "Brands", href: ROUTES.equipment, menu: "brands" },
     { label: "Sales & Service", href: ROUTES.service, menu: "sales" },
@@ -94,7 +95,7 @@
     { label: "News", href: ROUTES.news },
     { label: "Contact", href: ROUTES.contact }
   ];
-  var CAT_ICON = { tractors: "tractor", "hay-equipment": "wheat", sprayers: "spray", attachments: "cog", mulchers: "settings", utility: "mountain", "utility-vehicles": "truck", "turf-care": "leaf", "oils-lubricants": "droplet" };
+  var CAT_ICON = { tractors: "tractor", "hay-equipment": "wheat", sprayers: "spray", attachments: "cog", mulchers: "settings", utility: "mountain", "utility-vehicles": "truck", "turf-care": "leaf", "woods-equipment": "package" };
 
   /* ------------------------------ HEADER --------------------------------- */
   function megaHtml(kind) {
@@ -112,7 +113,7 @@
     }
     if (kind === "sales") {
       var c1 = [["New & Used Machinery", ROUTES.equipment, "tractor"], ["Finance Options", ROUTES.finance, "banknote"], ["Latest Specials", ROUTES.news, "sparkles"]];
-      var c2 = [["Service Centre", ROUTES.service, "wrench"], ["Book a Service", ROUTES.service + "#book", "calendar"], ["Spare Parts", ROUTES.parts, "settings"], ["Fleet Maintenance", ROUTES.fleet, "truck"]];
+      var c2 = [["Service Centre", ROUTES.service, "wrench"], ["Book a Service", ROUTES.service + "#book", "calendar"], ["Spare Parts", ROUTES.parts, "settings"]];
       function col(h, arr) { return '<div class="mega-col"><h4>' + h + "</h4>" + arr.map(function (l) { return '<a href="' + l[1] + '">' + icon(l[2]) + "<span>" + l[0] + "</span></a>"; }).join("") + "</div>"; }
       return '<div class="mega glass"><div class="mega-grid"><div class="mega-cols">' + col("Sales", c1) + col("Service & Parts", c2) + "</div>" + featureHtml("Workshop", "Factory-trained servicing", "Keep your equipment working hard with genuine parts and expert technicians.", ROUTES.service + "#book", "Book a service", PT.PHOTO.welderSparks) + "</div></div>";
     }
@@ -133,6 +134,14 @@
 
     mount.className = "site-header";
     mount.innerHTML =
+      '<div class="topbar"><div class="container topbar__row">' +
+        '<a class="topbar__item" href="' + s.emailHref + '">' + icon("mail") + s.email + "</a>" +
+        '<div class="topbar__phones">' +
+          '<a class="topbar__item" href="' + s.phoneHref + '">' + icon("phone") + s.phone + "</a>" +
+          '<a class="topbar__item topbar__item--accent" href="' + (s.mobileHref || s.phoneHref) + '">' + icon("phone") + (s.mobile || s.phone) +
+            (s.mobileLabel ? '<span class="topbar__note">' + s.mobileLabel + "</span>" : "") + "</a>" +
+        "</div>" +
+      "</div></div>" +
       '<div class="container"><div class="nav">' +
         logoHtml() +
         '<nav class="nav__menu" aria-label="Primary">' + navItems + "</nav>" +
@@ -178,7 +187,7 @@ function logoHtml() {
     var groups = [
       { id: "equipment", label: "Equipment", links: [["All Equipment", ROUTES.equipment]].concat(PT.categories.map(function (c) { return [c.name, ROUTES.category(c.slug)]; })) },
       { id: "brands", label: "Brands", links: PT.brands.map(function (b) { return [b.name, ROUTES.brand(b.slug)]; }) },
-      { id: "sales", label: "Sales & Service", links: [["Service Centre", ROUTES.service], ["Book a Service", ROUTES.service + "#book"], ["Spare Parts", ROUTES.parts], ["Finance", ROUTES.finance], ["Fleet Maintenance", ROUTES.fleet]] }
+      { id: "sales", label: "Sales & Service", links: [["Service Centre", ROUTES.service], ["Book a Service", ROUTES.service + "#book"], ["Spare Parts", ROUTES.parts], ["Finance", ROUTES.finance]] }
     ];
     var groupsHtml = groups.map(function (g) {
       var links = g.links.map(function (l) { return '<a href="' + l[1] + '">' + l[0] + "</a>"; }).join("");
@@ -220,7 +229,7 @@ function logoHtml() {
     var cols = [
       { h: "Equipment", links: [["All Equipment", ROUTES.equipment]].concat(PT.categories.map(function (c) { return [c.name, ROUTES.category(c.slug)]; })) },
       { h: "Brands", links: PT.brands.filter(function (b) { return b.featured; }).map(function (b) { return [b.name, ROUTES.brand(b.slug)]; }) },
-      { h: "Sales & Service", links: [["Service Centre", ROUTES.service], ["Spare Parts", ROUTES.parts], ["Finance", ROUTES.finance], ["Fleet Maintenance", ROUTES.fleet], ["Latest News", ROUTES.news]] },
+      { h: "Sales & Service", links: [["Service Centre", ROUTES.service], ["Spare Parts", ROUTES.parts], ["Finance", ROUTES.finance], ["Latest News", ROUTES.news]] },
       { h: "Company", links: [["About Us", ROUTES.about], ["Contact Us", ROUTES.contact], ["Privacy Policy", ROUTES.privacy], ["Disclaimer", ROUTES.disclaimer]] }
     ];
     var colsHtml = cols.map(function (c) {
