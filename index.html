@@ -186,7 +186,7 @@
       // Categories bento (first large, then spans)
       var spans = ["span-4 is-large", "span-2", "span-2", "span-2", "span-2"];
       document.getElementById("bento").innerHTML = PT.categories.map(function (c, i) {
-        return '<a class="cat-tile reveal ' + spans[i] + '" data-theme="dark" href="' + U.ROUTES.category(c.slug) + '">' +
+        return '<a class="cat-tile reveal ' + (spans[i] || "span-2") + '" data-theme="dark" href="' + U.ROUTES.category(c.slug) + '">' +
           '<img src="' + PT.img(c.photoId, i === 0 ? 1200 : 700) + '" alt="' + c.name + '" loading="lazy">' +
           '<span class="cat-tile__body"><span><span class="cat-icon">' + U.icon(U.CAT_ICON[c.slug]) + "</span><h3>" + c.name + "</h3><p>" + c.blurb + '</p></span><span class="view">View Range ' + U.icon("arrow-right") + "</span></span></a>";
       }).join("");

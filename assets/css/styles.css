@@ -623,6 +623,9 @@ input, select, textarea { font: inherit; }
 .detail__highlights svg { width: 1rem; height: 1rem; flex-shrink: 0; margin-top: .15rem; color: var(--brand-400); }
 .detail__cta { margin-top: 2rem; display: flex; flex-direction: column; gap: .75rem; }
 @media (min-width: 640px) { .detail__cta { flex-direction: row; } .detail__cta .btn { flex: 1; } }
+.detail__brochure { margin-top: .9rem; display: inline-flex; align-items: center; gap: .5rem; font-size: .875rem; font-weight: 600; color: var(--brand-400); }
+.detail__brochure svg { width: 1rem; height: 1rem; }
+.detail__brochure:hover { color: var(--brand-300, var(--brand-400)); text-decoration: underline; }
 .assurances { margin-top: 1.75rem; display: flex; flex-wrap: wrap; gap: .65rem 1.5rem; }
 .assurances span { display: inline-flex; align-items: center; gap: .5rem; font-size: .875rem; color: var(--ink-300); }
 .assurances svg { width: 1rem; height: 1rem; color: var(--brand-400); }
@@ -656,6 +659,9 @@ input, select, textarea { font: inherit; }
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%237b7b88' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E"); }
 .form .btn { margin-top: 1.5rem; }
 .form__note { margin-top: .75rem; text-align: center; font-size: .75rem; color: var(--ink-400); }
+.form-privacy { margin-top: .85rem; text-align: center; font-size: .75rem; line-height: 1.5; color: var(--ink-400); }
+.form-privacy a { color: var(--brand-400); font-weight: 600; }
+.form-privacy a:hover { text-decoration: underline; }
 .form-success { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 2.5rem; border-radius: var(--radius-2xl); border: 1px solid rgba(47,175,106,.3); background: rgba(47,175,106,.1); }
 .form-success .fs-icon { display: inline-flex; align-items: center; justify-content: center; width: 3.5rem; height: 3.5rem; border-radius: 999px; background: rgba(47,175,106,.2); color: var(--success); }
 .form-success .fs-icon svg { width: 1.75rem; height: 1.75rem; }

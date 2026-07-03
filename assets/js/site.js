@@ -55,7 +55,9 @@
     "wheat": '<path d="M12 22V8M6 9c0-2 1.5-3 3-3 0 2-1.5 3-3 3Zm0 4c0-2 1.5-3 3-3 0 2-1.5 3-3 3Zm0 4c0-2 1.5-3 3-3 0 2-1.5 3-3 3Zm12-8c0-2-1.5-3-3-3 0 2 1.5 3 3 3Zm0 4c0-2-1.5-3-3-3 0 2 1.5 3 3 3Zm0 4c0-2-1.5-3-3-3 0 2 1.5 3 3 3Z"/>',
     "spray": '<path d="M3 3h.01M7 5h.01M5 9h.01M11 5h.01M9 9h.01M13 9h.01"/><path d="M12 4h4v4h-4ZM12 8v3a2 2 0 0 0 2 2h0a2 2 0 0 1 2 2v6H10v-6a2 2 0 0 1 2-2"/>',
     "mountain": '<path d="m8 3 4 8 5-5 5 14H2L8 3Z"/>',
-    "users": '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/>'
+    "users": '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/>',
+    "leaf": '<path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/>',
+    "droplet": '<path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>'
   };
   function icon(name, cls) {
     var p = ICONS[name]; if (!p) return "";
@@ -76,7 +78,7 @@
   var ROUTES = {
     home: "index.html", equipment: "equipment.html", service: "service.html", parts: "parts.html",
     finance: "finance.html", about: "about.html", contact: "contact.html", news: "news.html",
-    fleet: "fleet-maintenance.html", disclaimer: "disclaimer.html",
+    fleet: "fleet-maintenance.html", disclaimer: "disclaimer.html", privacy: "privacy.html",
     category: function (s) { return "category.html?cat=" + s; },
     product: function (s) { return "product.html?slug=" + s; },
     brand: function (s) { return "equipment.html?brand=" + s; }
@@ -92,7 +94,7 @@
     { label: "News", href: ROUTES.news },
     { label: "Contact", href: ROUTES.contact }
   ];
-  var CAT_ICON = { tractors: "tractor", "hay-equipment": "wheat", sprayers: "spray", attachments: "cog", utility: "mountain" };
+  var CAT_ICON = { tractors: "tractor", "hay-equipment": "wheat", sprayers: "spray", attachments: "cog", mulchers: "settings", utility: "mountain", "utility-vehicles": "truck", "turf-care": "leaf", "oils-lubricants": "droplet" };
 
   /* ------------------------------ HEADER --------------------------------- */
   function megaHtml(kind) {
@@ -219,7 +221,7 @@ function logoHtml() {
       { h: "Equipment", links: [["All Equipment", ROUTES.equipment]].concat(PT.categories.map(function (c) { return [c.name, ROUTES.category(c.slug)]; })) },
       { h: "Brands", links: PT.brands.filter(function (b) { return b.featured; }).map(function (b) { return [b.name, ROUTES.brand(b.slug)]; }) },
       { h: "Sales & Service", links: [["Service Centre", ROUTES.service], ["Spare Parts", ROUTES.parts], ["Finance", ROUTES.finance], ["Fleet Maintenance", ROUTES.fleet], ["Latest News", ROUTES.news]] },
-      { h: "Company", links: [["About Us", ROUTES.about], ["Contact Us", ROUTES.contact], ["Disclaimer", ROUTES.disclaimer]] }
+      { h: "Company", links: [["About Us", ROUTES.about], ["Contact Us", ROUTES.contact], ["Privacy Policy", ROUTES.privacy], ["Disclaimer", ROUTES.disclaimer]] }
     ];
     var colsHtml = cols.map(function (c) {
       return "<div><h4>" + c.h + "</h4><ul>" + c.links.map(function (l) { return '<li><a href="' + l[1] + '">' + l[0] + "</a></li>"; }).join("") + "</ul></div>";

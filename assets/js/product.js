@@ -32,6 +32,7 @@ window.PTpage = function () {
           '<div class="detail__price">' + price + "</div>" +
           '<ul class="detail__highlights">' + highlights + "</ul>" +
           '<div class="detail__cta"><a class="btn btn--primary btn--lg" href="contact.html?enquiry=' + encodeURIComponent(p.name) + '">Enquire about this model ' + icon("arrow-right", "arrow") + '</a><a class="btn btn--secondary btn--lg" href="finance.html">' + icon("banknote") + " Finance options</a></div>" +
+          (p.brochure ? '<a class="detail__brochure" href="' + PT.asset(p.brochure) + '" target="_blank" rel="noopener">' + icon("file") + " Download specifications (PDF)" + icon("arrow-up-right") + "</a>" : "") +
           '<div class="assurances">' + assurances + "</div>" +
         "</div>" +
       "</div></div>";

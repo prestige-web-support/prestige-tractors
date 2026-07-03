@@ -1,0 +1,5 @@
+# robots.txt — Prestige Tractors Ballarat
+User-agent: *
+Allow: /
+
+Sitemap: https://www.prestigetractors.com.au/sitemap.xml
