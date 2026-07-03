@@ -1,6 +1,6 @@
 # Prestige Tractors Ballarat — Premium Dealership Website
 
-A world-class, conversion-focused website for **Prestige Tractors Ballarat** (a Goad Group company) —
+A world-class, conversion-focused website for **Prestige Tractors Ballarat** —
 your local dealer for McCormick, Bobcat & Mahindra tractors, Enorossi hay equipment, DakenAg,
 RapidSpray, Grasshopper, Orsi and Muratori machinery.
 
@@ -117,4 +117,4 @@ enqueued stylesheet + script.
 
 ---
 
-*A Goad Group company · 206 Burnbank Street, Wendouree, Victoria 3355 · (03) 5339 2056*
+*Prestige Tractors Ballarat · 206 Burnbank Street, Wendouree, Victoria 3355 · (03) 5339 2056*

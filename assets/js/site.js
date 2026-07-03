@@ -237,7 +237,7 @@ function logoHtml() {
           '<div class="footer-cta__actions"><a class="btn btn--primary btn--full" href="' + ROUTES.contact + '">Enquire Now ' + icon("arrow-right", "arrow") + '</a><a class="btn btn--secondary btn--full" href="' + s.phoneHref + '">' + icon("phone") + s.phone + "</a></div>" +
         "</div>" +
         '<div class="footer-main"><div class="footer-about">' + logoHtml() +
-          "<p>" + s.fullName + " — your local dealer for McCormick, Bobcat & Mahindra tractors, Enorossi hay equipment, DakenAg, RapidSpray and Grasshopper. Proudly part of the " + s.parentGroup + ".</p>" +
+          "<p>" + s.fullName + " — your local dealer for McCormick, Landini, Bobcat & Mahindra tractors, Enorossi hay equipment, DakenAg, RapidSpray and Grasshopper. Proudly serving Victorian farms, contractors and businesses.</p>" +
           '<ul class="footer-nap">' +
             "<li>" + icon("pin") + s.addressLine + "</li>" +
             '<li><a href="' + s.phoneHref + '">' + icon("phone") + s.phone + "</a></li>" +
@@ -247,7 +247,7 @@ function logoHtml() {
           '<div class="socials">' + socials + "</div>" +
         '</div><div class="footer-cols">' + colsHtml + "</div></div>" +
         '<div class="hairline" style="margin-block:2.5rem"></div>' +
-        '<div class="footer-legal"><p>© 2026 ' + s.fullName + ". A " + s.parentGroup + ' company. All rights reserved.</p><p class="fine">Specifications, pricing and availability are indicative and subject to change. Images may include optional equipment. E&amp;OE.</p></div>' +
+        '<div class="footer-legal"><p>© 2026 ' + s.fullName + '. All rights reserved.</p><p class="fine">Specifications, pricing and availability are indicative and subject to change. Images may include optional equipment. E&amp;OE.</p></div>' +
       "</div>";
   }
 

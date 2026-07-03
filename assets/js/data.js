@@ -44,11 +44,10 @@
   "name": "Prestige Tractors",
   "fullName": "Prestige Tractors Ballarat",
   "tagline": "Victoria's Trusted Agricultural Equipment Partner",
-  "parentGroup": "Goad Group",
   "phone": "(03) 5339 2056",
   "phoneHref": "tel:+61353392056",
-  "email": "sales@goadgroup.com.au",
-  "emailHref": "mailto:sales@goadgroup.com.au",
+  "email": "danny@prestigetractors.com.au",
+  "emailHref": "mailto:danny@prestigetractors.com.au",
   "addressLine": "206 Burnbank Street, Wendouree, Victoria 3355",
   "mapsQuery": "206+Burnbank+Street+Wendouree+VIC+3355",
   "hours": [
@@ -7670,10 +7669,10 @@
 
   var team = [
   {
-    "name": "Neale",
-    "role": "Fleet Maintenance Manager",
-    "initials": "N",
-    "bio": "Leads Prestige Fleet Maintenance — truck & heavy-vehicle servicing, light & commercial vehicle servicing, breakdown support, roadworthy certificates and classic cars across Ballarat."
+    "name": "Fleet Maintenance",
+    "role": "Truck & Heavy-Vehicle Servicing",
+    "initials": "FM",
+    "bio": "Prestige Fleet Maintenance covers truck & heavy-vehicle servicing, light & commercial vehicle servicing, breakdown support, roadworthy certificates (RWC) and classic-car servicing across Ballarat."
   },
   {
     "name": "Sales Team",

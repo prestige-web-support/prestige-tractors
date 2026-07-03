@@ -13,7 +13,7 @@ described here is **implemented in the codebase** — file references are includ
 
 ## 1. Brand Strategy & Design Objective
 
-Prestige Tractors is a multi-brand dealership (part of the **Goad Group**) in Wendouree, Ballarat,
+Prestige Tractors is a multi-brand dealership in Wendouree, Ballarat,
 representing nine premium brands across tractors, hay, spraying, attachments and grounds care, plus
 sales, finance, genuine parts, a service centre and a fleet-maintenance arm.
 
@@ -42,7 +42,7 @@ Home  (/)
 │   ├── Service Centre  (/service)  ·  Book a Service  (/service#book)
 │   ├── Spare Parts  (/parts)
 │   ├── Finance  (/finance)  ·  Finance Enquiry  (/finance#enquiry)
-│   └── Fleet Maintenance  (/fleet-maintenance)               ← Prestige Fleet Maintenance (Neale)
+│   └── Fleet Maintenance  (/fleet-maintenance)               ← Prestige Fleet Maintenance
 ├── Brands  ▾  (mega menu → /equipment?brand=:slug)
 │   └── McCormick · Bobcat · Mahindra · DakenAg · Enorossi · RapidSpray · Grasshopper · Orsi · Muratori
 ├── About  (/about)
@@ -423,6 +423,6 @@ CPTs, taxonomies, forms).
 
 ## 14. Content Fidelity & Handover Notes
 
-- **Verbatim from source:** NAP, hours, Goad Group, the 9 brands, the 7 sourced products (CT4055, CT2035, 26hp Hobby Farm Hero, McCormick X7/D-MAX/S-MAX/S-MAX 60 ROPS), the Bobcat **$30,250 inc GST** special, parts brands (McCormick, Daken, Grasshopper, Enorossi, Bobcat), finance/sectors copy, Service positioning, and the Prestige Fleet Maintenance line.
+- **Verbatim from source:** NAP, hours, the 9 brands, the 7 sourced products (CT4055, CT2035, 26hp Hobby Farm Hero, McCormick X7/D-MAX/S-MAX/S-MAX 60 ROPS), the Bobcat **$30,250 inc GST** special, parts brands (McCormick, Daken, Grasshopper, Enorossi, Bobcat), finance/sectors copy, Service positioning, and the Prestige Fleet Maintenance line.
 - **Representative (clearly flagged in data + UI):** expanded inventory specs/prices, additional brand models, testimonials, secondary news items, team roles. Confirm against live supplier data before publishing (`sourced: true` flags the verbatim items in `equipment.ts` / `news.ts`).
 - **To go live:** (1) replace image IDs in `lib/images.ts` with real photography; (2) wire the three forms to email/CRM; (3) add per-route meta via a head manager; (4) connect the map to the verified Google Place; (5) add real brand logo SVGs if preferred over wordmarks.
