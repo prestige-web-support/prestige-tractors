@@ -355,9 +355,25 @@ function logoHtml() {
   }
   w.PTinjectIcons = injectIcons;
 
+  /* --------------------------- HERO VIDEO -------------------------------- */
+  function initHeroVideo() {
+    var v = d.getElementById("hero-video");
+    if (!v) return;
+    // Respect reduced-motion and data-saver: keep the static poster, download
+    // zero video bytes (the <source> has no src until we opt in below).
+    var reduce = w.matchMedia && w.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var saveData = w.navigator && w.navigator.connection && w.navigator.connection.saveData;
+    if (reduce || saveData) return;
+    var src = v.querySelector("source[data-src]");
+    if (src && !src.getAttribute("src")) { src.setAttribute("src", src.getAttribute("data-src")); v.load(); }
+    var p = v.play();
+    if (p && typeof p.catch === "function") p.catch(function () {}); // autoplay blocked → poster stays
+  }
+
   function boot() {
     renderHeader();
     renderFooter();
+    initHeroVideo();
     // page-specific rendering first, so dynamic content gets wired below
     if (w.PTpage) w.PTpage();
     injectIcons();

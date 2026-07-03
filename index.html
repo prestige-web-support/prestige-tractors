@@ -18,7 +18,15 @@
   <main>
     <!-- HERO -->
     <section class="hero" data-theme="dark">
-      <img class="hero__bg" src="https://images.unsplash.com/photo-1530267981375-f0de937f5f13?auto=format&fit=crop&w=2400&q=72" alt="Tractor working a field at golden hour" fetchpriority="high" />
+      <!-- Background video: muted + looping + inline; decorative (aria-hidden).
+           Poster shows immediately as the LCP/fallback; the mp4 source is only
+           attached and played by initHeroVideo() (site.js) — skipped on
+           reduced-motion / data-saver, so the static poster remains. -->
+      <video id="hero-video" class="hero__bg" muted loop playsinline preload="metadata"
+             poster="assets/video/prestige-hero-poster.jpg" aria-hidden="true" tabindex="-1">
+        <source data-src="assets/video/prestige-hero-web.mp4" type="video/mp4" />
+      </video>
+      <div class="hero__scrim" aria-hidden="true"></div>
       <div class="container">
         <div class="hero__inner">
           <div class="hero__pill"><span class="dot"></span><span>Ballarat · Wendouree · Goad Group</span></div>
