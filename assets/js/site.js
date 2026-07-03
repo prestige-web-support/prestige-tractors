@@ -120,7 +120,7 @@
     return "";
   }
   function featureHtml(eyebrow, title, body, href, cta, photoId) {
-    return '<a class="mega-feature" data-theme="dark" href="' + href + '"><img src="' + PT.img(photoId, 700) + '" alt="" loading="lazy"><span class="mf-body"><span class="eyebrow">' + eyebrow + "</span><h4>" + title + "</h4><p>" + body + '</p><span class="mf-cta">' + cta + " " + icon("arrow-right") + "</span></span></a>";
+    return '<a class="mega-feature" href="' + href + '"><img src="' + PT.img(photoId, 700) + '" alt="" loading="lazy"><span class="mf-body"><span class="eyebrow">' + eyebrow + "</span><h4>" + title + "</h4><p>" + body + '</p><span class="mf-cta">' + cta + " " + icon("arrow-right") + "</span></span></a>";
   }
 
   function renderHeader() {
@@ -266,8 +266,7 @@ function logoHtml() {
     var isHome = d.body.dataset.page === "home";
     header.classList.add("is-solid"); // always solid — never transparent, even at first paint over the hero
     function update() {
-      var overHero = isHome && w.scrollY <= 24;
-      if (overHero) header.setAttribute("data-theme", "dark"); else header.removeAttribute("data-theme");
+      header.removeAttribute("data-theme"); // always light — no dark theme site-wide
     }
     update();
     w.addEventListener("scroll", update, { passive: true });
@@ -338,7 +337,7 @@ function logoHtml() {
       ? "<small>From</small><b>" + PT.formatPrice(p.priceFrom) + "</b>" + (p.priceNote ? "<em>" + p.priceNote + "</em>" : "")
       : "<b>Contact for price</b>";
     return '<article class="product-card reveal">' +
-      '<a class="product-card__media" data-theme="dark" href="' + ROUTES.product(p.slug) + '"><img src="' + PT.img(p.photoId, 700) + '" alt="' + p.name + '" loading="lazy">' +
+      '<a class="product-card__media" href="' + ROUTES.product(p.slug) + '"><img src="' + PT.img(p.photoId, 700) + '" alt="' + p.name + '" loading="lazy">' +
         '<span class="product-card__tags">' + tags + "</span>" + hp + "</a>" +
       '<div class="product-card__body"><div class="product-card__top"><span class="product-card__brand">' + (b ? b.name : p.brand) + '</span><span class="product-card__cat">' + (b ? b.category : "") + "</span></div>" +
         '<h3><a href="' + ROUTES.product(p.slug) + '">' + p.name + "</a></h3>" +

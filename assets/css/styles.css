@@ -1113,3 +1113,29 @@ input, select, textarea { font: inherit; }
 .finance-abn { display: flex; gap: .9rem; align-items: flex-start; padding: 1.25rem 1.5rem; border-radius: var(--radius-lg); margin-bottom: 2rem; }
 .finance-abn svg { width: 1.4rem; height: 1.4rem; color: var(--success); flex-shrink: 0; margin-top: .1rem; }
 .finance-abn strong { color: var(--fg); }
+
+/* ==========================================================================
+   CLIENT: no dark theme anywhere — light hero + solid light service badge
+   ========================================================================== */
+/* Light hero: video shows on the right, light veil on the left carries the
+   (now dark) heading text. Hero text already uses theme ink tokens. */
+.hero { background: var(--ink-950); }
+.hero__scrim {
+  background: linear-gradient(90deg,
+    var(--ink-950) 0%,
+    var(--ink-950) 40%,
+    color-mix(in srgb, var(--ink-950) 80%, transparent) 60%,
+    color-mix(in srgb, var(--ink-950) 28%, transparent) 82%,
+    transparent 100%);
+}
+@media (max-width: 900px) {
+  /* near-full light veil so text is readable across the full width on phones */
+  .hero__scrim { background: color-mix(in srgb, var(--ink-950) 88%, transparent); }
+}
+.hero__pill span { color: var(--ink-300); }
+.hero__sub { color: var(--ink-200); }
+
+/* Service "Peak performance" badge — solid light card, dark text */
+.media-badge { background: var(--ink-900); border: 1px solid var(--ink-700); box-shadow: var(--shadow-card); -webkit-backdrop-filter: none; backdrop-filter: none; }
+.media-badge b { color: var(--fg); }
+.media-badge span { color: var(--ink-300); }

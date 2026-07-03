@@ -51,10 +51,10 @@
       var U = window.PTUI, PT = window.PT, d = document;
       var feature = PT.articles[0], rest = PT.articles.slice(1);
       d.getElementById("news-feature").innerHTML =
-        '<article class="reveal" data-theme="dark" style="position:relative;display:grid;overflow:hidden;border-radius:var(--radius-2xl);border:1px solid var(--ink-700);grid-template-columns:1fr">' +
+        '<article class="reveal surface" style="position:relative;display:grid;overflow:hidden;border-radius:var(--radius-2xl);grid-template-columns:1fr">' +
           '<div class="media-frame scrim" style="min-height:18rem;border:0;border-radius:0"><img src="' + PT.img(feature.photoId, 1100) + '" alt="' + feature.title + '"></div>' +
           '<div style="padding:2rem"><div class="meta" style="display:flex;align-items:center;gap:.75rem">' + U.badge(feature.type, "brand") + '<time class="subtle" style="font-size:.875rem">' + feature.date + "</time></div>" +
-          '<h2 style="font-size:clamp(1.5rem,3vw,2.25rem);margin-top:1rem">' + feature.title + '</h2><p class="lead" style="color:#d2d2da;margin-top:1rem">' + feature.excerpt + "</p>" +
+          '<h2 style="font-size:clamp(1.5rem,3vw,2.25rem);margin-top:1rem">' + feature.title + '</h2><p class="lead" style="color:var(--ink-200);margin-top:1rem">' + feature.excerpt + "</p>" +
           (feature.cta ? '<a class="btn btn--primary" style="margin-top:1.75rem" href="' + feature.cta.href + '">' + feature.cta.label + " " + U.icon("arrow-right", "arrow") + "</a>" : "") + "</div></article>";
       var fb = d.querySelector("#news-feature article");
       if (window.matchMedia("(min-width:1024px)").matches) fb.style.gridTemplateColumns = "1fr 1fr";

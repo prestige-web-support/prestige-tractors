@@ -34,7 +34,7 @@ window.PTpage = function () {
   var hero =
     '<div class="container" style="padding-block:2.5rem">' + breadcrumb +
       '<div class="detail" style="margin-top:2rem">' +
-        '<div class="detail__media reveal"><div class="media-frame ratio-43" data-theme="dark">' + mainImg + '<span class="detail__tags">' + tags + "</span></div>" + thumbs + '<div class="stat-cards">' + statCards + "</div></div>" +
+        '<div class="detail__media reveal"><div class="media-frame ratio-43">' + mainImg + '<span class="detail__tags">' + tags + "</span></div>" + thumbs + '<div class="stat-cards">' + statCards + "</div></div>" +
         '<div class="reveal" data-delay="1">' +
           '<div style="display:flex;align-items:center;gap:.75rem"><a class="detail__brand" href="' + R.brand(p.brand) + '">' + (brand ? brand.name : p.brand) + '</a><span class="subtle">·</span><span class="subtle" style="text-transform:capitalize">' + p.condition + " " + (cat ? cat.name.toLowerCase() : "") + "</span></div>" +
           "<h1>" + p.name + "</h1>" +

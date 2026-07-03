@@ -17,7 +17,7 @@
 
   <main>
     <!-- HERO -->
-    <section class="hero" data-theme="dark">
+    <section class="hero">
       <!-- Background video: muted + looping + inline; decorative (aria-hidden).
            Poster shows immediately as the LCP/fallback; the mp4 source is only
            attached and played by initHeroVideo() (site.js) — skipped on
@@ -34,7 +34,7 @@
           <p class="hero__sub">Premium tractors, machinery, finance, genuine parts and factory-trained servicing — supporting Australian farms, contractors and rural businesses.</p>
           <div class="hero__cta">
             <a class="btn btn--primary btn--lg" href="equipment.html">Explore Equipment <i data-icon="arrow-right" class="arrow"></i></a>
-            <a class="btn btn--glass btn--lg" href="service.html#book"><i data-icon="calendar"></i> Book a Service</a>
+            <a class="btn btn--secondary btn--lg" href="service.html#book"><i data-icon="calendar"></i> Book a Service</a>
           </div>
           <dl class="hero__stats">
             <div><dt>20+</dt><dd>Years experience</dd></div>
@@ -116,7 +116,7 @@
             <div class="media-frame scrim">
               <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1100&q=72" alt="Factory-trained technician at work in the Prestige Tractors workshop" loading="lazy" />
             </div>
-            <div class="media-badge glass" data-theme="dark">
+            <div class="media-badge">
               <span class="mb-icon"><i data-icon="gauge"></i></span>
               <div><b>Peak performance</b><span>Maintained, season after season.</span></div>
             </div>
@@ -158,7 +158,7 @@
     </section>
 
     <!-- VALVOLINE BANNER (stockists — not a product folder) -->
-    <section class="section valvoline-banner" data-theme="dark">
+    <section class="section valvoline-banner">
       <img class="valvoline-banner__bg" src="assets/images/Vavoline Oils/diesel-engine-oil-range.webp" alt="" loading="lazy" />
       <div class="container valvoline-banner__inner">
         <div class="reveal">
@@ -251,7 +251,7 @@
       // Categories bento (first large, then spans)
       var spans = ["span-4 is-large", "span-2", "span-2", "span-2", "span-2"];
       document.getElementById("bento").innerHTML = PT.categories.map(function (c, i) {
-        return '<a class="cat-tile reveal ' + (spans[i] || "span-2") + '" data-theme="dark" href="' + U.ROUTES.category(c.slug) + '">' +
+        return '<a class="cat-tile reveal ' + (spans[i] || "span-2") + '" href="' + U.ROUTES.category(c.slug) + '">' +
           '<img src="' + PT.img(c.photoId, i === 0 ? 1200 : 700) + '" alt="' + c.name + '" loading="lazy">' +
           '<span class="cat-tile__body"><span><span class="cat-icon">' + U.icon(U.CAT_ICON[c.slug]) + "</span><h3>" + c.name + "</h3><p>" + c.blurb + '</p></span><span class="view">View Range ' + U.icon("arrow-right") + "</span></span></a>";
       }).join("");
@@ -267,7 +267,7 @@
       // Promotions
       var a = PT.articles[0];
       document.getElementById("promo-feature").innerHTML =
-        '<article class="promo-feature reveal" data-theme="dark"><img src="' + PT.img(a.photoId, 1100) + '" alt="' + a.title + '" loading="lazy"><div class="promo-feature__body">' +
+        '<article class="promo-feature reveal"><img src="' + PT.img(a.photoId, 1100) + '" alt="' + a.title + '" loading="lazy"><div class="promo-feature__body">' +
         U.badge(a.type, "brand") + "<h3>" + a.title + "</h3><p>" + a.excerpt + '</p><a class="btn btn--primary" style="margin-top:1.5rem" href="' + (a.cta ? a.cta.href : "news.html") + '">' + (a.cta ? a.cta.label : "Read more") + " " + U.icon("arrow-right", "arrow") + "</a></div></article>";
       document.getElementById("promo-list").innerHTML = PT.articles.slice(1, 4).map(function (x) {
         return '<a class="promo-item surface reveal" href="' + (x.cta ? x.cta.href : "news.html") + '"><img src="' + PT.img(x.photoId, 300) + '" alt="' + x.title + '" loading="lazy"><div style="min-width:0;flex:1"><div class="meta">' + U.badge(x.type, x.type === "Special" ? "brand" : "neutral") + "<time>" + x.date + "</time></div><h4>" + x.title + "</h4><p>" + x.excerpt + '</p></div><span class="arrow-link">' + U.icon("arrow-up-right") + "</span></a>";
