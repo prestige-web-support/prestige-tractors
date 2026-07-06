@@ -46,8 +46,8 @@
   "tagline": "Victoria's Trusted Agricultural Equipment Partner",
   "phone": "(03) 5339 2056",
   "phoneHref": "tel:+61353392056",
-  "mobile": "(03) 5339 2056",
-  "mobileHref": "tel:+61353392056",
+  "mobile": "0435 905 150",
+  "mobileHref": "tel:+61435905150",
   "mobileLabel": "Danny — 7 days",
   "email": "danny@prestigetractors.com.au",
   "emailHref": "mailto:danny@prestigetractors.com.au",
@@ -241,7 +241,7 @@
     "name": "Tractors",
     "icon": "tractor",
     "blurb": "Compact, utility & high-horsepower",
-    "photoId": "1530267981375-f0de937f5f13",
+    "photoId": "assets/images/McCormick Tractors/Random Tractor Photos/687684101_1410971207739072_4516664925661053912_n.jpg",
     "brands": [
       "bobcat",
       "mccormick",
@@ -281,7 +281,7 @@
     "name": "Attachments",
     "icon": "cog",
     "blurb": "Implements & 3-point linkage gear",
-    "photoId": "1486262715619-67b85e0b08d3",
+    "photoId": "assets/images/DakenAg - Implements/Slashers.jpg",
     "brands": [
       "dakenag",
       "muratori"
@@ -303,9 +303,9 @@
   },
   {
     "slug": "utility",
-    "name": "Utility Equipment",
+    "name": "Zero Turn Mowers",
     "icon": "mountain",
-    "blurb": "Zero-turn mowers & maintenance",
+    "blurb": "Gas, diesel & stand-on mowers",
     "photoId": "assets/images/Grasshopper Zero-Turn Mowers/Grasshopper 900D.jpg",
     "brands": [
       "grasshopper"

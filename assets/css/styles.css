@@ -266,7 +266,10 @@ input, select, textarea { font: inherit; }
 /* Mega menu */
 .mega-wrap { position: absolute; inset-inline: 0; top: 100%; display: none; }
 .nav__item.is-open .mega-wrap { display: block; }
-.mega { border-radius: var(--radius-2xl); padding: 1.5rem; box-shadow: 0 40px 80px -30px rgba(0,0,0,.9); margin-top: .5rem; margin-bottom: 1rem; }
+/* Solid, fully-opaque white dropdown panel (client request) — override the
+   translucent .glass treatment so no page content shows through behind it. */
+.mega { border-radius: var(--radius-2xl); padding: 1.5rem; box-shadow: 0 40px 80px -30px rgba(0,0,0,.35); margin-top: .5rem; margin-bottom: 1rem;
+  background: #ffffff; -webkit-backdrop-filter: none; backdrop-filter: none; border: 1px solid var(--ink-700); }
 .mega-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1.5rem; }
 .mega-cats { grid-column: span 8; display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; }
 .mega-cat { display: flex; align-items: flex-start; gap: 1rem; padding: 1rem; border-radius: var(--radius-md); transition: background .2s; }
@@ -928,6 +931,13 @@ input, select, textarea { font: inherit; }
 .site-header:not([data-theme="dark"]) .logo__image--dark {
   opacity: 1;
 }
+
+/* Footer logo: force the dark (black) wordmark on the light footer background
+   so the logo is clearly visible (client request — the white logo was faint). */
+.site-footer .logo__image--light { opacity: 0; }
+.site-footer .logo__image--dark { opacity: 1; }
+.drawer .logo__image--light { opacity: 0; }
+.drawer .logo__image--dark { opacity: 1; }
 
 /* ========================= 15. CHECKOUT / ORDER FORM ===================== */
 /* Reuses .overlay-shell / .backdrop (section 5) — same pattern as the nav

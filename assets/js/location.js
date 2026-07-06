@@ -7,6 +7,7 @@
     var cards = [
       ["pin", "Visit us", s.addressLine, null],
       ["phone", "Call us", s.phone, s.phoneHref],
+      ["phone", "Mobile", s.mobile, s.mobileHref],
       ["mail", "Email us", s.email, s.emailHref]
     ].map(function (c) {
       var inner = '<div class="contact-card surface"><span class="cc-icon">' + U.icon(c[0]) + '</span><div><p class="cc-label">' + c[1] + '</p><p class="cc-value">' + c[2] + "</p></div></div>";

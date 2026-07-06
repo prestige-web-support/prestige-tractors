@@ -67,10 +67,8 @@
 
   /* ------------------------------ HELPERS -------------------------------- */
   function el(html) { var t = d.createElement("template"); t.innerHTML = html.trim(); return t.content.firstElementChild; }
-  function wm(b) { // brand wordmark styling
-    var s = "font-family:var(--font-display);white-space:nowrap;font-weight:" + b.wm.w + ";";
-    if (b.wm.up) s += "text-transform:uppercase;letter-spacing:-.02em;"; if (b.wm.it) s += "font-style:italic;";
-    return s;
+  function wm(b) { // brand wordmark styling — uniform across all brands (client request: match RapidSpray, no per-brand weight/uppercase/italic)
+    return "font-family:var(--font-display);white-space:nowrap;font-weight:700;";
   }
   function starsHtml(n) { var s = ""; for (var i = 0; i < 5; i++) s += '<svg viewBox="0 0 24 24" fill="' + (i < n ? "currentColor" : "none") + '" stroke="currentColor" stroke-width="2">' + ICONS.star + "</svg>"; return '<span class="stars">' + s + "</span>"; }
 
@@ -250,6 +248,7 @@ function logoHtml() {
           '<ul class="footer-nap">' +
             "<li>" + icon("pin") + s.addressLine + "</li>" +
             '<li><a href="' + s.phoneHref + '">' + icon("phone") + s.phone + "</a></li>" +
+            '<li><a href="' + (s.mobileHref || s.phoneHref) + '">' + icon("phone") + "Mobile: " + (s.mobile || s.phone) + "</a></li>" +
             '<li><a href="' + s.emailHref + '">' + icon("mail") + s.email + "</a></li>" +
             "<li>" + icon("clock") + "<span>" + hours + "</span></li>" +
           "</ul>" +
