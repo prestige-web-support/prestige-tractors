@@ -11,33 +11,31 @@
 (function (w) {
   "use strict";
 
-  var IMG = "https://images.unsplash.com/photo-";
   function enc(p) { return p.split("/").map(encodeURIComponent).join("/"); }
-  function img(id, width) {
+  function img(id) {
     if (/^https?:/.test(id)) return id;
-    if (/[/.]/.test(id)) return enc(id);
-    return IMG + id + "?auto=format&fit=crop&w=" + (width || 1200) + "&q=72";
+    return enc(id);
   }
 
   var PHOTO = {
-    goldenFieldSunset: "1500382017468-9049fed747ef",
-    tractorHarvest: "1530267981375-f0de937f5f13",
-    tractorPaddy: "1574943320219-553eb213f72d",
-    greenFieldSunset: "1620200423727-8127f75d7f53",
-    cropRowsGolden: "1560493676-04071c5f467b",
-    aerialCrops: "1592982537447-7440770cbfc9",
-    welderSparks: "1504328345606-18bbc8c9d7d1",
-    oilService: "1487754180451-c456f719a1fc",
-    toolWall: "1530124566582-a618bc2615dc",
-    engineBelts: "1486262715619-67b85e0b08d3",
-    fieldWorkers: "1605000797499-95a51c5269ae",
-    cornSeedlings: "1625246333195-78d9c38ad449",
-    vegetables: "1464226184884-fa280b87c399",
-    sheepAerial: "1517022812141-23620dba5c23",
-    soilScoop: "1416879595882-3373a0480b5b",
-    forestRoad: "1473773508845-188df298d2d1",
-    financeChart: "1591696205602-2f950c417cb9",
-    teamMeeting: "1572021335469-31706a17aaef"
+    goldenFieldSunset: "assets/images/McCormick Tractors/Random Tractor Photos/Virginia_0019-11-672x480.jpg",
+    tractorHarvest: "assets/images/McCormick Tractors/Random Tractor Photos/687684101_1410971207739072_4516664925661053912_n.jpg",
+    tractorPaddy: "assets/images/McCormick Tractors/Random Tractor Photos/468397808_18073132342715305_290408137835016871_n.jpg",
+    greenFieldSunset: "assets/images/McCormick Tractors/Random Tractor Photos/555582792_18102784021715305_4708318628149109975_n.jpg",
+    cropRowsGolden: "assets/images/McCormick Tractors/Random Tractor Photos/484107767_3034277186729281_439500300604338958_n.jpg",
+    aerialCrops: "assets/images/McCormick Tractors/Random Tractor Photos/494116213_1138630334944307_489935307600419155_n.jpg",
+    welderSparks: "assets/images/Vavoline Oils/tractor-2.webp",
+    oilService: "assets/images/Vavoline Oils/diesel-engine-oil-range.webp",
+    toolWall: "assets/images/DakenAg - Implements/Pallet Forks.jpg",
+    engineBelts: "assets/images/Vavoline Oils/All Fleet.webp",
+    fieldWorkers: "assets/images/McCormick Tractors/Random Tractor Photos/170516437_1905537582936586_4042135404887111918_n.jpg",
+    cornSeedlings: "assets/images/McCormick Tractors/Random Tractor Photos/468545576_18073136917715305_7693466587703946981_n.jpg",
+    vegetables: "assets/images/McCormick Tractors/Random Tractor Photos/484135980_1099313312209343_475456195010696810_n.jpg",
+    sheepAerial: "assets/images/McCormick Tractors/Random Tractor Photos/468424311_18073132474715305_9078954065758753982_n.jpg",
+    soilScoop: "assets/images/McCormick Tractors/Random Tractor Photos/468552156_18073132450715305_1297360908194991730_n.jpg",
+    forestRoad: "assets/images/McCormick Tractors/Random Tractor Photos/468448490_18073132453715305_2497643600556884022_n.jpg",
+    financeChart: "assets/images/McCormick Tractors/Random Tractor Photos/687684101_1410971207739072_4516664925661053912_n.jpg",
+    teamMeeting: "assets/images/Danny-The-Tractor-Guy.jpeg"
   };
 
   var site = {
@@ -256,7 +254,7 @@
     "name": "Hay Equipment",
     "icon": "wheat",
     "blurb": "Mowers, rakes, balers & wrappers",
-    "photoId": "1560493676-04071c5f467b",
+    "photoId": "assets/images/Enorossi Hay Equipment/Balers/Round balers fixed chamber RB 120.jpg",
     "brands": [
       "enorossi"
     ],
@@ -269,7 +267,7 @@
     "name": "Spraying Equipment",
     "icon": "spray",
     "blurb": "Sprayers, tanks, pumps & fire units",
-    "photoId": "1620200423727-8127f75d7f53",
+    "photoId": "assets/images/Rapid Spray/3pl Sprayers.webp",
     "brands": [
       "rapidspray"
     ],
@@ -375,7 +373,7 @@
       "Best Seller"
     ],
     "featured": true,
-    "photoId": "assets/bobcat-ct4055.jpeg",
+    "photoId": "assets/images/bobcat-ct4055.jpeg",
     "tagline": "Heavy-duty compact, ready for the next chore.",
     "summary": "The CT4055 compact tractor allows operators to finish one chore after the next. A heavy-duty work companion that comes standard with rear PTO and four-wheel drive.",
     "description": "Built for operators who never stop moving, the Bobcat CT4055 is a heavy-duty compact tractor engineered to take on loader work, mowing, slashing, tilling and towing without breaking stride. Standard four-wheel drive and a rear PTO mean it's ready to work the moment it arrives — and with genuine parts and factory-trained servicing through Prestige Tractors, it stays that way.",
@@ -428,7 +426,7 @@
     "condition": "new",
     "availability": "in-stock",
     "featured": true,
-    "photoId": "assets/bobcat-ct2035-scaled.jpeg",
+    "photoId": "assets/images/bobcat-ct2035-scaled.jpeg",
     "tagline": "The performance and power to tackle any task.",
     "summary": "The CT2035 delivers the performance and power you need to tackle loader and implement work. Standard four-wheel drive makes this a confident all-rounder.",
     "description": "The Bobcat CT2035 hits the sweet spot for properties and small farms that need genuine capability without the bulk. With standard four-wheel drive and strong hydraulics, it handles loader duties, implement work and day-to-day property maintenance with ease.",
@@ -485,7 +483,7 @@
       "Package Deal"
     ],
     "featured": true,
-    "photoId": "assets/26hp-hobby.png",
+    "photoId": "assets/images/26hp-hobby.png",
     "tagline": "The ideal package for lifestyle blocks.",
     "summary": "Take on everything from mowing and slashing to lifting, towing and general property maintenance with the 26hp Bobcat Tractor + Implement Package — the ideal hobby-farm all-rounder.",
     "description": "Purpose-built for lifestyle blocks and hobby farms, the 26hp Hobby Farm Hero bundles a capable Bobcat compact tractor with the essential implements to get started straight away. Mow, slash, lift, tow and maintain your property with one machine — sold as a value-driven, ready-to-work package.",
@@ -7154,7 +7152,7 @@
     "type": "Special",
     "title": "Limited-Time Bobcat Package — $30,250 inc GST",
     "date": "20 May 2026",
-    "photoId": "1530267981375-f0de937f5f13",
+    "photoId": "assets/images/Bobcat Tractors/CT2035/1.jpg",
     "featured": true,
     "excerpt": "Our partners at Bobcat are offering a remarkable deal on a complete tractor + implement package. Get in quick — this won't last.",
     "cta": {
@@ -7167,7 +7165,7 @@
     "type": "News",
     "title": "Get Hay Season Ready with Enorossi",
     "date": "28 Apr 2026",
-    "photoId": "1560493676-04071c5f467b",
+    "photoId": "assets/images/Enorossi Hay Equipment/Balers/Round balers fixed chamber RB 120.jpg",
     "excerpt": "Mowers, rakes, balers and wrappers in stock now. Book a pre-season service and walk into the season with confidence.",
     "cta": {
       "label": "Shop Hay Equipment",
@@ -7179,7 +7177,7 @@
     "type": "Special",
     "title": "Competitive Finance on New & Used Machinery",
     "date": "10 Apr 2026",
-    "photoId": "1591696205602-2f950c417cb9",
+    "photoId": "assets/images/McCormick Tractors/Random Tractor Photos/494116213_1138630334944307_489935307600419155_n.jpg",
     "excerpt": "We can arrange finance for both new and used machinery at competitive interest rates — tailored to farming, horticulture, government and business.",
     "cta": {
       "label": "Finance Enquiry",
@@ -7191,7 +7189,7 @@
     "type": "News",
     "title": "Keep Your Equipment Working Hard",
     "date": "15 Mar 2026",
-    "photoId": "1504328345606-18bbc8c9d7d1",
+    "photoId": "assets/images/Vavoline Oils/tractor-2.webp",
     "excerpt": "Our factory-trained technicians keep your equipment in peak operating condition — scheduled servicing, genuine parts and mobile support.",
     "cta": {
       "label": "Book a Service",
