@@ -771,6 +771,10 @@ input, select, textarea { font: inherit; }
 .footer-about p { margin-top: 1.25rem; max-width: 24rem; font-size: .875rem; line-height: 1.6; color: var(--ink-300); }
 .footer-nap { margin-top: 1.75rem; display: flex; flex-direction: column; gap: .75rem; font-size: .875rem; }
 .footer-nap li { display: flex; align-items: flex-start; gap: .75rem; color: var(--ink-200); }
+/* Anchored items (phone/mobile/email) wrap the icon in an <a>; make that a
+   flex row too so the icon sits beside its text like the address/hours items
+   (a global svg{display:block} otherwise stacks the icon above the text). */
+.footer-nap a { display: inline-flex; align-items: flex-start; gap: .75rem; }
 .footer-nap svg { width: 1rem; height: 1rem; flex-shrink: 0; margin-top: .15rem; color: var(--brand-400); }
 .footer-nap a:hover { color: var(--fg); }
 .socials { margin-top: 1.75rem; display: flex; gap: .65rem; }
