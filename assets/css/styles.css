@@ -502,7 +502,7 @@ input, select, textarea { font: inherit; }
 .band__inner { max-width: 40rem; }
 .band h2 { font-size: clamp(1.875rem, 5vw, 3rem); text-transform: uppercase; line-height: 1.05; }
 .pill-list { margin-top: 1.75rem; display: flex; flex-wrap: wrap; gap: .65rem; }
-.pill { display: inline-flex; align-items: center; gap: .4rem; border-radius: 999px; border: 1px solid rgba(255,255,255,.15); background: rgba(255,255,255,.05); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); padding: .4rem .9rem; font-size: .875rem; color: #d2d2da; }
+.pill { display: inline-flex; align-items: center; gap: .4rem; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--fg) 18%, transparent); background: color-mix(in srgb, var(--fg) 6%, transparent); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); padding: .4rem .9rem; font-size: .875rem; font-weight: 500; color: var(--ink-100); }
 .pill svg { width: .85rem; height: .85rem; color: var(--brand-400); }
 
 /* Testimonials */
