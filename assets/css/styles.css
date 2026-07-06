@@ -569,6 +569,10 @@ input, select, textarea { font: inherit; }
 .cat-aside { display: none; }
 @media (min-width: 1024px) { .cat-aside { display: block; } .cat-aside .sticky { position: sticky; top: 7rem; } }
 .chips { display: flex; gap: .5rem; overflow-x: auto; padding-block: 1rem; }
+/* On desktop there's room to wrap the category chips onto two rows rather than
+   clipping the last one at the container edge (which looked unfinished);
+   keep the horizontal-scroll pattern on smaller screens. */
+@media (min-width: 1024px) { .chips { flex-wrap: wrap; overflow-x: visible; } }
 .chip { flex-shrink: 0; border-radius: 999px; border: 1px solid var(--ink-600); padding: .4rem 1rem; font-size: .875rem; font-weight: 500; color: var(--ink-200); transition: all .2s; white-space: nowrap; }
 .chip:hover { border-color: var(--ink-400); }
 .chip.is-active { border-color: var(--brand-500); background: var(--brand-500); color: #fff; }
