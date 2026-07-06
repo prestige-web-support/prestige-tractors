@@ -1053,7 +1053,7 @@ input, select, textarea { font: inherit; }
 .hero .container { padding-top: 8.5rem; }
 
 /* Top utility bar: email + landline + Danny direct (compact, single row) */
-.topbar { background: var(--ink-900); border-bottom: 1px solid var(--ink-700); font-size: .8125rem; }
+.topbar { background: var(--ink-900); border-bottom: 1px solid var(--ink-700); font-size: clamp(.64rem, 3vw, .8125rem); }
 .topbar__row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 2.4rem; }
 .topbar__phones { display: flex; align-items: center; gap: 1.25rem; }
 .topbar__item { display: inline-flex; align-items: center; gap: .4rem; color: var(--ink-200); font-weight: 500; white-space: nowrap; }
@@ -1063,9 +1063,11 @@ input, select, textarea { font: inherit; }
 .topbar__note { color: var(--ink-400); font-weight: 400; margin-left: .35rem; }
 @media (max-width: 700px) {
   .topbar__row { justify-content: center; gap: 1rem; }
-  .topbar > .container > .topbar__row > .topbar__item:first-child { display: none; } /* hide email text on small screens */
-  .topbar__phones > .topbar__item:first-child { display: none; }                     /* keep just Danny's number */
-  .topbar__note { display: none; }
+  .topbar__row > .topbar__item { display: none; } /* hide email on small screens (it's the only direct .topbar__item child of the row) */
+  .topbar__note { display: none; }                /* hide the "Danny — 7 days" note to make room */
+  .topbar__phones { gap: .75rem; }                /* keep BOTH numbers (landline + Danny's mobile), tighten spacing */
+  .topbar__item { gap: .3rem; }
+  .topbar__item svg { width: .85rem; height: .85rem; }
 }
 
 /* Locally-owned badge */
