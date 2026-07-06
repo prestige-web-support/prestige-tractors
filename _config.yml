@@ -1,0 +1,11 @@
+# GitHub Pages / Jekyll configuration.
+# Keep internal + developer files in the repository (for the team) but OUT of
+# the PUBLISHED site so they are not publicly reachable during client review.
+# These return 404 on the live site once this config is deployed.
+exclude:
+  - "*.docx"
+  - "EOD-file.md"
+  - "DESIGN-SYSTEM.md"
+  - "README.md"
+  - "_reference"
+  - ".gitignore"
