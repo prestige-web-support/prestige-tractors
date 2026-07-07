@@ -301,6 +301,9 @@ input, select, textarea { font: inherit; }
 .mega-feature h4 { color: #fff; font-size: 1.125rem; }
 .mega-feature p { color: #d2d2da; font-size: .875rem; margin-top: .5rem; max-width: 18rem; }
 .mega-feature .mf-cta { margin-top: 1rem; display: inline-flex; align-items: center; gap: .5rem; font-size: .875rem; font-weight: 600; color: var(--brand-300); }
+.mega-feature--wide { grid-column: span 12; min-height: 10rem; }
+.mega-feature--wide::after { background: linear-gradient(90deg, #000 30%, rgba(0,0,0,.55) 55%, transparent); }
+.mega-feature--wide p { max-width: 30rem; }
 
 /* Backdrop dim for mega/drawer */
 /* Off-canvas shell: fixed full-viewport clip layer so the drawer / filter sheet

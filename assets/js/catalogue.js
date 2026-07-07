@@ -8,7 +8,7 @@ window.PTpage = function () {
     q: "",
     categories: params.get("category") ? [params.get("category")] : [],
     brands: params.get("brand") ? [params.get("brand")] : [],
-    conditions: [],
+    conditions: params.get("condition") ? [params.get("condition")] : [],
     maxPrice: PRICE_MAX,
     sort: "featured"
   };
@@ -149,6 +149,7 @@ window.PTpage = function () {
     var u = new URLSearchParams();
     if (state.brands.length === 1) u.set("brand", state.brands[0]);
     if (state.categories.length === 1) u.set("category", state.categories[0]);
+    if (state.conditions.length === 1) u.set("condition", state.conditions[0]);
     var qs = u.toString();
     history.replaceState(null, "", location.pathname + (qs ? "?" + qs : ""));
   }
