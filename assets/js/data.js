@@ -25,6 +25,7 @@
     cropRowsGolden: "assets/images/McCormick Tractors/Random Tractor Photos/484107767_3034277186729281_439500300604338958_n.jpg",
     aerialCrops: "assets/images/McCormick Tractors/Random Tractor Photos/494116213_1138630334944307_489935307600419155_n.jpg",
     welderSparks: "assets/images/Vavoline Oils/tractor-2.webp",
+    mccormickService: "assets/images/McCormick Tractors/14th - McCormick X7.660/1.jpg",
     oilService: "assets/images/Vavoline Oils/diesel-engine-oil-range.webp",
     toolWall: "assets/images/DakenAg - Implements/Pallet Forks.jpg",
     engineBelts: "assets/images/Vavoline Oils/All Fleet.webp",

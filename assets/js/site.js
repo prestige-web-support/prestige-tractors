@@ -113,7 +113,7 @@
       var c1 = [["New & Used Machinery", ROUTES.equipment, "tractor"], ["Finance Options", ROUTES.finance, "banknote"], ["Latest Specials", ROUTES.news, "sparkles"]];
       var c2 = [["Service Centre", ROUTES.service, "wrench"], ["Book a Service", ROUTES.service + "#book", "calendar"], ["Spare Parts", ROUTES.parts, "settings"]];
       function col(h, arr) { return '<div class="mega-col"><h4>' + h + "</h4>" + arr.map(function (l) { return '<a href="' + l[1] + '">' + icon(l[2]) + "<span>" + l[0] + "</span></a>"; }).join("") + "</div>"; }
-      return '<div class="mega glass"><div class="mega-grid"><div class="mega-cols">' + col("Sales", c1) + col("Service & Parts", c2) + "</div>" + featureHtml("Workshop", "Factory-trained servicing", "Keep your equipment working hard with genuine parts and expert technicians.", ROUTES.service + "#book", "Book a service", PT.PHOTO.welderSparks) + "</div></div>";
+      return '<div class="mega glass"><div class="mega-grid"><div class="mega-cols">' + col("Sales", c1) + col("Service & Parts", c2) + "</div>" + featureHtml("Workshop", "Factory-trained servicing", "Keep your equipment working hard with genuine parts and expert technicians.", ROUTES.service + "#book", "Book a service", PT.PHOTO.mccormickService) + "</div></div>";
     }
     return "";
   }
