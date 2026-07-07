@@ -251,11 +251,21 @@
       }).join("");
       // Categories bento (first large, then spans)
       var spans = ["span-4 is-large", "span-2", "span-2", "span-2", "span-2"];
-      document.getElementById("bento").innerHTML = PT.categories.map(function (c, i) {
+      var catTiles = PT.categories.map(function (c, i) {
         return '<a class="cat-tile reveal ' + (spans[i] || "span-2") + '" href="' + U.ROUTES.category(c.slug) + '">' +
           '<img src="' + PT.img(c.photoId, i === 0 ? 1200 : 700) + '" alt="' + c.name + '" loading="lazy">' +
           '<span class="cat-tile__body"><span><span class="cat-icon">' + U.icon(U.CAT_ICON[c.slug]) + "</span><h3>" + c.name + "</h3><p>" + c.blurb + '</p></span><span class="view">View Range ' + U.icon("arrow-right") + "</span></span></a>";
       }).join("");
+      // Two extra tiles filling the bottom row — images from our own assets/images only
+      var extraTiles = [
+        { href: U.ROUTES.equipment + "?condition=used", img: "assets/images/McCormick Tractors/Random Tractor Photos/170516437_1905537582936586_4042135404887111918_n.jpg", icon: "tractor", h: "Used Tractors & Equipment", p: "Inspected pre-owned machinery", view: "Browse used" },
+        { href: "news.html", img: "assets/images/McCormick Tractors/Random Tractor Photos/555582792_18102784021715305_4708318628149109975_n.jpg", icon: "sparkles", h: "Monthly Specials", p: "Latest deals & seasonal offers", view: "See specials" }
+      ].map(function (t) {
+        return '<a class="cat-tile reveal span-2" href="' + t.href + '">' +
+          '<img src="' + PT.img(t.img, 700) + '" alt="' + t.h + '" loading="lazy">' +
+          '<span class="cat-tile__body"><span><span class="cat-icon">' + U.icon(t.icon) + "</span><h3>" + t.h + "</h3><p>" + t.p + '</p></span><span class="view">' + t.view + " " + U.icon("arrow-right") + "</span></span></a>";
+      }).join("");
+      document.getElementById("bento").innerHTML = catTiles + extraTiles;
       // Featured products
       document.getElementById("featured").innerHTML = PT.products.filter(function (p) { return p.featured; }).slice(0, 4).map(U.productCard).join("");
       // Finance pills
