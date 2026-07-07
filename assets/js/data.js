@@ -7037,19 +7037,6 @@
 
   var articles = [
   {
-    "slug": "bobcat-package-special",
-    "type": "Special",
-    "title": "Limited-Time Bobcat Package — $30,250 inc GST",
-    "date": "20 May 2026",
-    "photoId": "assets/images/Bobcat Tractors/CT2035/1.jpg",
-    "featured": true,
-    "excerpt": "Our partners at Bobcat are offering a remarkable deal on a complete tractor + implement package. Get in quick — this won't last.",
-    "cta": {
-      "label": "Enquire Now",
-      "href": "product.html?slug=26hp-hobby-farm-hero"
-    }
-  },
-  {
     "slug": "get-hay-season-ready",
     "type": "News",
     "title": "Get Hay Season Ready with Enorossi",
