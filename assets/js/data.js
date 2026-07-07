@@ -363,172 +363,6 @@
 
   var products = [
   {
-    "slug": "bobcat-ct4055-55hp",
-    "name": "Bobcat CT4055",
-    "brand": "bobcat",
-    "category": "tractors",
-    "hp": 55,
-    "priceFrom": 42990,
-    "condition": "new",
-    "availability": "in-stock",
-    "badges": [
-      "Best Seller"
-    ],
-    "featured": true,
-    "photoId": "assets/images/bobcat-ct4055.jpeg",
-    "tagline": "Heavy-duty compact, ready for the next chore.",
-    "summary": "The CT4055 compact tractor allows operators to finish one chore after the next. A heavy-duty work companion that comes standard with rear PTO and four-wheel drive.",
-    "description": "Built for operators who never stop moving, the Bobcat CT4055 is a heavy-duty compact tractor engineered to take on loader work, mowing, slashing, tilling and towing without breaking stride. Standard four-wheel drive and a rear PTO mean it's ready to work the moment it arrives — and with genuine parts and factory-trained servicing through Prestige Tractors, it stays that way.",
-    "highlights": [
-      "55hp turbo-diesel engine",
-      "Four-wheel drive standard",
-      "Rear PTO standard",
-      "Heavy-duty front loader ready"
-    ],
-    "specs": [
-      [
-        "Engine Power",
-        "55 hp"
-      ],
-      [
-        "Drivetrain",
-        "4WD (standard)"
-      ],
-      [
-        "PTO",
-        "Rear PTO, 540 rpm"
-      ],
-      [
-        "Transmission",
-        "Hydrostatic, 3-range"
-      ],
-      [
-        "Lift Capacity",
-        "1,200 kg (rear)"
-      ],
-      [
-        "Category",
-        "Compact utility tractor"
-      ]
-    ],
-    "features": [
-      "Spacious operator platform with ergonomic controls",
-      "Quick-attach front-end loader compatibility",
-      "Category 1 three-point linkage",
-      "Tight turning radius for confined work"
-    ]
-  },
-  {
-    "slug": "bobcat-ct2035-35hp",
-    "name": "Bobcat CT2035",
-    "brand": "bobcat",
-    "category": "tractors",
-    "hp": 35,
-    "priceFrom": 31490,
-    "condition": "new",
-    "availability": "in-stock",
-    "featured": true,
-    "photoId": "assets/images/bobcat-ct2035-scaled.jpeg",
-    "tagline": "The performance and power to tackle any task.",
-    "summary": "The CT2035 delivers the performance and power you need to tackle loader and implement work. Standard four-wheel drive makes this a confident all-rounder.",
-    "description": "The Bobcat CT2035 hits the sweet spot for properties and small farms that need genuine capability without the bulk. With standard four-wheel drive and strong hydraulics, it handles loader duties, implement work and day-to-day property maintenance with ease.",
-    "highlights": [
-      "35hp diesel engine",
-      "Four-wheel drive standard",
-      "Loader & implement ready",
-      "Compact, manoeuvrable footprint"
-    ],
-    "specs": [
-      [
-        "Engine Power",
-        "35 hp"
-      ],
-      [
-        "Drivetrain",
-        "4WD (standard)"
-      ],
-      [
-        "PTO",
-        "Rear PTO, 540 rpm"
-      ],
-      [
-        "Transmission",
-        "Hydrostatic, 3-range"
-      ],
-      [
-        "Lift Capacity",
-        "900 kg (rear)"
-      ],
-      [
-        "Category",
-        "Compact utility tractor"
-      ]
-    ],
-    "features": [
-      "Easy-operate hydrostatic transmission",
-      "Loader-ready hydraulics",
-      "Comfortable, low-vibration operator station",
-      "Excellent visibility to implement"
-    ]
-  },
-  {
-    "slug": "26hp-hobby-farm-hero",
-    "name": "26hp Hobby Farm Hero",
-    "brand": "bobcat",
-    "category": "tractors",
-    "hp": 26,
-    "priceFrom": 30250,
-    "priceNote": "Package price inc GST",
-    "condition": "new",
-    "availability": "in-stock",
-    "badges": [
-      "Package Deal"
-    ],
-    "featured": true,
-    "photoId": "assets/images/26hp-hobby.png",
-    "tagline": "The ideal package for lifestyle blocks.",
-    "summary": "Take on everything from mowing and slashing to lifting, towing and general property maintenance with the 26hp Bobcat Tractor + Implement Package — the ideal hobby-farm all-rounder.",
-    "description": "Purpose-built for lifestyle blocks and hobby farms, the 26hp Hobby Farm Hero bundles a capable Bobcat compact tractor with the essential implements to get started straight away. Mow, slash, lift, tow and maintain your property with one machine — sold as a value-driven, ready-to-work package.",
-    "highlights": [
-      "26hp Bobcat tractor + implement package",
-      "Front-end loader included",
-      "Slasher & implements bundled",
-      "Ideal for hobby & lifestyle farms"
-    ],
-    "specs": [
-      [
-        "Engine Power",
-        "26 hp"
-      ],
-      [
-        "Drivetrain",
-        "4WD"
-      ],
-      [
-        "PTO",
-        "Rear PTO, 540 rpm"
-      ],
-      [
-        "Package",
-        "Tractor + loader + implements"
-      ],
-      [
-        "Best For",
-        "Hobby & lifestyle farms"
-      ],
-      [
-        "Transmission",
-        "Hydrostatic"
-      ]
-    ],
-    "features": [
-      "Complete start-to-work implement bundle",
-      "Easy operation for new operators",
-      "Compact and easy to store",
-      "Genuine parts & local servicing included"
-    ]
-  },
-  {
     "slug": "mccormick-s-max-60",
     "name": "McCormick S-MAX 60",
     "brand": "mccormick",
@@ -594,7 +428,7 @@
     "brand": "mccormick",
     "category": "tractors",
     "hp": 75,
-    "featured": false,
+    "featured": true,
     "photoId": "assets/images/McCormick Tractors/2nd - McCormick S-MAX 75/1.jpg",
     "gallery": [
       "assets/images/McCormick Tractors/2nd - McCormick S-MAX 75/1.jpg",
@@ -834,7 +668,7 @@
     "brand": "mccormick",
     "category": "tractors",
     "hp": 110,
-    "featured": false,
+    "featured": true,
     "photoId": "assets/images/McCormick Tractors/6th - McCormick B-MAX 110/1.jpg",
     "gallery": [
       "assets/images/McCormick Tractors/6th - McCormick B-MAX 110/1.jpg",
@@ -1139,7 +973,7 @@
     "brand": "mccormick",
     "category": "tractors",
     "hp": null,
-    "featured": false,
+    "featured": true,
     "photoId": "assets/images/McCormick Tractors/11th - McCormick X6.415/1.jpg",
     "gallery": [
       "assets/images/McCormick Tractors/11th - McCormick X6.415/1.jpg",
@@ -1322,7 +1156,7 @@
     "brand": "mccormick",
     "category": "tractors",
     "hp": null,
-    "featured": false,
+    "featured": true,
     "photoId": "assets/images/McCormick Tractors/14th - McCormick X7.660/1.jpg",
     "gallery": [
       "assets/images/McCormick Tractors/14th - McCormick X7.660/1.jpg",
@@ -1433,67 +1267,6 @@
       "High-flow load-sensing hydraulics",
       "Front linkage & PTO options",
       "GPS / precision-farming ready"
-    ],
-    "priceFrom": null,
-    "condition": "new",
-    "availability": "enquire"
-  },
-  {
-    "slug": "mccormick-x8-680",
-    "name": "McCormick X8.680",
-    "brand": "mccormick",
-    "category": "tractors",
-    "hp": null,
-    "featured": true,
-    "photoId": "assets/images/McCormick Tractors/16th - McCormick X8.680/1.jpg",
-    "gallery": [
-      "assets/images/McCormick Tractors/16th - McCormick X8.680/1.jpg",
-      "assets/images/McCormick Tractors/16th - McCormick X8.680/2.jpg",
-      "assets/images/McCormick Tractors/16th - McCormick X8.680/3.jpg",
-      "assets/images/McCormick Tractors/16th - McCormick X8.680/4.jpg",
-      "assets/images/McCormick Tractors/16th - McCormick X8.680/5.jpg"
-    ],
-    "brochure": "assets/images/McCormick Tractors/16th - McCormick X8.680/Tractor_Specifications.pdf",
-    "tagline": "The flagship — maximum power & technology.",
-    "summary": "The McCormick X8.680 is the flagship of the range, delivering top-tier horsepower, premium technology and exceptional comfort for the largest broadacre operations.",
-    "description": "The X8-series X8.680 represents the pinnacle of McCormick engineering — high output, advanced continuously variable transmission, load-sensing hydraulics and a premium suspended cab. Built for the heaviest tillage, seeding and transport work on large-scale operations.",
-    "highlights": [
-      "Flagship high-horsepower output",
-      "Advanced CVT transmission",
-      "Load-sensing hydraulics",
-      "Premium suspended cab"
-    ],
-    "specs": [
-      [
-        "Engine Power",
-        "Flagship horsepower (6-cyl)"
-      ],
-      [
-        "Drivetrain",
-        "4WD"
-      ],
-      [
-        "Transmission",
-        "VT-Drive CVT"
-      ],
-      [
-        "PTO",
-        "Rear PTO, 540/540E rpm"
-      ],
-      [
-        "Cab",
-        "Premium suspended cab"
-      ],
-      [
-        "Origin",
-        "Italy"
-      ]
-    ],
-    "features": [
-      "Maximum pulling & PTO power",
-      "High-flow load-sensing hydraulics",
-      "Front linkage & PTO",
-      "Full GPS / precision-farming suite"
     ],
     "priceFrom": null,
     "condition": "new",
