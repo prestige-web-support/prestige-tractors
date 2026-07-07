@@ -30,7 +30,6 @@
     toolWall: "assets/images/DakenAg - Implements/Pallet Forks.jpg",
     engineBelts: "assets/images/Vavoline Oils/All Fleet.webp",
     fieldWorkers: "assets/images/McCormick Tractors/Random Tractor Photos/170516437_1905537582936586_4042135404887111918_n.jpg",
-    usedMachinery: "assets/images/McCormick Tractors/Random Tractor Photos/170516437_1905537582936586_4042135404887111918_n.jpg",
     cornSeedlings: "assets/images/McCormick Tractors/Random Tractor Photos/468545576_18073136917715305_7693466587703946981_n.jpg",
     vegetables: "assets/images/McCormick Tractors/Random Tractor Photos/484135980_1099313312209343_475456195010696810_n.jpg",
     sheepAerial: "assets/images/McCormick Tractors/Random Tractor Photos/468424311_18073132474715305_9078954065758753982_n.jpg",
