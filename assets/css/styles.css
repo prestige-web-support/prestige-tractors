@@ -14,6 +14,50 @@
      7. Reveal animations                     14. Responsive + reduced motion
    ========================================================================== */
 
+/* ==========================================================================
+   PAGE / SECTION MAP  —  every page section carries a unique hook class so it
+   maps 1:1 to a WordPress template part. Section wrappers use shared layout
+   utilities (.section, .split, .grid-cards, .cards-grid, .steps, .band …); the
+   hook class below is the anchor for that section's bespoke CSS + WP part.
+
+   HOME  (index.html)
+     .hero ................ §8 Hero
+     .brand-strip ......... §9 Brand strip (marquee)
+     .owned-banner ........ §9-extra (locally-owned badge)
+     .brand-logos ......... §9-extra (authorised-dealer logo wall)
+     .home-trust .......... §9 Trust bar (.trust-grid/.trust-card)
+     .home-categories ..... §9 Category bento (.bento/.cat-tile)
+     .home-featured ....... §9 Product grid (.grid-cards/.product-card)
+     .home-service ........ §9 Service band (.split/.feature-list/.media-frame)
+     .home-finance ........ §9 Finance band (.band/.pill-list)
+     .valvoline-banner .... §9-extra (stockist banner)
+     .tractor-guy ......... §9 Service band layout (shared)
+     .home-testimonials ... §9 Testimonials (.testimonial)
+     .home-promos ......... §9 Promotions (.promo-grid/.promo-feature/.promo-item)
+     .home-location ....... §9 Location (.location-grid/.map-frame/.contact-card)
+
+   SERVICE  (service.html)
+     .service-benefits, .service-steps (.steps), .service-book (.split/.form),
+     .service-cta (.cta-banner) — all on shared utilities.
+
+   FINANCE  (finance.html)
+     .finance-options, .finance-sectors, .finance-steps (.steps),
+     .finance-enquiry (.form) — shared utilities.
+
+   ABOUT  (about.html)
+     .about-story, .about-stats (.stats-band), .about-difference, .about-brands,
+     .about-team, .about-owned — shared utilities.
+
+   NEWS  (news.html):   .news-feature, .news-list (.article-card)
+   PARTS (parts.html):  .parts-intro, .parts-brands, .parts-request
+   CONTACT:             .contact-form (.split/.form), .contact-location (.location-grid)
+   EQUIPMENT:           .equipment-filter-chips (.chips), .catalogue §10,
+                        .equipment-shop-by-brand
+   PRODUCT (JS):        .detail §10, .product-overview, .product-related
+   CATEGORY (JS):       .category-brand-bar, .category-listing, .category-other
+   LEGAL:               .disclaimer-content, .privacy-content
+   ========================================================================== */
+
 /* ============================ 1. DESIGN TOKENS ============================ */
 :root,
 [data-theme="dark"] {
@@ -397,7 +441,7 @@ input, select, textarea { font: inherit; }
 .hero__stats dd { margin-top: .25rem; font-size: .8rem; color: var(--ink-300); }
 
 /* ========================== 9. HOME SECTIONS ============================= */
-/* Brand strip */
+/* Brand strip — .brand-strip */
 .brand-strip { padding-block: 2.5rem; border-block: 1px solid color-mix(in srgb,var(--fg) 6%, transparent); background: color-mix(in srgb, var(--ink-900) 60%, transparent); }
 .brand-strip__label { text-align: center; font-size: .75rem; font-weight: 600; text-transform: uppercase; letter-spacing: .32em; color: var(--ink-400); margin-bottom: 1.75rem; }
 .marquee { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
@@ -408,7 +452,7 @@ input, select, textarea { font: inherit; }
 .wordmark:hover { color: var(--fg); }
 @media (min-width: 640px) { .wordmark { font-size: 1.875rem; } }
 
-/* Trust bar */
+/* Trust bar — .home-trust */
 .trust-grid { display: grid; grid-template-columns: 1fr; gap: 1px; overflow: hidden; border-radius: var(--radius-2xl); border: 1px solid var(--ink-700); background: var(--ink-700); }
 @media (min-width: 640px) { .trust-grid { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 1024px) { .trust-grid { grid-template-columns: repeat(4, 1fr); } }
@@ -418,7 +462,7 @@ input, select, textarea { font: inherit; }
 .trust-card h3 { font-size: 1rem; line-height: 1.35; }
 .trust-card p { margin-top: .5rem; font-size: .875rem; color: var(--ink-300); }
 
-/* Category bento */
+/* Category bento — .home-categories */
 .bento { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 3rem; }
 @media (min-width: 640px) { .bento { grid-template-columns: repeat(6, 1fr); } }
 .cat-tile { position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 15rem; height: 100%; overflow: hidden; border-radius: var(--radius-2xl); border: 1px solid var(--ink-700); }
@@ -440,7 +484,7 @@ input, select, textarea { font: inherit; }
   .cat-tile.span-2 { grid-column: span 2; }
 }
 
-/* Product grid */
+/* Product grid — .home-featured / catalogue #results */
 .grid-cards { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
 @media (min-width: 640px) { .grid-cards { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 1024px) { .grid-cards.cols-3 { grid-template-columns: repeat(3, 1fr); } .grid-cards.cols-4 { grid-template-columns: repeat(4, 1fr); } }
@@ -468,7 +512,7 @@ input, select, textarea { font: inherit; }
 .product-card:hover .product-card__arrow { border-color: var(--brand-500); background: var(--brand-500); color: #fff; }
 .product-card__arrow svg { width: 1.25rem; height: 1.25rem; }
 
-/* Service band */
+/* Service band — .home-service / .tractor-guy / .service-book */
 .split { display: grid; grid-template-columns: 1fr; gap: 2.5rem; align-items: center; }
 /* Prevent CSS-grid blowout everywhere: by default a grid item's automatic
    minimum is its min-content (so wide/nowrap content forces the track wider
@@ -502,7 +546,7 @@ input, select, textarea { font: inherit; }
 .feature-list p { margin-top: .25rem; font-size: .875rem; color: var(--ink-300); }
 .cta-row { margin-top: 2.25rem; display: flex; flex-wrap: wrap; gap: .75rem; }
 
-/* Finance band (full-bleed image) */
+/* Finance band — .home-finance / .band */
 .band { position: relative; overflow: hidden; padding-block: 6rem; background: var(--ink-950); isolation: isolate; }
 .band__bg { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; }
 .band::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, var(--ink-950), color-mix(in srgb,var(--ink-950) 85%, transparent) 50%, color-mix(in srgb,var(--ink-950) 40%, transparent)); }
@@ -512,7 +556,7 @@ input, select, textarea { font: inherit; }
 .pill { display: inline-flex; align-items: center; gap: .4rem; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--fg) 18%, transparent); background: color-mix(in srgb, var(--fg) 6%, transparent); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); padding: .4rem .9rem; font-size: .875rem; font-weight: 500; color: var(--ink-100); }
 .pill svg { width: .85rem; height: .85rem; color: var(--brand-400); }
 
-/* Testimonials */
+/* Testimonials — .home-testimonials */
 .testimonial { position: relative; display: flex; flex-direction: column; padding: 1.5rem; border-radius: var(--radius-2xl); }
 .testimonial .quote-mark { color: rgba(224,25,43,.4); }
 .testimonial .quote-mark svg { width: 2rem; height: 2rem; }
@@ -521,7 +565,7 @@ input, select, textarea { font: inherit; }
 .testimonial figcaption b { display: block; font-family: var(--font-display); color: var(--fg); }
 .testimonial figcaption span { display: block; font-size: .875rem; color: var(--ink-400); }
 
-/* Promotions / news cards */
+/* Promotions — .home-promos */
 .promo-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 3rem; }
 @media (min-width: 1024px) { .promo-grid { grid-template-columns: 1fr 1fr; } }
 .promo-feature { position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 24rem; overflow: hidden; border-radius: var(--radius-2xl); border: 1px solid var(--ink-700); }
@@ -542,7 +586,7 @@ input, select, textarea { font: inherit; }
 .promo-item:hover .arrow-link { color: var(--brand-400); }
 .promo-item .arrow-link svg { width: 1.25rem; height: 1.25rem; }
 
-/* News article cards */
+/* News article cards — .news-list / .news-feature */
 .article-card { display: flex; flex-direction: column; overflow: hidden; border-radius: var(--radius-2xl); border: 1px solid var(--ink-700); background: var(--ink-850); transition: border-color .3s, box-shadow .3s; }
 .article-card:hover { border-color: var(--ink-500); box-shadow: var(--shadow-card); }
 .article-card__media { position: relative; aspect-ratio: 16/10; overflow: hidden; }
@@ -556,7 +600,7 @@ input, select, textarea { font: inherit; }
 .article-card__cta { margin-top: 1.25rem; display: inline-flex; align-items: center; gap: .5rem; font-size: .875rem; font-weight: 600; color: var(--brand-300); }
 [data-theme="light"] .article-card__cta { color: var(--brand-600); }
 
-/* Location */
+/* Location — .home-location / .contact-location */
 .location-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 3rem; }
 @media (min-width: 1024px) { .location-grid { grid-template-columns: 1.3fr 1fr; } }
 .map-frame { overflow: hidden; border-radius: var(--radius-2xl); border: 1px solid var(--ink-700); min-height: 24rem; }

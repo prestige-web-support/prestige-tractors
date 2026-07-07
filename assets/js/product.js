@@ -58,7 +58,7 @@ window.PTpage = function () {
   var specs = p.specs.map(function (s) { return '<div class="row"><dt>' + s[0] + "</dt><dd>" + s[1] + "</dd></div>"; }).join("");
 
   var overview =
-    '<section class="section section--alt"><div class="container"><div class="split" style="align-items:flex-start;grid-template-columns:1fr">' +
+    '<section class="section section--alt product-overview"><div class="container"><div class="split" style="align-items:flex-start;grid-template-columns:1fr">' +
       '<div class="detail-overview" style="display:grid;gap:2.5rem;grid-template-columns:1fr">' +
         '<div><div class="reveal"><h2 style="font-size:1.5rem">Overview</h2><p class="lead" style="margin-top:1rem">' + p.description + '</p>' +
           '<h3 style="font-size:1.25rem;margin-top:2.5rem">Key features</h3><ul class="kv-list">' + features + "</ul></div></div>" +
@@ -67,7 +67,7 @@ window.PTpage = function () {
 
   var related = PT.byCategory(p.category).concat(PT.byBrand(p.brand)).filter(function (x, i, arr) { return x.slug !== p.slug && arr.findIndex(function (y) { return y.slug === x.slug; }) === i; }).slice(0, 3);
   var relatedHtml = related.length
-    ? '<section class="section section--canvas"><div class="container"><div class="section-head has-action"><div class="section-head__main reveal"><span class="eyebrow">You may also like</span><h2>Related equipment</h2></div><div class="reveal"><a class="btn btn--secondary" href="equipment.html">View all ' + icon("arrow-right", "arrow") + '</a></div></div><div class="grid-cards cols-3" style="margin-top:3rem">' + related.map(U.productCard).join("") + "</div></div></section>"
+    ? '<section class="section section--canvas product-related"><div class="container"><div class="section-head has-action"><div class="section-head__main reveal"><span class="eyebrow">You may also like</span><h2>Related equipment</h2></div><div class="reveal"><a class="btn btn--secondary" href="equipment.html">View all ' + icon("arrow-right", "arrow") + '</a></div></div><div class="grid-cards cols-3" style="margin-top:3rem">' + related.map(U.productCard).join("") + "</div></div></section>"
     : "";
 
   // make overview two-column on desktop

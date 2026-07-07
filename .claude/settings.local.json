@@ -7,7 +7,23 @@
       "Read(//tmp/**)",
       "Bash(perl -0pi -e 's/<html lang=\"en-AU\">/<html lang=\"en-AU\" data-theme=\"light\">/' *.html)",
       "Bash(perl -ni -e 'print unless /var s=localStorage\\\\.getItem\\\\\\(\"pt-theme\"\\\\\\)/' *.html)",
-      "Bash(./docxenv/bin/python *)"
+      "Bash(./docxenv/bin/python *)",
+      "Bash(python3 /private/tmp/claude-501/-Users-devan-prestige-tractors/f63eb79c-ee2a-4c5c-817a-dcfd71b6f1bb/scratchpad/gen_data.py)",
+      "Bash(node --check assets/js/data.js)",
+      "Bash(node --check assets/js/site.js)",
+      "Bash(node --check assets/js/product.js)",
+      "Bash(git add *)",
+      "Bash(git commit -q -m 'Add EOD report for 5 July 2026 *)",
+      "Bash(git push *)",
+      "Bash(gh run *)",
+      "Bash(python3 -c 'from PIL import Image; Image.open\\('\\\\''/private/tmp/claude-501/-Users-devan-prestige-tractors/64bdaac5-dfae-4d56-9588-10b4f3a1a9d0/scratchpad/vqa/chk-index2.png'\\\\''\\).crop\\(\\(0,4720,1440,5320\\)\\).save\\('\\\\''/private/tmp/claude-501/-Users-devan-prestige-tractors/64bdaac5-dfae-4d56-9588-10b4f3a1a9d0/scratchpad/vqa/fin-band3.png'\\\\''\\)')",
+      "Bash(python3 -c 'from PIL import Image; Image.open\\('\\\\''/private/tmp/claude-501/-Users-devan-prestige-tractors/64bdaac5-dfae-4d56-9588-10b4f3a1a9d0/scratchpad/vqa/chk-parts.png'\\\\''\\).crop\\(\\(0,150,1440,470\\)\\).save\\('\\\\''/private/tmp/claude-501/-Users-devan-prestige-tractors/64bdaac5-dfae-4d56-9588-10b4f3a1a9d0/scratchpad/vqa/parts-hdr.png'\\\\''\\)')",
+      "Bash(command -v chromium-cli)",
+      "Bash(command -v playwright)",
+      "Bash(command -v python3)",
+      "Read(//Users/devan/.claude/skills/**)",
+      "Bash(lsof -ti:8899)",
+      "Bash(python3 -)"
     ]
   }
 }

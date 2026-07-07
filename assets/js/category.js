@@ -24,7 +24,7 @@ window.PTpage = function () {
       "</div></div></header>";
 
   var brandsBar = catBrands.length
-    ? '<div class="section--alt"><div class="container" style="padding-block:2rem"><div style="display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.5rem"><span class="eyebrow">Brands</span>' +
+    ? '<div class="section--alt category-brand-bar"><div class="container" style="padding-block:2rem"><div style="display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.5rem"><span class="eyebrow">Brands</span>' +
         catBrands.map(function (b) { return '<a href="' + R.brand(b.slug) + '" style="' + U.wm(b) + ';font-size:1.125rem;color:var(--ink-200)">' + b.name + "</a>"; }).join("") + "</div></div></div>"
     : "";
 
@@ -61,6 +61,6 @@ window.PTpage = function () {
   d.getElementById("cat-main").innerHTML =
     header +
     brandsBar +
-    '<section class="section section--canvas"><div class="container"><h2 style="font-size:1.5rem;margin-bottom:2rem">' + heading + "</h2>" + body + "</div></section>" +
-    '<section class="section section--alt"><div class="container"><h2 style="font-size:1.5rem;margin-bottom:2rem">Explore other categories</h2>' + otherCats + "</div></section>";
+    '<section class="section section--canvas category-listing"><div class="container"><h2 style="font-size:1.5rem;margin-bottom:2rem">' + heading + "</h2>" + body + "</div></section>" +
+    '<section class="section section--alt category-other"><div class="container"><h2 style="font-size:1.5rem;margin-bottom:2rem">Explore other categories</h2>' + otherCats + "</div></section>";
 };
