@@ -101,7 +101,7 @@
       var cats = PT.categories.map(function (c) {
         return '<a class="mega-cat" href="' + ROUTES.category(c.slug) + '"><span class="mc-icon">' + icon(CAT_ICON[c.slug]) + '</span><span><b>' + c.name + "</b><span>" + c.blurb + "</span></span></a>";
       }).join("");
-      cats += '<a class="mega-cat" href="' + ROUTES.equipment + '?condition=used"><span class="mc-icon">' + icon("tractor") + '</span><span><b>Used Tractors & Equipment</b><span>Inspected pre-owned machinery</span></span></a>';
+      cats += featureHtml("Now available", "Used Tractors & Equipment", "Inspected pre-owned machinery, ready to work.", ROUTES.equipment + "?condition=used", "Browse used stock", PT.PHOTO.usedMachinery, "mega-feature--cat");
       return '<div class="mega glass"><div class="mega-grid"><div class="mega-cats">' + cats + "</div>" + featureHtml("Featured", "Browse the full catalogue", "Filter by category, brand, horsepower and price across our complete range.", ROUTES.equipment, "View all equipment", PT.PHOTO.tractorHarvest) + "</div></div>";
     }
     if (kind === "brands") {
@@ -118,8 +118,8 @@
     }
     return "";
   }
-  function featureHtml(eyebrow, title, body, href, cta, photoId) {
-    return '<a class="mega-feature" href="' + href + '"><img src="' + PT.img(photoId, 700) + '" alt="" loading="lazy"><span class="mf-body"><span class="eyebrow">' + eyebrow + "</span><h4>" + title + "</h4><p>" + body + '</p><span class="mf-cta">' + cta + " " + icon("arrow-right") + "</span></span></a>";
+  function featureHtml(eyebrow, title, body, href, cta, photoId, mod) {
+    return '<a class="mega-feature' + (mod ? " " + mod : "") + '" href="' + href + '"><img src="' + PT.img(photoId, 700) + '" alt="" loading="lazy"><span class="mf-body"><span class="eyebrow">' + eyebrow + "</span><h4>" + title + "</h4><p>" + body + '</p><span class="mf-cta">' + cta + " " + icon("arrow-right") + "</span></span></a>";
   }
 
   function renderHeader() {
