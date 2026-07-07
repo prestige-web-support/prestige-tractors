@@ -9,3 +9,6 @@
 
 # Archived previous (React) tech stack — kept for reference only
 # _reference/react-app/   (uncomment to exclude from version control)
+
+# Claude Code local worktrees & settings
+.claude/worktrees/
