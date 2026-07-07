@@ -1273,6 +1273,67 @@
     "availability": "enquire"
   },
   {
+    "slug": "mccormick-x8-680",
+    "name": "McCormick X8.680",
+    "brand": "mccormick",
+    "category": "tractors",
+    "hp": null,
+    "featured": false,
+    "photoId": "assets/images/McCormick Tractors/16th - McCormick X8.680/1.jpg",
+    "gallery": [
+      "assets/images/McCormick Tractors/16th - McCormick X8.680/1.jpg",
+      "assets/images/McCormick Tractors/16th - McCormick X8.680/2.jpg",
+      "assets/images/McCormick Tractors/16th - McCormick X8.680/3.jpg",
+      "assets/images/McCormick Tractors/16th - McCormick X8.680/4.jpg",
+      "assets/images/McCormick Tractors/16th - McCormick X8.680/5.jpg"
+    ],
+    "brochure": "assets/images/McCormick Tractors/16th - McCormick X8.680/Tractor_Specifications.pdf",
+    "tagline": "The flagship — maximum power & technology.",
+    "summary": "The McCormick X8.680 is the flagship of the range, delivering top-tier horsepower, premium technology and exceptional comfort for the largest broadacre operations.",
+    "description": "The X8-series X8.680 represents the pinnacle of McCormick engineering — high output, advanced continuously variable transmission, load-sensing hydraulics and a premium suspended cab. Built for the heaviest tillage, seeding and transport work on large-scale operations.",
+    "highlights": [
+      "Flagship high-horsepower output",
+      "Advanced CVT transmission",
+      "Load-sensing hydraulics",
+      "Premium suspended cab"
+    ],
+    "specs": [
+      [
+        "Engine Power",
+        "Flagship horsepower (6-cyl)"
+      ],
+      [
+        "Drivetrain",
+        "4WD"
+      ],
+      [
+        "Transmission",
+        "VT-Drive CVT"
+      ],
+      [
+        "PTO",
+        "Rear PTO, 540/540E rpm"
+      ],
+      [
+        "Cab",
+        "Premium suspended cab"
+      ],
+      [
+        "Origin",
+        "Italy"
+      ]
+    ],
+    "features": [
+      "Maximum pulling & PTO power",
+      "High-flow load-sensing hydraulics",
+      "Front linkage & PTO",
+      "Full GPS / precision-farming suite"
+    ],
+    "priceFrom": null,
+    "condition": "new",
+    "availability": "enquire"
+  },
+  {
     "slug": "bobcat-ct1025",
     "name": "Bobcat CT1025",
     "brand": "bobcat",
@@ -1393,6 +1454,59 @@
     "condition": "new",
     "availability": "enquire",
     "featured": false
+  },
+  {
+    "slug": "bobcat-ct2035-35hp",
+    "name": "Bobcat CT2035",
+    "brand": "bobcat",
+    "category": "tractors",
+    "hp": 35,
+    "priceFrom": 31490,
+    "condition": "new",
+    "availability": "in-stock",
+    "featured": false,
+    "photoId": "assets/images/bobcat-ct2035-scaled.jpeg",
+    "tagline": "The performance and power to tackle any task.",
+    "summary": "The CT2035 delivers the performance and power you need to tackle loader and implement work. Standard four-wheel drive makes this a confident all-rounder.",
+    "description": "The Bobcat CT2035 hits the sweet spot for properties and small farms that need genuine capability without the bulk. With standard four-wheel drive and strong hydraulics, it handles loader duties, implement work and day-to-day property maintenance with ease.",
+    "highlights": [
+      "35hp diesel engine",
+      "Four-wheel drive standard",
+      "Loader & implement ready",
+      "Compact, manoeuvrable footprint"
+    ],
+    "specs": [
+      [
+        "Engine Power",
+        "35 hp"
+      ],
+      [
+        "Drivetrain",
+        "4WD (standard)"
+      ],
+      [
+        "PTO",
+        "Rear PTO, 540 rpm"
+      ],
+      [
+        "Transmission",
+        "Hydrostatic, 3-range"
+      ],
+      [
+        "Lift Capacity",
+        "900 kg (rear)"
+      ],
+      [
+        "Category",
+        "Compact utility tractor"
+      ]
+    ],
+    "features": [
+      "Easy-operate hydrostatic transmission",
+      "Loader-ready hydraulics",
+      "Comfortable, low-vibration operator station",
+      "Excellent visibility to implement"
+    ]
   },
   {
     "slug": "bobcat-ct2045",
